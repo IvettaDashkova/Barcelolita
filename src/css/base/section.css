@@ -1,25 +1,25 @@
 @media screen and (max-width: 374px) {
-  section {
+  .section {
     width: 100%;
     margin-bottom: 64px;
   }
 }
 
 @media screen and (min-width: 375px) {
-  section {
+  .section {
     width: 100%;
     margin-bottom: 64px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  section {
+  .section {
     margin-bottom: 100px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  section {
+  .section {
     margin-bottom: 138px;
   }
 }
