@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header container">
   <nav class="header-nav">
     <ul class="header-nav-list">
       <li class="header-nav-list-item">
@@ -23,42 +23,66 @@
       <load ="./svitcher.html" />
     </div>
   </div>
-  <div class="header-burger">
-    <svg>
-      <!-- waitig for sprite -->
+  <button type="button" class="header-burger">
+    <svg class="header-burger-icon" width="40" height="40">
+      <use href="../img/icons/symbol.svg#icon-burger"></use>
     </svg>
-  </div>
+  </button>
 </header>
 <!-- mobile menu -->
-<div class="mobmenu">
-  <div class="mobmenu-text">
-    <!-- width 24% -->
-    <p class="mobmenu-text-txt" id="menu">menu</p>
-  </div>
-  <div class="mobmenu-menu">
-    <ul class="mobmenu-menu-list">
-      <li class="mobmenu-menu-item">
-        <a href="#" class="mobmenu-menu-link" id="about-menu">about</a>
-      </li>
-      <li class="mobmenu-menu-item">
-        <a href="#" class="mobmenu-menu-link" id="portfolio-menu">portfolio</a>
-      </li>
-      <li class="mobmenu-menu-item">
-        <a href="#" class="mobmenu-menu-link" id="price-menu">price</a>
-      </li>
-      <li class="mobmenu-menu-item">
-        <a href="#" class="mobmenu-menu-link" id="contacts-menu">contacts</a>
-      </li>
-    </ul>
-  </div>
-  <div class="mobmenu-close">
-    <!-- width 24% -->
-    <svg>
-      <!-- waitig for sprite -->
-    </svg>
-  </div>
-  <div class="header-lang">
-    <!-- relative position -->
-    <load ="./svitcher.html" />
+<div class="mobmenu-backdrop menu-hidden">
+  <div class="mobmenu container">
+    <div class="mobmenu-text">
+      <!-- width 24% -->
+      <p class="mobmenu-text-txt" id="menu">menu</p>
+    </div>
+    <div class="mobmenu-menu">
+      <ul class="mobmenu-menu-list">
+        <li class="mobmenu-menu-item">
+          <a
+            href="#"
+            class="mobmenu-menu-link"
+            data-ua="про нас"
+            data-en="about"
+            >about</a
+          >
+        </li>
+        <li class="mobmenu-menu-item">
+          <a
+            href="#"
+            class="mobmenu-menu-link"
+            data-ua="портфоліо"
+            data-en="portfolio"
+            >portfolio</a
+          >
+        </li>
+        <li class="mobmenu-menu-item">
+          <a href="#" class="mobmenu-menu-link" data-ua="ціни" data-en="price"
+            >price</a
+          >
+        </li>
+        <li class="mobmenu-menu-item">
+          <a
+            href="#"
+            class="mobmenu-menu-link"
+            data-ua="контакти"
+            data-en="contacts"
+            >contacts</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="mobmenu-close">
+      <!-- width 24% -->
+      <svg class="mobmenu-close-icon">
+        <use href="../img/icons/symbol.svg#icon-close"></use>
+      </svg>
+    </div>
+    <div class="menu-lang">
+      <!-- relative position -->
+      <load ="./svitcher.html" />
+    </div>
   </div>
 </div>
+<script type="module" src="../js/mobile-menu.js"></script>
+<script type="module" src="../js/lang-switcher.js"></script>
