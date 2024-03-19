@@ -1,13 +1,11 @@
 @media screen and (max-width: 374px) {
   .section {
-    width: 100%;
     margin-bottom: 64px;
   }
 }
 
 @media screen and (min-width: 375px) {
   .section {
-    width: 100%;
     margin-bottom: 64px;
   }
 }
