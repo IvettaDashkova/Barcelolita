@@ -5,3 +5,11 @@
 @import url('./base/container.css');
 @import url('./base/section.css');
 @import url('./layout/header.css');
+@import url('./layout/hero.css');
+@import url('./layout/contact-me.css');
+@import url('./layout/about.css');
+@import url('./layout/portfolio.css');
+@import url('./layout/pop-up-gallery.css');
+@import url('./layout/backstage.css');
+@import url('./layout/footer.css');
+@import url('./layout/team.css');
