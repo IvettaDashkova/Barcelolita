@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'InterTight';
+  src: url('../../fonts/InterTight/InterTight-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../../fonts/HelveticaNueu/HelveticaNeueBoldCondensed.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../../fonts/HelveticaNueu/HelveticaNeueBlackCondensed.ttf');
+  font-weight: 900;
+  font-style: normal;
+}
