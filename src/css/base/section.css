@@ -1,0 +1,23 @@
+@media screen and (max-width: 374px) {
+  .section {
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .section {
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    margin-bottom: 138px;
+  }
+}

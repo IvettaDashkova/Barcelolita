@@ -7,8 +7,6 @@
 @import url('./reset.css');
 @import url('./vite-promo.css');
 @import url('./header.css');
-@import url('./contacts.css');
-@import url('./footer.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -25,3 +23,12 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+@import url('./base/reset.css');
+@import url('./utils/fonts.css');
+@import url('./utils/variables.css');
+@import url('./base/common.css');
+@import url('./base/container.css');
+@import url('./base/section.css');
+@import url('./layout/header.css');
+@import url('./contacts.css');
+@import url('./footer.css');
