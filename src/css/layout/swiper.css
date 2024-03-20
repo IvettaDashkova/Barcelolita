@@ -29,6 +29,7 @@
     initial
   );
   box-sizing: content-box;
+  /* margin-bottom: 117px; */
 }
 .swiper-android .swiper-slide,
 .swiper-ios .swiper-slide,

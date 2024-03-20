@@ -5,7 +5,7 @@ import team from './team.json';
 const swiperParams = {
   modules: [Navigation],
   breakpoints: {
-    375: { slidesPerView: 2, spaceBetween: 20 },
+    375: { slidesPerView: 2, spaceBetween: 35 },
     768: { slidesPerView: 3, spaceBetween: 50 },
     1440: { slidesPerView: 6, spaceBetween: 50 },
   },
@@ -17,6 +17,7 @@ const swiperParams = {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  slidesOffsetAfter: 25,
 };
 
 new Swiper('.swiper', swiperParams);
@@ -30,7 +31,7 @@ function toggleModal() {
   document.body.style.overflow = isMenuOpen ? 'hidden' : '';
 }
 
-// open.addEventListener('click', toggleModal); // відкриття модалки
+// open.addEventListener('click', toggleModal); // слухач відкриття модалки
 close.addEventListener('click', toggleModal);
 
 const createMrkpSwiper = () => {
