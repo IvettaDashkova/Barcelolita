@@ -51,23 +51,6 @@
   border: none;
 }
 
-.svitcher-label {
-  position: relative;
-}
-
-.svitcher-input {
-  position: absolute;
-  opacity: 0;
-}
-
-.svitcher-input + .svitcher-text {
-  transition: opacity 250ms ease-in-out;
-}
-
-.svitcher-input:checked + .svitcher-text {
-  opacity: 1;
-}
-
 .svitcher-text {
   font-family: 'InterTight';
   font-style: normal;
@@ -79,6 +62,20 @@
   color: var(--primary-color);
   opacity: 0.5;
   cursor: pointer;
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  border: none;
+}
+
+.en-text,
+.ua-text {
+  transition: opacity 250ms ease-in-out;
+}
+
+.svitcher-highlight {
+  opacity: 1;
 }
 
 .mobmenu-backdrop {
@@ -150,7 +147,6 @@
   font-size: 44px;
   line-height: 0.95;
   letter-spacing: -0.03em;
-  text-transform: capitalize;
   color: var(--primary-color);
 }
 
@@ -272,7 +268,3 @@
   }
 }
 
-.red {
-  background-color: rebeccapurple;
-  height: 80px;
-}
