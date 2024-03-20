@@ -2,8 +2,8 @@
   max-width: 375px;
   padding-top: 62px;
   padding-bottom: 64px;
-  background-color: black;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   margin: 0 auto;
 }
 .block-footer {
@@ -22,6 +22,7 @@
   justify-content: space-between;
 }
 .footer-title {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25em;
@@ -31,11 +32,12 @@
   margin-bottom: 10px;
 }
 .footer-title-item {
+  font-family: inherit;
   font-weight: 500;
   font-size: 20px;
   line-height: 1em;
   letter-spacing: -0.03em;
-  color: #fff;
+  color: var(--primary-color);
   margin-bottom: 6px;
 }
 .footer-contacts-box-child {
