@@ -4,9 +4,6 @@
   | default @import url()
   |============================
 */
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -36,6 +33,6 @@
 @import url('./layout/portfolio.css');
 @import url('./layout/pop-up-gallery.css');
 @import url('./layout/backstage.css');
-@import url('./contacts.css');
+@import url('./layout/contacts.css');
 @import url('./layout/footer.css');
 @import url('./layout/team.css');
