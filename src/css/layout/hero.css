@@ -1,0 +1,118 @@
+.hero-section {
+  margin: 0 auto;
+  padding-top: 422px;
+  padding-bottom: 40px;
+  background-image: url(/img/hero/hero-mobile-min.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.text-wrapper {
+  width: 343px;
+}
+
+.hero-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+}
+
+.hero-title {
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 95%;
+  margin-bottom: 28px;
+  letter-spacing: -0.03em;
+}
+
+.hero-title-accent {
+  color: var(--accent-color);
+}
+
+.contact-me-btn {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 12px;
+  display: block;
+  margin: 0 auto;
+  line-height: 133%;
+  letter-spacing: -0.03em;
+  transform: rotate(13deg);
+  box-shadow: inset -13px -5px 13px 0 rgba(255, 255, 255, 0.05),
+    inset 13px 10px 13px 0 rgba(8, 8, 8, 0.05);
+  padding: 0;
+  border: 1px solid rgba(249, 249, 249, 0.1);
+  background: rgba(1, 1, 1, 0.05);
+}
+
+.contact-me-btn:hover,
+.contact-me-btn:focus {
+  background-color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-wrapper {
+    width: 768px;
+    position: relative;
+  }
+
+  .hero-section {
+    padding-top: 540px;
+    padding-bottom: 196px;
+    background-image: url(/img/hero/hero-tablet-min.png);
+  }
+
+  .text-wrapper {
+    width: 566px;
+  }
+
+  .hero-title {
+    font-size: 80px;
+    line-height: 72px;
+    margin-bottom: 0;
+  }
+
+  .contact-me-btn {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 32px;
+    bottom: -132px;
+    font-size: 16px;
+    background: var(--secondary-color);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-section {
+    padding-top: 612px;
+    padding-bottom: 140px;
+    background-image: url(/img/hero/hero-desc-min.png);
+  }
+
+  .hero-wrapper {
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .hero-title {
+    font-size: 100px;
+    line-height: 100%;
+  }
+
+  .text-wrapper {
+    width: 1048px;
+    margin-right: 64px;
+  }
+
+  .contact-me-btn {
+    position: static;
+  }
+}
