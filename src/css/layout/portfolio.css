@@ -1,0 +1,135 @@
+@media screen and (min-width: 768px) {
+  .portfolio {
+    padding: 0 32px;
+  }
+
+  .portfolio-title {
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 80px;
+  }
+
+  /* .position-top{
+  
+  }
+  
+  .position-down{
+   
+  } */
+
+  .portfolio-item:nth-child(odd) {
+    grid-column: 1;
+  }
+
+  .portfolio-item:nth-child(even) {
+    grid-column: 2;
+  }
+
+  .portfolio-item-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .portfolio-item-description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    margin-bottom: 16px;
+    opacity: 0.3;
+  }
+
+  .portfolio-item-image {
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  .small {
+    max-width: 234px;
+    max-height: 290px;
+  }
+
+  .large {
+    max-width: 382px;
+    max-height: 333px;
+  }
+
+  .medium {
+    max-width: 382px;
+    max-height: 474px;
+  }
+
+  .portfolio-item-date {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .portfolio {
+    padding: 0 64px;
+  }
+
+  .portfolio-title {
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 80px;
+  }
+
+  .position-top {
+    margin-left: 126px;
+    margin-bottom: 117px;
+  }
+
+  .position-down {
+    margin-top: 200px;
+    margin-left: 374px;
+  }
+
+  .portfolio-item:nth-child(odd) {
+    grid-column: 1;
+  }
+
+  .portfolio-item:nth-child(even) {
+    grid-column: 2;
+  }
+
+  .portfolio-item-image {
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  .small {
+    min-width: 310px;
+    min-height: 385px;
+  }
+
+  .large {
+    min-width: 502px;
+    min-height: 436px;
+  }
+
+  .medium {
+    min-width: 524px;
+    min-height: 651px;
+  }
+}
