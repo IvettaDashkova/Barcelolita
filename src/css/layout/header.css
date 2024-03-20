@@ -125,13 +125,13 @@
   padding-left: 32px;
   display: flex;
   align-items: center;
-  transform: translate(0%, -5%);
 }
 
 .mobmenu-menu-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  transform: translate(0%, -5%);
 }
 
 .mobmenu-menu-link {
