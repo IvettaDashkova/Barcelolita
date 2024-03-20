@@ -235,6 +235,12 @@
     opacity: 1;
   }
 
+  .header-logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+
   .header-right {
     display: flex;
     gap: 64px;
