@@ -49,7 +49,6 @@
 }
 
 .svitcher-text {
-  font-family: 'InterTight';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -58,7 +57,6 @@
   text-transform: uppercase;
   color: var(--primary-color);
   opacity: 0.5;
-  cursor: pointer;
   background-color: transparent;
   width: fit-content;
   height: fit-content;
@@ -102,7 +100,6 @@
 }
 
 .mobmenu-text-txt {
-  font-family: 'InterTight';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -138,7 +135,6 @@
 }
 
 .mobmenu-menu-link {
-  font-family: 'InterTight';
   font-style: normal;
   font-weight: 500;
   font-size: 44px;
@@ -199,7 +195,7 @@
     height: 40px;
   }
 
-  .menu-lang{
+  .menu-lang {
     transform: translate(-50%, calc(100vh - 84px));
   }
 }
@@ -223,7 +219,6 @@
   }
 
   .header-nav-list-link {
-    font-family: 'InterTight';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -247,7 +242,6 @@
   }
 
   .header-right-contacts-link {
-    font-family: 'InterTight';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -264,4 +258,3 @@
     opacity: 1;
   }
 }
-
