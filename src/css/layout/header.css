@@ -109,15 +109,15 @@
 
 .mobmenu-text-txt {
   font-family: 'InterTight';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height, or 125% */
-letter-spacing: -0.03em;
-text-transform: uppercase;
-opacity: 0.5;
-color: var(--primary-color)
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  color: var(--primary-color);
 }
 
 .mobmenu-menu {
@@ -182,7 +182,40 @@ color: var(--primary-color)
   transform: translate(-50%, calc(100vh - 52px));
 }
 
+@media screen and (min-width: 768px) {
+  .mobmenu-text {
+    padding-left: 32px;
+  }
+
+  .mobmenu-menu {
+    width: 404px;
+    padding-left: 80px;
+  }
+
+  .mobmenu-menu-link {
+    font-size: 64px;
+    line-height: 1;
+  }
+
+  .mobmenu-close {
+    padding-right: 32px;
+  }
+
+  .mobmenu-close-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-lang{
+    transform: translate(-50%, calc(100vh - 84px));
+  }
+}
+
 @media screen and (min-width: 1440px) {
+  .mobmenu-backdrop {
+    display: none;
+  }
+
   .header-burger {
     display: none;
   }
