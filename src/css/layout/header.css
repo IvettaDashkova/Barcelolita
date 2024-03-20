@@ -74,6 +74,7 @@
 }
 
 .mobmenu-backdrop {
+  display: none;
   position: absolute;
   background-color: var(--accent-color);
   width: 100vw;
@@ -81,6 +82,10 @@
   z-index: 3;
   transform: translate(100vw, 0);
   transition: transform 250ms ease-in-out;
+}
+
+.mobmenu-visible {
+  display: block;
 }
 
 .mobmenu-open {
@@ -103,8 +108,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
-  /* identical to box height, or 125% */
+  line-height: 1.25;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   opacity: 0.5;
@@ -125,13 +129,13 @@
   padding-left: 32px;
   display: flex;
   align-items: center;
-  transform: translate(0%, -5%);
 }
 
 .mobmenu-menu-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  transform: translate(0%, -5%);
 }
 
 .mobmenu-menu-link {
