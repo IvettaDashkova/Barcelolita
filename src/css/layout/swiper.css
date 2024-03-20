@@ -9,7 +9,6 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  overflow: hidden;
   list-style: none;
   padding: 0;
   z-index: 1;
@@ -30,7 +29,6 @@
     initial
   );
   box-sizing: content-box;
-  /* margin-bottom: 117px; */
 }
 .swiper-android .swiper-slide,
 .swiper-ios .swiper-slide,

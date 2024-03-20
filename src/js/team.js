@@ -21,7 +21,7 @@ const swiperParams = {
 
 new Swiper('.swiper', swiperParams);
 const swiperWrapper = document.querySelector('.swiper-wrapper');
-// const open = document.querySelector('.open');
+// const open = document.querySelector('.open'); // кнопка відкриття модалки
 const developerSection = document.querySelector('.developer-section');
 const close = document.querySelector('.icon-close');
 
@@ -30,7 +30,7 @@ function toggleModal() {
   document.body.style.overflow = isMenuOpen ? 'hidden' : '';
 }
 
-// open.addEventListener('click', toggleModal);
+// open.addEventListener('click', toggleModal); // відкриття модалки
 close.addEventListener('click', toggleModal);
 
 const createMrkpSwiper = () => {
@@ -41,9 +41,12 @@ const createMrkpSwiper = () => {
   <div class="container-img">
     <div class="box-img">
       <div class="icon-linkedin">
+      <a href="${url}" target="_blank"
+        >
         <svg class="linkedin" width="16" height="16">
           <use href="../img/icons/symbol.svg#icon-linkedin"></use>
         </svg>
+        </a>
       </div>
       <a href="${url}" target="_blank"
         ><img class="dev-photo" src="${src}" alt="${userName}"
@@ -55,7 +58,7 @@ const createMrkpSwiper = () => {
   </div>
 </div>`;
     })
-    .join();
+    .join('');
   return markup;
 };
 
