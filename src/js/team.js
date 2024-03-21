@@ -1,7 +1,8 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import team from './team.json';
-
+import 'swiper/css/navigation';
+import 'swiper/css';
 const swiperParams = {
   modules: [Navigation],
   breakpoints: {
@@ -10,12 +11,12 @@ const swiperParams = {
     1000: { slidesPerView: 4, spaceBetween: 50 },
     1440: { slidesPerView: 6, spaceBetween: 50 },
   },
-
   navigation: {
     nextEl: '.swiper-button-next-section-team',
     prevEl: '.swiper-button-prev-section-team',
   },
   slidesOffsetAfter: 25,
+  slidesOffsetBefore: 10,
 };
 
 new Swiper('.swiper', swiperParams);
@@ -34,16 +35,16 @@ openModal.addEventListener('click', toggleModal);
 
 const createMrkpSwiper = () => {
   const markup = team
-    .map(({ small, large, userName, developer, url }) => {
+    .map(({ small, large, userNameEn, developer, url, userNameUa }) => {
       return `<div class="swiper-slide">
       <div class="developer-container">
   <div class="container-img">
     <div class="box-img-team">
       <div class="icon-linkedin-team">
-      <a href="${url}" target="_blank"
+      <a href="${url}"  target="_blank"
         >
         <svg class="linkedin" width="16" height="16">
-          <use href="../img/icons/symbol.svg#icon-linkedin"></use>
+          <use href="./img/icons/symbol.svg#icon-linkedin"></use>
         </svg>
         </a>
       </div>
@@ -67,14 +68,14 @@ const createMrkpSwiper = () => {
   <img
     class="dev-photo"
     src="${small}"
-    alt="${userName}"
+    alt="${userNameEn}"
   />
 </picture>
         </a>
     </div>
   </div>
-  <h3 class="dev-name">${userName}</h3>
-  <p class="dev-desription">${developer}</p>
+  <h3 class="dev-name" data-ua="${userNameUa}" data-en="${userNameEn}">${userNameEn}</h3>
+  <p class="dev-desription" >${developer}</p>
   </div>
 </div>`;
     })
