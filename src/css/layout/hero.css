@@ -2,8 +2,7 @@
   margin: 0 auto;
   padding-top: 422px;
   padding-bottom: 40px;
-  background-image: url(../../img/hero/hero-tablet.webp);
-  /* background-image: url(../img/hero/hero-mobile.webp); */
+  background-image: url('../../img/hero/hero-tablet.webp');
   background-repeat: no-repeat;
   background-size: auto 700px;
   background-position-x: 70%;
@@ -12,8 +11,7 @@
 
 @media only screen and (min-resolution: 192dpi) {
   .hero-section {
-    /* background-image: url(../img/hero/hero-mobile_@2x.webp); */
-    background-image: url(../../img/hero/hero-tablet_@2x.webp);
+    background-image: url('../../img/hero/hero-tablet_@2x.webp');
   }
 }
 
@@ -74,7 +72,7 @@
   .hero-section {
     padding-top: 540px;
     padding-bottom: 196px;
-    background-image: url(../../img/hero/hero-tablet.webp);
+    background-image: url('../../img/hero/hero-tablet.webp');
     background-size: auto 980px;
   }
 
@@ -101,7 +99,7 @@
 
 @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
   .hero-section {
-    background-image: url(../../img/hero/hero-tablet_@2x.webp);
+    background-image: url('../../img/hero/hero-tablet_@2x.webp');
   }
 }
 
@@ -110,7 +108,7 @@
     padding-top: 612px;
     padding-bottom: 140px;
     background-color: var(--secondary-color);
-    background-image: url(../../img/hero/hero-desc.webp);
+    background-image: url('../../img/hero/hero-desc.webp');
   }
 
   .hero-wrapper {
@@ -137,12 +135,12 @@
 
 @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
   .hero-section {
-    background-image: url(../../img/hero/hero-desc_@2x.webp);
+    background-image: url('../../img/hero/hero-desc_@2x.webp');
   }
 }
 
 .is-open-modal {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
