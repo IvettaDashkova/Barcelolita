@@ -8,6 +8,7 @@
   z-index: 999;
   transform: translate(100%);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 .developer-wrapper {
   width: 100%;
@@ -42,8 +43,12 @@
   cursor: pointer;
 }
 
+.icon-close-section-team:hover {
+  fill: gray;
+}
+
 .team {
-  font-family: Inter Tight;
+  font-family: Inter Tight, sans-serif;
   color: rgba(249, 249, 249, 0.3);
   font-size: 16px;
   font-weight: 500;
@@ -53,7 +58,8 @@
   text-transform: uppercase;
 }
 
-.title {
+.title-section-team {
+  font-family: Inter Tight, sans-serif;
   width: 265px;
   font-size: 50px;
   font-weight: 500;
@@ -64,7 +70,7 @@
   margin-bottom: 64px;
 }
 @media screen and (min-width: 768px) {
-  .title {
+  .title-section-team {
     width: 570px;
     font-size: 100px;
     font-weight: 500;
@@ -75,7 +81,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .title {
+  .title-section-team {
     width: 1025px;
     font-size: 120px;
     line-height: 110px;
@@ -155,9 +161,6 @@
 }
 
 .icon-linkedin-team {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 40px;
   height: 40px;
   background-color: var(--accent-color);
@@ -175,6 +178,10 @@
 }
 
 .linkedin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   fill: var(--primary-color);
 }
 
