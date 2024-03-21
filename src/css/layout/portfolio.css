@@ -1,5 +1,6 @@
 .portfolio {
   padding: 0 16px;
+  margin-bottom: 100px;
 }
 
 .portfolio-title {
@@ -81,21 +82,31 @@
 
   .portfolio-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 80px;
-  }
-
-  .portfolio-item {
-    margin-bottom: 0;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'left right';
   }
 
   .portfolio-item:nth-child(odd) {
-    grid-column: 1;
+    margin-bottom: 320px;
   }
 
   .portfolio-item:nth-child(even) {
-    grid-column: 2;
+    margin-top: 150px;
+    margin-left: -30px;
+    margin-bottom: 80px;
   }
+
+  .portfolio-item:nth-child(1n),
+  .portfolio-item:nth-child(5n) {
+    width: 382px;
+  }
+  .portfolio-item:nth-child(4n) {
+    margin-top: auto;
+    margin-left: 180px;
+  }
+
+  
+  
 
   .portfolio-item-image {
     border-radius: 4px;
