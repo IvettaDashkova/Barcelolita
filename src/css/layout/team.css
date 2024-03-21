@@ -2,7 +2,7 @@
   margin-bottom: 0;
 }
 .team-info {
-  padding: 16px 4px;
+  padding: 16px 8px;
   border-top: 1px solid rgba(249, 249, 249, 0.15);
   background-color: var(--secondary-color);
   display: flex;
@@ -27,8 +27,8 @@
 }
 .team-button::after {
   content: '|';
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 .team-watermark {
   font-family: inherit;
@@ -41,7 +41,7 @@
 }
 .team-watermark::before {
   content: '©';
-  padding-right: 2px;
+  padding-right: 4px;
 }
 
 @media screen and (min-width: 768px) {

@@ -2,7 +2,6 @@
 .contacts-block {
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
   max-width: 375px;
   padding-bottom: 40px;
   background-color: var(--secondary-color);

@@ -40,6 +40,15 @@
   color: var(--primary-color);
   margin-bottom: 6px;
 }
+.footer-title-item:hover,
+.footer-title-item:focus {
+  color: var(--accent-color);
+  outline: transparent;
+}
+.plus::before {
+  content: '+';
+  padding-right: 1px;
+}
 .footer-contacts-box-child {
   overflow-wrap: break-word;
   width: 92px;
@@ -79,8 +88,12 @@
   .footer {
     max-width: 1440px;
   }
+  .block-footer {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
   .footer-contacts-box {
-    width: 976px;
+    width: 1028px;
     gap: 80px;
     flex-direction: row;
     justify-content: space-between;
@@ -89,6 +102,6 @@
     font-size: 64px;
   }
   .footer-contacts-box-child {
-    width: 272px;
+    width: 288px;
   }
 }
