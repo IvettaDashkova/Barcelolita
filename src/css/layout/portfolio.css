@@ -40,6 +40,7 @@
   text-align: left;
   margin-bottom: 16px;
   opacity: 0.3;
+  max-width: 343px;
 }
 
 .portfolio-item-image {
@@ -92,21 +93,30 @@
 
   .portfolio-item:nth-child(even) {
     margin-top: 150px;
-    margin-left: -30px;
+    margin-left: -65px;
     margin-bottom: 80px;
   }
 
-  .portfolio-item:nth-child(1n),
-  .portfolio-item:nth-child(5n) {
-    width: 382px;
-  }
-  .portfolio-item:nth-child(4n) {
-    margin-top: auto;
-    margin-left: 180px;
+  .position-down-container {
+    max-width: 234px;
   }
 
-  
-  
+  .portfolio-item:nth-child(4n) {
+    margin-top: auto;
+    margin-left: auto;
+  }
+
+  .portfolio-item-description-small {
+    max-width: 234px;
+  }
+
+  .portfolio-item-description-large {
+    max-width: 382px;
+  }
+
+  .portfolio-item-description-medium {
+    max-width: 382px;
+  }
 
   .portfolio-item-image {
     border-radius: 4px;
@@ -126,6 +136,7 @@
 
   .medium {
     max-width: 382px;
+    width: 100%;
     max-height: 474px;
   }
 }
@@ -140,9 +151,8 @@
     margin-bottom: 117px;
   }
 
-  .position-down {
-    margin-top: 200px;
-    margin-left: 374px;
+  .position-down-container {
+    max-width: 310px;
   }
 
   .portfolio-item:nth-child(odd) {
@@ -151,6 +161,23 @@
 
   .portfolio-item:nth-child(even) {
     grid-column: 2;
+  }
+
+  .portfolio-item-description-small {
+    max-width: 310px;
+  }
+
+  .portfolio-item-description-large {
+    max-width: 502px;
+  }
+
+  .portfolio-item-description-medium {
+    max-width: 524px;
+  }
+
+  .portfolio-item:nth-child(4n) {
+    margin-top: auto;
+    margin-left: auto;
   }
 
   .small {
