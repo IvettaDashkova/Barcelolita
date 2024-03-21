@@ -202,3 +202,15 @@
     margin-top: 117px;
   }
 }
+
+.swiper-button-next-section-team.swiper-button-disabled,
+.swiper-button-prev-section-team.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper-button-next-section-team,
+.swiper-button-prev-section-team {
+  cursor: pointer;
+}
