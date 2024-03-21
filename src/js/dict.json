@@ -1,0 +1,16 @@
+{
+    "en": {
+       "about": "about",
+       "portfolio": "portfolio",
+       "price": "price",
+       "contacts": "contacts",
+       "menu": "menu"
+    },
+    "uk": {
+       "about": "про мене",
+       "portfolio": "портфоліо",
+       "price": "ціни",
+       "contacts": "контакти",
+       "menu": "меню"
+    }
+ }
