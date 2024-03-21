@@ -9,11 +9,12 @@
 @media screen and (min-width: 768px) {
     .title {
         padding-right: 339px;
+        padding-bottom: 40px;
     }
 }
 
 .description {
-    margin-bottom: 32px;
+    line-height: 1.25;
 }
 
 @media screen and (min-width: 768px) {
@@ -30,7 +31,6 @@
     .content {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 32px;
     }
 }
 
@@ -89,6 +89,7 @@
    .quote-text {
     padding-top: 80px;
     padding-bottom: 40px;
+    font-size: 46px;
    }
 }
 
@@ -105,6 +106,7 @@
     .quote-author {
         padding-bottom: 80px;
         font-size: 20px;
+        line-height: 1;
     }
 }
 
