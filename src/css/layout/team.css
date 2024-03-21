@@ -191,3 +191,14 @@
   justify-content: center;
   gap: 16px;
 }
+
+@media screen and (min-width: 768px) {
+  .array-box {
+    margin-top: 178px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .array-box {
+    margin-top: 117px;
+  }
+}
