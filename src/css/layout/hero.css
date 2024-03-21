@@ -1,11 +1,21 @@
 .hero-section {
-  margin: 0 auto;
+    /* width: 100%; */
+    margin: 0 auto;
   padding-top: 422px;
   padding-bottom: 40px;
-  background-image: url(/img/hero/hero-mobile-min.png);
+  background-image: url(../img/hero/hero-tablet.webp);
+  /* background-image: url(../img/hero/hero-mobile.webp); */
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: center;
 }
+
+
+ @media only screen and (min-resolution: 192dpi) {
+    .hero-section {
+        /* background-image: url(../img/hero/hero-mobile_@2x.webp); */
+        background-image: url(../img/hero/hero-tablet_@2x.webp);
+    }
+} 
 
 .text-wrapper {
   width: 343px;
@@ -14,14 +24,14 @@
 .hero-text {
   margin-bottom: 16px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: -0.03em;
 }
 
 .hero-title {
   font-weight: 500;
   font-size: 44px;
-  line-height: 95%;
+  line-height: 0.95;
   margin-bottom: 28px;
   letter-spacing: -0.03em;
 }
@@ -40,7 +50,7 @@
   font-size: 12px;
   display: block;
   margin: 0 auto;
-  line-height: 133%;
+  line-height: 1.33;
   letter-spacing: -0.03em;
   transform: rotate(13deg);
   box-shadow: inset -13px -5px 13px 0 rgba(255, 255, 255, 0.05),
@@ -64,7 +74,7 @@
   .hero-section {
     padding-top: 540px;
     padding-bottom: 196px;
-    background-image: url(/img/hero/hero-tablet-min.png);
+    background-image: url(../img/hero/hero-tablet.webp);
   }
 
   .text-wrapper {
@@ -73,7 +83,7 @@
 
   .hero-title {
     font-size: 80px;
-    line-height: 72px;
+    line-height: 0.9;
     margin-bottom: 0;
   }
 
@@ -88,11 +98,18 @@
   }
 }
 
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: url(../img/hero/hero-tablet_@2x.webp);
+    }
+}
+
 @media screen and (min-width: 1440px) {
   .hero-section {
     padding-top: 612px;
     padding-bottom: 140px;
-    background-image: url(/img/hero/hero-desc-min.png);
+    background-color: var(--secondary-color);
+    background-image: url(../img/hero/hero-desc.webp);
   }
 
   .hero-wrapper {
@@ -104,7 +121,7 @@
 
   .hero-title {
     font-size: 100px;
-    line-height: 100%;
+    line-height: 1;
   }
 
   .text-wrapper {
@@ -115,4 +132,10 @@
   .contact-me-btn {
     position: static;
   }
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: url(../img/hero/hero-desc_@2x.webp);
+    }
 }
