@@ -1,52 +1,204 @@
-.footer-team {
-  margin-bottom: 0;
+.developer-section {
+  background-color: #010101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  transform: translate(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
-.team-info {
-  padding: 16px 8px;
-  border-top: 1px solid rgba(249, 249, 249, 0.15);
-  background-color: var(--secondary-color);
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-.team-button {
-  padding: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.29em;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: rgba(249, 249, 249, 0.5);
-  border: none;
-}
-.team-button:hover,
-.team-button:focus {
-  color: rgba(249, 249, 249, 0.3);
-}
-.team-button::after {
-  content: '|';
-  padding-left: 4px;
-  padding-right: 4px;
-}
-.team-watermark {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.29em;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: rgba(249, 249, 249, 0.5);
-}
-.team-watermark::before {
-  content: '©';
-  padding-right: 4px;
+.developer-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 32px 16px;
 }
 
 @media screen and (min-width: 768px) {
-  .team-info {
-    justify-content: center;
-    padding: 32px 16px;
+  .developer-wrapper {
+    padding: 32px 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .developer-wrapper {
+    padding: 32px 64px;
+  }
+}
+
+.is-open {
+  transform: translate(0);
+}
+
+.section-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.icon-close-section-team {
+  fill: #fff;
+  cursor: pointer;
+}
+
+.icon-close-section-team:hover {
+  fill: gray;
+}
+
+.team {
+  font-family: Inter Tight, sans-serif;
+  color: rgba(249, 249, 249, 0.3);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.title-section-team {
+  font-family: Inter Tight, sans-serif;
+  width: 265px;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: left;
+  color: var(--primary-color);
+  letter-spacing: -0.03em;
+  margin-bottom: 64px;
+}
+@media screen and (min-width: 768px) {
+  .title-section-team {
+    width: 570px;
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 90px;
+    text-align: left;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title-section-team {
+    width: 1025px;
+    font-size: 120px;
+    line-height: 110px;
+    letter-spacing: -0.03em;
+    margin-bottom: 117px;
+  }
+}
+
+.title-red {
+  color: var(--accent-color);
+}
+
+.container-img {
+  position: relative;
+}
+
+.box-img-team {
+  overflow: hidden;
+  border: 2px solid rgb(165, 8, 7);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}
+
+@media screen and (min-width: 768px) {
+  .box-img-team {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.dev-photo {
+  filter: grayscale(100%);
+}
+
+.dev-name {
+  margin: 16px 0 8px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+.dev-desription {
+  color: rgba(249, 249, 249, 0.3);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.arrow-team {
+  fill: var(--primary-color);
+}
+
+.arrow-left-team {
+  transform: rotate(180deg);
+}
+
+.developer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+}
+
+@media screen and (min-width: 768px) {
+  .developer-container {
+    width: 200px;
+  }
+}
+
+.icon-linkedin-team {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  top: 140px;
+  left: 130px;
+  position: absolute;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 768px) {
+  .icon-linkedin-team {
+    top: 160px;
+  }
+}
+
+.linkedin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--primary-color);
+}
+
+.array-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .array-box {
+    margin-top: 178px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .array-box {
+    margin-top: 117px;
   }
 }
