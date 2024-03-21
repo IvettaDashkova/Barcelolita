@@ -15,7 +15,7 @@
   height: 100%;
 }
 
-.is-open {
+.is-open-section-team {
   transform: translate(0);
 }
 
@@ -212,4 +212,12 @@
 .swiper-button-next-section-team,
 .swiper-button-prev-section-team {
   cursor: pointer;
+}
+
+.red-title-section-team {
+  color: var(--accent-color);
+}
+
+.white-title-section-team {
+  color: var(--primary-color);
 }

@@ -26,7 +26,7 @@ const closeModal = document.querySelector('.icon-close-section-team');
 const openModal = document.querySelector('.team-button');
 
 function toggleModal() {
-  const isMenuOpen = developerSection.classList.toggle('is-open');
+  const isMenuOpen = developerSection.classList.toggle('is-open-section-team');
   document.body.style.overflow = isMenuOpen ? 'hidden' : '';
 }
 
