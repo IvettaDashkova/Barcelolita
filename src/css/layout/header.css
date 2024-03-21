@@ -268,3 +268,7 @@
     opacity: 1;
   }
 }
+
+.noscroll {
+  overflow: hidden;
+}
