@@ -5,12 +5,18 @@ function mobileMenu() {
   const closeButton = document.querySelector('.mobmenu-close-button');
 
   function openMenu() {
-    backdropMenu.classList.add('mobmenu-open');
+    backdropMenu.classList.add('mobmenu-visible');
+    const timerId = setTimeout(() => {
+      backdropMenu.classList.add('mobmenu-open');
+    }, 50);
     closeButton.addEventListener('click', closeMenu);
   }
 
   function closeMenu() {
     backdropMenu.classList.remove('mobmenu-open');
+    const timerId = setTimeout(() => {
+      backdropMenu.classList.remove('mobmenu-visible');
+    }, 50);
     closeButton.removeEventListener('click', closeMenu);
   }
 }
