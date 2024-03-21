@@ -1,3 +1,10 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+
 @import url('./base/reset.css');
 @import url('./utils/fonts.css');
 @import url('./utils/variables.css');
@@ -11,6 +18,7 @@
 @import url('./layout/portfolio.css');
 @import url('./layout/pop-up-gallery.css');
 @import url('./layout/backstage.css');
+@import url('./layout/contacts.css');
 @import url('./layout/footer.css');
 @import url('./layout/team.css');
 @import url('./layout/swiper.css');
