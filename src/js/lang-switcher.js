@@ -16,7 +16,8 @@ function langSwitcher() {
 
   function switchLang(lang) {
     for (let key in dict[lang]) {
-      document.getElementById(key).textContent = dict[lang][key];
+      let searchKey = '[data-id=' + key +']'
+      document.querySelector(searchKey).textContent = dict[lang][key];
     }
 
     if (lang === 'en') {

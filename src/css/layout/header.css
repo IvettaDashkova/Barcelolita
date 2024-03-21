@@ -75,7 +75,7 @@
 
 .mobmenu-backdrop {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: var(--accent-color);
   width: 100vw;
   height: 100vh;
