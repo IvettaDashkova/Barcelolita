@@ -39,8 +39,64 @@ const swiper = new Swiper('.swiper', {
         btnNext.style.fill = 'rgba(249, 249, 249, 0.226)';
       }
     }
-  }
+  },
+  grabCursor: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+
+  mousewheel: {
+    sensitivity: 1,
+    eventsTarget: '.swiper',
+  },
+  effect: 'fade',
+  fadeEffect: { 
+    crossFade: true,
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2.2,
+      spaceBetween: 16,
+      effect: 'slide',
+    },
+      on: {
+        slideChange: function () {
+          const activeIndex = this.activeIndex;
+          if (activeIndex === 0) {
+            btnPrev.style.fill = 'rgba(249, 249, 249, 0.226)';
+            btnNext.style.fill = '#f9f9f9';
+          } else if (activeIndex === 1) {
+            btnPrev.style.fill = '#f9f9f9';
+            btnNext.style.fill = '#f9f9f9';
+          } else {
+            btnPrev.style.fill = '#f9f9f9';
+            btnNext.style.fill = 'rgba(249, 249, 249, 0.226)';
+          }
+        }
+    },
+
+  },
 });
+
+swiperSlides.forEach(slide => {
+  slide.addEventListener('click', () => { 
+    const click = slide.querySelector('.overlay-click');
+    const number = slide.querySelector('.number');
+    
+    click.classList.toggle('active');
+    number.style.display = (click.classList.contains('active')) ? 'none' : '';
+    
+  });
+});
+
+// swiperSlides.forEach((slide, index) => {
+//   slide.addEventListener('click', () => {
+//     slide.classList.toggle('active');
+//   });
+// });
 
 // swiperSlides.forEach(slide => {
 //   slide.addEventListener('click', () => {
@@ -91,15 +147,17 @@ const swiper = new Swiper('.swiper', {
 //   })
 // });
 
-swiperSlides.forEach(slide => { 
-  const content = slide.querySelector('.content');
-  const click = slide.querySelector('.click');
-  slide.addEventListener('click', () => { 
-    content.style.display = 'none';
-    content.style.opacity = '0';
-    click.classList.add('animate__animated', 'animate__flipInY');
-    click.style.opacity = '1';
-    click.style.visibility = 'visible';
-  })
-});
+// swiperSlides.forEach(slide => {
+//   const content = slide.querySelector('.content');
+//   const click = slide.querySelector('.click');
+//   slide.addEventListener('click', () => {
+//     content.style.display = 'none';
+//     content.style.opacity = '0';
+//     click.classList.add('animate__animated', 'animate__flipInY');
+//     click.style.opacity = '1';
+//     click.style.visibility = 'visible';
+//   })
+// });
+
+
 

@@ -53,6 +53,10 @@
 
 .swiper-slide {
   position: relative;
+  cursor: pointer;
+  /* transition: transform 1s;
+  transform-style: preserve-3d; */
+  transform-style: preserve-3d;
 }
 
 .name-first {
@@ -64,7 +68,7 @@
   line-height: 100%;
   letter-spacing: -0.03em;
   color: #f9f9f9;
-  z-index: 1;
+  z-index: 6;
 }
 
 .number-first {
@@ -79,18 +83,6 @@
   z-index: 1;
 }
 
-.price-first {
-  position: absolute;
-  bottom: 29px;
-  right: 29px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: -0.03em;
-  color: #f9f9f9;
-  z-index: 1;
-}
-
 .name-second {
   position: absolute;
   bottom: 32px;
@@ -100,7 +92,7 @@
   line-height: 100%;
   letter-spacing: -0.03em;
   color: #f9f9f9;
-  z-index: 1;
+  z-index: 6;
 }
 
 .number-second {
@@ -115,28 +107,16 @@
   z-index: 1;
 }
 
-.price-second {
-  position: absolute;
-  top: 81px;
-  right: 16px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: -0.03em;
-  color: #f9f9f9;
-  z-index: 1;
-}
-
 .name-third {
   position: absolute;
   top: 32px;
-  right: 16px;
+  left: 16px;
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
   letter-spacing: -0.03em;
   color: #f9f9f9;
-  z-index: 1;
+  z-index: 6;
 }
 
 .number-third {
@@ -151,18 +131,6 @@
   z-index: 1;
 }
 
-.price-third {
-  position: absolute;
-  bottom: 39px;
-  right: 16px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: -0.03em;
-  color: #f9f9f9;
-  z-index: 1;
-}
-
 .price-img {
   position: absolute;
   top: 50%;
@@ -172,7 +140,7 @@
   height: 100%;
   object-fit: cover;
 }
-
+/* 
 .overlay {
   position: absolute;
   top: 0;
@@ -184,25 +152,163 @@
   transition: opacity 0.3s ease;
 }
 
-.swiper-slide:hover .overlay {
+.overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #010101a0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide.third:hover .overlay {
   opacity: 1;
 }
 
-.click {
+.swiper-slide:hover .overlay-dark {
+  opacity: 1;
+} */
+
+.overlay-click {
   position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  height: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: #111;
-  z-index: 4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  background-color: #010101a0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.overlay-click.red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a50707a0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.overlay-click.active {
+  opacity: 1;
+}
+
+.overlay-click.red.active {
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  top: 176px;
+  left: 50px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  width: 235px;
+  height: 76px;
   text-align: center;
 }
 
-/* .card-flipped {
-  transform: rotateY(180deg);
-  transition: transform 0.4s ease;
-}  */
+.price-first {
+  position: absolute;
+  bottom: 32px;
+  left: 109px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+}
+
+.price-second {
+  position: absolute;
+  top: 32px;
+  left: 103px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+}
+
+.price-third {
+  position: absolute;
+  bottom: 32px;
+  left: 100px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+}
+
+@media screen and (min-width: 768px) {
+  .container-prices {
+    min-width: 704px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 32px;
+    margin-right: 32px;
+    position: relative;
+  }
+
+  .prices-text {
+    width: 400px;
+    margin-bottom: 32px;
+  }
+
+  .arrows {
+    position: absolute;
+    top: -40px;
+    right: 0;
+  }
+
+  .swiper {
+    width: 704px;
+  }
+
+  .swiper-slide.first {
+    background-image: url('../../img/prices/price-img-01.jpg');
+  }
+  .swiper-slide.second {
+    background-image: url('../../img/prices/price-img-02.jpg');
+  }
+
+  .swiper-slide.third {
+    background-image: url('../../img/prices/price-img-03.jpg');
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #a50707a0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #010101a0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .swiper-slide.third:hover .overlay {
+    opacity: 1;
+  }
+
+  .swiper-slide:hover .overlay-dark {
+    opacity: 1;
+  }
+}
