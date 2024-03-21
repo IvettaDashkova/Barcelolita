@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Portrait photo",
+    "description": "Images with an emphasis on faces, facial expressions and character.",
+    "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
+  },
+
+  {
+    "id": 2,
+    "name": "Fashion photo",
+    "description": "The art of creating expressive and stylish images that emphasize fashion and style.",
+    "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "Brand photo",
+    "description": "Reflects the uniqueness of the brand, its values, style and character through visual elements.",
+    "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Genre photo",
+    "description": "A variety of categories and styles covering different themes, moods.",
+    "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
+  },
+  {
+    "id": 5,
+    "name": "Studio photo",
+    "description": "Capturing the beauty of nature and landscapes.",
+    "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
+  },
+  {
+    "id": 6,
+    "name": "Couple photo",
+    "description": "Used to reinforce and build the brand's visual identity.",
+    "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
+  },
+  {
+    "id": 7,
+    "name": "LOOKBOOK",
+    "description": "Images of people, emphasizing their individuality.",
+    "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
+  }
+]

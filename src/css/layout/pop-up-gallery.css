@@ -1,0 +1,56 @@
+.pop-up-gallery-container {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  background: #010101;
+  padding-top: 90px;
+  margin: 0 auto;
+}
+
+.pop-up-gallery-icon-close {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+
+  fill: #f9f9f9;
+}
+.swiper {
+}
+
+.swiper-wrapper {
+  width: 343px;
+  height: 591px;
+}
+
+.pop-up-gallery-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #f9f9f9;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.pop-up-gallery-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: rgba(249, 249, 249, 0.3);
+}
+
+.pop-up-swiper-arrows {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.swiper-arrow-next {
+  fill: #f9f9f9;
+}
+
+.swiper-arrow-prev {
+  fill: rgba(249, 249, 249, 0.2);
+  transform: rotate(180deg);
+}
