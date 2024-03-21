@@ -213,3 +213,11 @@
 .swiper-button-prev-section-team {
   cursor: pointer;
 }
+
+.red-title-section-team {
+  color: var(--accent-color);
+}
+
+.white-title-section-team {
+  color: var(--primary-color);
+}
