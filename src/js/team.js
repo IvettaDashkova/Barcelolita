@@ -16,6 +16,7 @@ const swiperParams = {
     prevEl: '.swiper-button-prev-section-team',
   },
   slidesOffsetAfter: 25,
+  slidesOffsetBefore: 10,
 };
 
 new Swiper('.swiper', swiperParams);
@@ -43,7 +44,7 @@ const createMrkpSwiper = () => {
       <a href="${url}"  target="_blank"
         >
         <svg class="linkedin" width="16" height="16">
-          <use href="/img/icons/symbol.svg#icon-linkedin"></use>
+          <use href="./img/icons/symbol.svg#icon-linkedin"></use>
         </svg>
         </a>
       </div>
