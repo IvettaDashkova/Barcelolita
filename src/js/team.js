@@ -20,14 +20,16 @@ const swiperParams = {
 new Swiper('.swiper', swiperParams);
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 const developerSection = document.querySelector('.developer-section');
-const close = document.querySelector('.icon-close-section-team');
+const closeModal = document.querySelector('.icon-close-section-team');
+const openModal = document.querySelector('.team-button');
 
 function toggleModal() {
   const isMenuOpen = developerSection.classList.toggle('is-open');
   document.body.style.overflow = isMenuOpen ? 'hidden' : '';
 }
 
-close.addEventListener('click', toggleModal);
+closeModal.addEventListener('click', toggleModal);
+openModal.addEventListener('click', toggleModal);
 
 const createMrkpSwiper = () => {
   const markup = team
