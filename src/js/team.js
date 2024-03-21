@@ -9,39 +9,34 @@ const swiperParams = {
     768: { slidesPerView: 3, spaceBetween: 50 },
     1440: { slidesPerView: 6, spaceBetween: 50 },
   },
-  pagination: {
-    el: '.swiper-pagination',
-  },
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next-section-team',
+    prevEl: '.swiper-button-prev-section-team',
   },
   slidesOffsetAfter: 25,
 };
 
 new Swiper('.swiper', swiperParams);
 const swiperWrapper = document.querySelector('.swiper-wrapper');
-// const open = document.querySelector('.open'); // кнопка відкриття модалки
 const developerSection = document.querySelector('.developer-section');
-const close = document.querySelector('.icon-close');
+const close = document.querySelector('.icon-close-section-team');
 
 function toggleModal() {
   const isMenuOpen = developerSection.classList.toggle('is-open');
   document.body.style.overflow = isMenuOpen ? 'hidden' : '';
 }
 
-// open.addEventListener('click', toggleModal); // слухач відкриття модалки
 close.addEventListener('click', toggleModal);
 
 const createMrkpSwiper = () => {
   const markup = team
-    .map(({ src, userName, developer, url }) => {
+    .map(({ small, large, userName, developer, url }) => {
       return `<div class="swiper-slide">
       <div class="developer-container">
   <div class="container-img">
-    <div class="box-img">
-      <div class="icon-linkedin">
+    <div class="box-img-team">
+      <div class="icon-linkedin-team">
       <a href="${url}" target="_blank"
         >
         <svg class="linkedin" width="16" height="16">
@@ -50,12 +45,33 @@ const createMrkpSwiper = () => {
         </a>
       </div>
       <a href="${url}" target="_blank"
-        ><img class="dev-photo" src="${src}" alt="${userName}"
-      /></a>
+        >
+<picture>
+  <source
+    media="(min-width: 768px )"
+    srcset="
+      ${small}    1x,
+      ${large} 2x
+    "
+  />
+  <source
+    media="(max-width: 767.98px)"
+    srcset="
+      ${small}    1x,
+      ${large} 2x
+    "
+  />
+  <img
+    class="dev-photo"
+    src="${small}"
+    alt="${userName}"
+  />
+</picture>
+        </a>
     </div>
   </div>
-  <h3 class="devName">${userName}</h3>
-  <p class="dev">${developer}</p>
+  <h3 class="dev-name">${userName}</h3>
+  <p class="dev-desription">${developer}</p>
   </div>
 </div>`;
     })

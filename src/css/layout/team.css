@@ -37,8 +37,9 @@
   margin-bottom: 64px;
 }
 
-.icon-close {
+.icon-close-section-team {
   fill: #fff;
+  cursor: pointer;
 }
 
 .team {
@@ -91,7 +92,7 @@
   position: relative;
 }
 
-.box-img {
+.box-img-team {
   overflow: hidden;
   border: 2px solid rgb(165, 8, 7);
   border-radius: 50%;
@@ -100,7 +101,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .box-img {
+  .box-img-team {
     width: 200px;
     height: 200px;
   }
@@ -110,7 +111,7 @@
   filter: grayscale(100%);
 }
 
-.devName {
+.dev-name {
   margin: 16px 0 8px;
   text-transform: uppercase;
   color: var(--primary-color);
@@ -118,25 +119,24 @@
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.03em;
-  text-align: left;
-  text-transform: uppercase;
+  text-align: center;
 }
 
-.dev {
+.dev-desription {
   color: rgba(249, 249, 249, 0.3);
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.03em;
-  text-align: left;
+  text-align: center;
   text-transform: capitalize;
 }
 
-.arrow {
+.arrow-team {
   fill: var(--primary-color);
 }
 
-.arrow-left {
+.arrow-left-team {
   transform: rotate(180deg);
 }
 
@@ -154,7 +154,7 @@
   }
 }
 
-.icon-linkedin {
+.icon-linkedin-team {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,7 +169,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .icon-linkedin {
+  .icon-linkedin-team {
     top: 160px;
   }
 }
