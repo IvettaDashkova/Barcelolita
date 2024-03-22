@@ -1,7 +1,6 @@
 .footer {
   max-width: 375px;
   padding-top: 62px;
-  padding-bottom: 64px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   margin: 0 auto;
@@ -9,6 +8,7 @@
 .block-footer {
   padding-left: 16px;
   padding-right: 16px;
+  padding-bottom: 64px;
 }
 .footer-img {
   width: 50px;
@@ -55,12 +55,18 @@
   overflow-wrap: break-word;
   width: 92px;
 }
+.team-info {
+  padding: 16px 8px;
+  border-top: 1px solid rgba(249, 249, 249, 0.15);
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (min-width: 768px) {
   .footer {
     padding-top: 80px;
     max-width: 768px;
-    padding-bottom: 80px;
   }
   .block-footer {
     display: flex;
@@ -74,6 +80,9 @@
     margin-bottom: 0;
   }
   .footer-title-item {
+    font-size: 44px;
+  }
+  .footer-title-link {
     font-size: 44px;
   }
   .footer-contacts-box {
@@ -110,14 +119,6 @@
 
 .footer-team {
   margin-bottom: 0;
-}
-.team-info {
-  padding: 16px 8px;
-  border-top: 1px solid rgba(249, 249, 249, 0.15);
-  background-color: var(--secondary-color);
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
 }
 .team-button {
   padding: 0;
