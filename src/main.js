@@ -4,4 +4,4 @@ import changeLang from './js/footer';
 
 mobileMenu();
 langSwitcher();
-// changeLang();
+changeLang();
