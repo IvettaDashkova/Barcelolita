@@ -1,18 +1,32 @@
 import Swiper from 'swiper';
-import { Navigation, Scrollbar } from 'swiper/modules';
+import { Navigation, Scrollbar, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow';
 import '../css/layout/pop-up-gallery.css';
-// import 'swiper/css/pagination';
 import portfolio from './pop-up-gallery.json';
 
 const swiperParams = {
-  modules: [Navigation, Scrollbar],
+  modules: [Navigation, Scrollbar, EffectCoverflow],
 
   breakpoints: {
     375: { slidesPerView: 1, spaceBetween: 2 },
     // 768: { slidesPerView: 1 },
-    1440: { slidesPerView: 3 },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+
+  effect: 'coverflow',
+  slidesPerView: 3,
+  spaceBetween: 20,
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
   },
 
   navigation: {
@@ -22,11 +36,6 @@ const swiperParams = {
 
   loop: true,
 
-  //   effect: 'coverflow',
-  //   coverflowEffect: {
-  //     rotate: 30,
-  //     slideShadows: false,
-  //   },
   centeredSlides: true,
   //   centeredSlidesBounds: true,
 

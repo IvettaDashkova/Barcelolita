@@ -40,6 +40,11 @@
     "id": 7,
     "name": "LOOKBOOK",
     "description": "Images of people, emphasizing their individuality.",
-    "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
+    "img": [
+      "../img/IMG_4870.jpg",
+      "../img/IMG_4956.jpg",
+      "../img/IMG_5106.jpg",
+      "../img/IMG_5028.jpg"
+    ]
   }
 ]
