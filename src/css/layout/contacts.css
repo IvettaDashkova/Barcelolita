@@ -6,7 +6,7 @@
   padding-bottom: 40px;
   background-color: var(--secondary-color);
   height: 550px;
-  background-image: url(../img/contacts-img/barcelolita-mobile.jpg);
+  background-image: url(./img/contacts-img/barcelolita-mobile.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -19,6 +19,9 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
+}
+.contacts-title {
+  opacity: 0;
 }
 .contacts-message {
   font-family: inherit;

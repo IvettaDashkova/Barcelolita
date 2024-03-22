@@ -39,10 +39,6 @@
   text-transform: uppercase;
   color: rgba(249, 249, 249, 0.5);
 }
-.team-watermark::before {
-  content: '©';
-  padding-right: 4px;
-}
 
 @media screen and (min-width: 768px) {
   .team-info {

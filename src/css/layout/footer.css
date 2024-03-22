@@ -29,19 +29,21 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: rgba(249, 249, 249, 0.5);
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 .footer-title-item {
+  margin-bottom: 10px;
+}
+.footer-title-link {
   font-family: inherit;
   font-weight: 500;
   font-size: 20px;
   line-height: 1em;
   letter-spacing: -0.03em;
   color: var(--primary-color);
-  margin-bottom: 6px;
 }
-.footer-title-item:hover,
-.footer-title-item:focus {
+.footer-title-link:hover,
+.footer-title-link:focus {
   color: var(--accent-color);
   outline: transparent;
 }
@@ -98,7 +100,7 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  .footer-title-item {
+  .footer-title-link {
     font-size: 64px;
   }
   .footer-contacts-box-child {

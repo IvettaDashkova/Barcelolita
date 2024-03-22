@@ -1,26 +1,27 @@
 import dict from './dict.json';
 
-function langSwitcher() {
+function changeLang() {
   let initialValue = 'en';
-  const chekerFields = document.querySelectorAll('.svitcher-fieldset');
-  let dataLanguage = document.querySelectorAll('[data-en]');
+  const getLangs = document.querySelectorAll('.svitcher-fieldset');
+  let dataLang = document.querySelectorAll('[data-en]');
 
-  chekerFields.forEach(chekerField => {
-    chekerField.addEventListener('click', chooseLang);
+  getLangs.forEach(getLang => {
+    getLang.addEventListener('click', chooseLang);
   });
 
   function chooseLang(e) {
-    switchLang(e.target.value);
+    language(e.target.value);
     localStorage.setItem('lang', e.target.value);
   }
+  const res = chooseLang();
+  console.log(res);
 
-  function switchLang(lang) {
+  function language(lang) {
     for (let key in dict[lang]) {
       document.getElementById(key).textContent = dict[lang][key];
     }
-
     if (lang === 'en') {
-      dataLanguage.forEach(data => {
+      dataLang.forEach(data => {
         data.textContent = data.dataset.en;
       });
       document.querySelectorAll('.en-text').forEach(el => {
@@ -30,7 +31,7 @@ function langSwitcher() {
         el.classList.remove('svitcher-highlight');
       });
     } else {
-      dataLanguage.forEach(data => {
+      dataLang.forEach(data => {
         data.textContent = data.dataset.ua;
       });
       document.querySelectorAll('.ua-text').forEach(el => {
@@ -41,14 +42,12 @@ function langSwitcher() {
       });
     }
   }
-
   let langCheck = localStorage.getItem('lang');
 
   if (langCheck) {
     initialValue = langCheck;
   }
-
-  switchLang(initialValue);
+  language(initialValue);
 }
 
-export default langSwitcher;
+export default changeLang;
