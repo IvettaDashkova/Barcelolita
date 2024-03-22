@@ -15,8 +15,8 @@ const swiperParams = {
   //   },
 
   navigation: {
-    nextEl: '.swiper-arrow-next',
-    prevEl: '.swiper-arrow-prev',
+    nextEl: '.pop-up-gallery-swiper-arrow-next',
+    prevEl: '.pop-up-gallery-swiper-arrow-prev',
   },
 
   loop: true,
@@ -26,16 +26,13 @@ const swiperParams = {
   //     rotate: 30,
   //     slideShadows: false,
   //   },
-  //   centeredSlides: true,
+  centeredSlides: true,
 
-  //   keyboard: {
-  //     enabled: true,
-  //     onlyInViewport: false,
-  //   },
+  keyboard: {
+    enabled: true,
+  },
 
-  //   mousewheel: {
-  //     invert: true,
-  //   },
+  mousewheel: true,
 
   //   scrollbar: {
   //     el: '.swiper-scrollbar',
@@ -74,4 +71,4 @@ function renderPopUpGallery(portfolio) {
   wrapper.innerHTML = markup;
 }
 
-// renderPopUpGallery(portfolio);
+renderPopUpGallery(portfolio);
