@@ -63,7 +63,6 @@
   font-weight: 500;
   line-height: 50px;
   text-align: left;
-  color: var(--primary-color);
   letter-spacing: -0.03em;
   margin: 0 16px 64px;
 }
@@ -215,8 +214,4 @@
 
 .red-title-section-team {
   color: var(--accent-color);
-}
-
-.white-title-section-team {
-  color: var(--primary-color);
 }
