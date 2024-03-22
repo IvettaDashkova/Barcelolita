@@ -1,27 +1,73 @@
 
 import Swiper from 'swiper/bundle';
-
-// import styles bundle
 import 'swiper/css/bundle';
 import { Navigation } from 'swiper/modules';
-// import Swiper and modules styles
 import 'swiper/css/navigation';
-// init Swiper:
+
 const btnPrev = document.querySelector('.icon-arrow-prev');
 const btnNext = document.querySelector('.icon-arrow-next');
 const swiperSlides = document.querySelectorAll('.swiper-slide');
-// const click = document.querySelector('.click');
-// const content = document.querySelector('.content');
-import 'animate.css';
+
+// const swiperParams = {
+//   modules: [Navigation],
+//   breakpoints: {
+//     375: {
+//       slidesPerView: 1,
+//     on: {
+//     slideChange: function () {
+//       const activeIndex = this.activeIndex;
+
+//       if (activeIndex === 1 || activeIndex === 2) {
+//         btnPrev.style.fill = '#f9f9f9';
+//       } else {
+//         btnPrev.style.fill = 'rgba(249, 249, 249, 0.226)';
+//       }
+
+//       if (activeIndex === 0 || activeIndex === 1) {
+//         btnNext.style.fill = '#f9f9f9';
+//       } else {
+//         btnNext.style.fill = 'rgba(249, 249, 249, 0.226)';
+//       }
+//     }
+//       },
+//   effect: 'fade',
+//   fadeEffect: { 
+//     crossFade: true,
+//   },
+//     },
+//     768: { slidesPerView: 2.2, spaceBetween: 16 },
+//     1440: { slidesPerView: 3, spaceBetween: 16 },
+//   },
+//   navigation: {
+//     nextEl: '.arrow-next',
+//     prevEl: '.arrow-prev',
+//   },
+//     grabCursor: true,
+//   keyboard: {
+//     enabled: true,
+//     onlyInViewport: true,
+//     pageUpDown: true,
+//   },
+//   mousewheel: {
+//     sensitivity: 1,
+//     eventsTarget: '.swiper',
+//   },
+// }
+
+// const priceSwiper = slideData => {
+//   const swiperPrice = slideData;
+//   const swiper = new Swiper(`[data-id="${swiperPrice}"]`, swiperParams);
+//   console.log(swiperPrice);
+//   return swiper;
+// }
+
+// priceSwiper('price');
 
 
-
-const swiper = new Swiper('.swiper', {
-  
+const swiperPrice = new Swiper('.swiper', {
   navigation: {
     nextEl: '.arrow-next',
     prevEl: '.arrow-prev',
-    
   },
   on: {
     slideChange: function () {
@@ -46,7 +92,6 @@ const swiper = new Swiper('.swiper', {
     onlyInViewport: true,
     pageUpDown: true,
   },
-
   mousewheel: {
     sensitivity: 1,
     eventsTarget: '.swiper',
@@ -55,29 +100,12 @@ const swiper = new Swiper('.swiper', {
   fadeEffect: { 
     crossFade: true,
   },
-
   breakpoints: {
     768: {
       slidesPerView: 2.2,
       spaceBetween: 16,
       effect: 'slide',
     },
-      on: {
-        slideChange: function () {
-          const activeIndex = this.activeIndex;
-          if (activeIndex === 0) {
-            btnPrev.style.fill = 'rgba(249, 249, 249, 0.226)';
-            btnNext.style.fill = '#f9f9f9';
-          } else if (activeIndex === 1) {
-            btnPrev.style.fill = '#f9f9f9';
-            btnNext.style.fill = '#f9f9f9';
-          } else {
-            btnPrev.style.fill = '#f9f9f9';
-            btnNext.style.fill = 'rgba(249, 249, 249, 0.226)';
-          }
-        }
-    },
-
   },
 });
 
@@ -91,6 +119,7 @@ swiperSlides.forEach(slide => {
     
   });
 });
+
 
 // swiperSlides.forEach((slide, index) => {
 //   slide.addEventListener('click', () => {
