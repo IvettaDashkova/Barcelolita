@@ -3,6 +3,8 @@ import { Navigation } from 'swiper/modules';
 import team from './team.json';
 import 'swiper/css/navigation';
 import 'swiper/css';
+import icons from '../img/icons/symbol.svg';
+
 const swiperParams = {
   modules: [Navigation],
   breakpoints: {
@@ -19,14 +21,20 @@ const swiperParams = {
   slidesOffsetBefore: 10,
 };
 
-new Swiper('.swiper', swiperParams);
+const gallerySwiperTeam = photoEl => {
+  const photoId = photoEl;
+  const swiper = new Swiper(`[data-id="${photoId}"]`, swiperParams);
+  return swiper;
+};
+gallerySwiperTeam('gallery-photo-team');
+
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 const developerSection = document.querySelector('.developer-section');
 const closeModal = document.querySelector('.icon-close-section-team');
 const openModal = document.querySelector('.team-button');
 
 function toggleModal() {
-  const isMenuOpen = developerSection.classList.toggle('is-open');
+  const isMenuOpen = developerSection.classList.toggle('is-open-section-team');
   document.body.style.overflow = isMenuOpen ? 'hidden' : '';
 }
 
@@ -44,7 +52,7 @@ const createMrkpSwiper = () => {
       <a href="${url}"  target="_blank"
         >
         <svg class="linkedin" width="16" height="16">
-          <use href="./img/icons/symbol.svg#icon-linkedin"></use>
+          <use href="${icons}#icon-linkedin"></use>
         </svg>
         </a>
       </div>

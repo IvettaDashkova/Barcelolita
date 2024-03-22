@@ -15,7 +15,7 @@
   height: 100%;
 }
 
-.is-open {
+.is-open-section-team {
   transform: translate(0);
 }
 
@@ -64,7 +64,6 @@
   font-weight: 500;
   line-height: 50px;
   text-align: left;
-  color: var(--primary-color);
   letter-spacing: -0.03em;
   margin: 0 16px 64px;
 }
@@ -212,4 +211,8 @@
 .swiper-button-next-section-team,
 .swiper-button-prev-section-team {
   cursor: pointer;
+}
+
+.red-title-section-team {
+  color: var(--accent-color);
 }
