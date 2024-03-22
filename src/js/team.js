@@ -1,6 +1,9 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import team from './team.json';
+import 'swiper/css/navigation';
+import 'swiper/css';
+import icons from '../img/icons/symbol.svg';
 
 const swiperParams = {
   modules: [Navigation],
@@ -10,22 +13,28 @@ const swiperParams = {
     1000: { slidesPerView: 4, spaceBetween: 50 },
     1440: { slidesPerView: 6, spaceBetween: 50 },
   },
-
   navigation: {
     nextEl: '.swiper-button-next-section-team',
     prevEl: '.swiper-button-prev-section-team',
   },
   slidesOffsetAfter: 25,
+  slidesOffsetBefore: 10,
 };
 
-new Swiper('.swiper', swiperParams);
-const swiperWrapper = document.querySelector('.swiper-wrapper');
+const gallerySwiperTeam = photoEl => {
+  const photoId = photoEl;
+  const swiper = new Swiper(`[data-id="${photoId}"]`, swiperParams);
+  return swiper;
+};
+gallerySwiperTeam('gallery-photo-team');
+
+const swiperWrapper = document.getElementById('team-section-wrapper');
 const developerSection = document.querySelector('.developer-section');
 const closeModal = document.querySelector('.icon-close-section-team');
 const openModal = document.querySelector('.team-button');
 
 function toggleModal() {
-  const isMenuOpen = developerSection.classList.toggle('is-open');
+  const isMenuOpen = developerSection.classList.toggle('is-open-section-team');
   document.body.style.overflow = isMenuOpen ? 'hidden' : '';
 }
 
@@ -34,16 +43,16 @@ openModal.addEventListener('click', toggleModal);
 
 const createMrkpSwiper = () => {
   const markup = team
-    .map(({ small, large, userName, developer, url }) => {
+    .map(({ small, large, userNameEn, developer, url, userNameUa }) => {
       return `<div class="swiper-slide">
       <div class="developer-container">
   <div class="container-img">
     <div class="box-img-team">
       <div class="icon-linkedin-team">
-      <a href="${url}" target="_blank"
+      <a href="${url}"  target="_blank"
         >
         <svg class="linkedin" width="16" height="16">
-          <use href="../img/icons/symbol.svg#icon-linkedin"></use>
+          <use href="${icons}#icon-linkedin"></use>
         </svg>
         </a>
       </div>
@@ -67,14 +76,14 @@ const createMrkpSwiper = () => {
   <img
     class="dev-photo"
     src="${small}"
-    alt="${userName}"
+    alt="${userNameEn}"
   />
 </picture>
         </a>
     </div>
   </div>
-  <h3 class="dev-name">${userName}</h3>
-  <p class="dev-desription">${developer}</p>
+  <h3 class="dev-name" data-ua="${userNameUa}" data-en="${userNameEn}">${userNameEn}</h3>
+  <p class="dev-desription" >${developer}</p>
   </div>
 </div>`;
     })
