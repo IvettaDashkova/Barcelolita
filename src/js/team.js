@@ -28,7 +28,7 @@ const gallerySwiperTeam = photoEl => {
 };
 gallerySwiperTeam('gallery-photo-team');
 
-const swiperWrapper = document.querySelector('.swiper-wrapper');
+const swiperWrapper = document.getElementById('team-section-wrapper');
 const developerSection = document.querySelector('.developer-section');
 const closeModal = document.querySelector('.icon-close-section-team');
 const openModal = document.querySelector('.team-button');
