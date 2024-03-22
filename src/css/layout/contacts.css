@@ -6,7 +6,7 @@
   padding-bottom: 40px;
   background-color: var(--secondary-color);
   height: 550px;
-  background-image: url(../img/contacts-img/barcelolita-mobile.jpg);
+  background-image: url(../../img/contacts-img/barcelolita-mobile.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -19,6 +19,10 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
+}
+.contacts-title {
+  opacity: 0;
+  white-space: pre-line;
 }
 .contacts-message {
   font-family: inherit;
@@ -46,7 +50,7 @@
   .contacts-block {
     max-width: 768px;
     height: 880px;
-    background-image: url(../img/contacts-img/barcelolita-tablet.jpg);
+    background-image: url(../img/contacts-img/barcelolita-tablet.webp);
     padding-bottom: 64px;
   }
   .contacts-message {
@@ -62,7 +66,7 @@
     .contacts-block {
       max-width: 1440px;
       height: 880px;
-      background-image: url(../img/contacts-img/barcelolita-desktop.jpg);
+      background-image: url(../img/contacts-img/barcelolita-desktop.webp);
     }
     .contacts-logo {
       font-size: 200px;
