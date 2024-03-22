@@ -1,19 +1,28 @@
-<div class="pop-up-gallery-backdrop">
+<div class="pop-up-gallery-backdrop is-open">
   <div class="pop-up-gallery-container">
     <svg class="pop-up-gallery-icon-close" width="26" height="26">
       <use href="../img/icons/symbol.svg#icon-close"></use>
     </svg>
-    <div class="swiper">
-      <div class="swiper-wrapper"></div>
-    </div>
-    <div class="pop-up-swiper-arrows">
-      <svg class="pop-up-gallery-swiper-arrow-prev" width="32" height="32">
-        <use href="../img/icons/symbol.svg#icon-arrow-1" />
-      </svg>
+    <div class="pop-up-gallary-cont-layout">
+      <div class="swiper pop-up-gallery-swiper" data-id="photo">
+        <div class="swiper-wrapper pop-up-gallery-wrapper"></div>
+      </div>
 
-      <svg class="pop-up-gallery-swiper-arrow-next" width="32" height="32">
-        <use href="../img/icons/symbol.svg#icon-arrow-1" />
-      </svg>
+      <div class="pop-up-gallary-desc-wrapper">
+        <div class="pop-up-gallery-descr">
+          <h3 class="pop-up-gallery-title">name</h3>
+          <p class="pop-up-gallery-text">description</p>
+        </div>
+        <div class="pop-up-swiper-arrows">
+          <svg class="pop-up-gallery-swiper-arrow-prev" width="32" height="32">
+            <use href="../img/icons/symbol.svg#icon-arrow-1" />
+          </svg>
+
+          <svg class="pop-up-gallery-swiper-arrow-next" width="32" height="32">
+            <use href="../img/icons/symbol.svg#icon-arrow-1" />
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </div>
