@@ -2,7 +2,7 @@ import dict from './dict.json';
 
 function langSwitcher() {
   let initialValue = 'en';
-  const chekerFields = document.querySelectorAll('.svitcher-fieldset');
+  const chekerFields = document.querySelectorAll('.svitcher-text');
   let dataLanguage = document.querySelectorAll('[data-en]');
 
   chekerFields.forEach(chekerField => {
@@ -16,10 +16,14 @@ function langSwitcher() {
 
   function switchLang(lang) {
     for (let key in dict[lang]) {
-      document.getElementById(key).textContent = dict[lang][key];
+      let searchKey = '[data-id=' + key + ']';
+      let translateEl = document.querySelector(searchKey);
+      if (translateEl) {
+        translateEl.textContent = dict[lang][key];
+      }
     }
 
-    if (lang === 'en') {
+    if (lang == 'en') {
       dataLanguage.forEach(data => {
         data.textContent = data.dataset.en;
       });

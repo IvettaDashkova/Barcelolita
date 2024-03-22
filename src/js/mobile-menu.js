@@ -3,8 +3,10 @@ function mobileMenu() {
   const backdropMenu = document.querySelector('.mobmenu-backdrop');
   openButton.addEventListener('click', openMenu);
   const closeButton = document.querySelector('.mobmenu-close-button');
+  const allSite = document.querySelector('body');
 
   function openMenu() {
+    allSite.classList.add('noscroll')
     backdropMenu.classList.add('mobmenu-visible');
     const timerId = setTimeout(() => {
       backdropMenu.classList.add('mobmenu-open');
@@ -13,6 +15,7 @@ function mobileMenu() {
   }
 
   function closeMenu() {
+    allSite.classList.remove('noscroll')
     backdropMenu.classList.remove('mobmenu-open');
     const timerId = setTimeout(() => {
       backdropMenu.classList.remove('mobmenu-visible');
