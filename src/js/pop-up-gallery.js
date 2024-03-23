@@ -62,7 +62,6 @@ const popUpGallerySlider = sliderData => {
   return swiper;
 };
 
-popUpGallerySlider('photo');
 const wrapper = document.querySelector('.swiper-wrapper');
 const closeBtn = document.querySelector('.pop-up-gallery-icon-close');
 const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
@@ -73,13 +72,15 @@ const popUpGalleryArrowPrev = document.querySelector(
 const popUpGalleryArrowNext = document.querySelector(
   '.pop-up-gallery-swiper-arrow-next'
 );
+const bodyScroll = document.querySelector('body');
 
-popUpGalleryArrowNext.addEventListener('click', e => {
-  popUpGalleryArrowPrev.style.fill = '#f9f9f9';
-});
+// popUpGalleryArrowNext.addEventListener('click', e => {
+//   popUpGalleryArrowPrev.style.fill = '#f9f9f9';
+// });
 
 closeBtn.addEventListener('click', e => {
   galleryBackdrop.classList.remove('is-open');
+  bodyScroll.classList.remove('noscroll');
 });
 
 portfolioList.addEventListener('click', e => {
@@ -93,19 +94,30 @@ portfolioList.addEventListener('click', e => {
 
     console.log(portfolioItemName);
     galleryBackdrop.classList.add('is-open');
+    bodyScroll.classList.add('noscroll');
+
     renderPopUpGallery(portfolio, portfolioItemName);
+    popUpGallerySlider('photo');
   }
 });
 function renderPopUpGallery(portfolio, portfolioItemName) {
   const galleryCurrent = portfolio.find(
     currentType =>
-      currentType.name.toLowerCase() === portfolioItemName.toLowerCase()
+      currentType.nameEn.toLowerCase() === portfolioItemName.toLowerCase()
   );
   //   console.log(galleryCurrent);
-  const { name, description, img } = galleryCurrent;
+  const { nameEn, nameUa, descriptionEn, descriptionUa, img } = galleryCurrent;
 
-  document.querySelector('.pop-up-gallery-title').textContent = name;
-  document.querySelector('.pop-up-gallery-text').textContent = description;
+  const popUpGalleryTitle = document.querySelector('.pop-up-gallery-title');
+  const popUpGalleryText = document.querySelector('.pop-up-gallery-text');
+  let languageChange = localStorage.getItem('lang');
+  if (languageChange === 'en') {
+    popUpGalleryTitle.textContent = nameEn;
+    popUpGalleryText.textContent = descriptionEn;
+  } else {
+    popUpGalleryTitle.textContent = nameUa;
+    popUpGalleryText.textContent = descriptionUa;
+  }
 
   const markup = img
     .map(imgItem => {

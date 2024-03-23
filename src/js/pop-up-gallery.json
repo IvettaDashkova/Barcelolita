@@ -1,45 +1,59 @@
 [
   {
     "id": 1,
-    "name": "Portrait photo",
-    "description": "Images with an emphasis on faces, facial expressions and character.",
+    "nameEn": "Portrait photo",
+    "nameUa": "Портретне фото",
+    "descriptionEn": "Images with an emphasis on faces, facial expressions and character.",
+    "descriptionUa": "Зображення з акцентом на обличчях, міміці та характері.",
     "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
   },
 
   {
     "id": 2,
-    "name": "Fashion photo",
-    "description": "The art of creating expressive and stylish images that emphasize fashion and style.",
+    "nameEn": "Fashion photo",
+    "nameUa": "Fashion фото",
+    "descriptionEn": "The art of creating expressive and stylish images that emphasize fashion and style.",
+    "descriptionUa": "Мистецтво створення виразних і стильних образів, що підкреслюють моду і стиль.",
     "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
   },
   {
     "id": 3,
-    "name": "Brand photo",
-    "description": "Reflects the uniqueness of the brand, its values, style and character through visual elements.",
+    "nameEn": "Brand photo",
+    "nameUa": "Фото для брендів",
+    "descriptionEn": "Reflects the uniqueness of the brand, its values, style and character through visual elements.",
+    "descriptionUa": "Відображає унікальність бренду, його цінності, стиль і характер за допомогою візуальних елементів.",
     "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
   },
   {
     "id": 4,
-    "name": "Genre photo",
-    "description": "A variety of categories and styles covering different themes, moods.",
+    "nameEn": "Genre photo",
+    "nameUa": "Жанрове фото",
+    "descriptionEn": "A variety of categories and styles covering different themes, moods.",
+    "descriptionUa": "Різноманітність категорій і стилів, що охоплюють різні теми, настрої.",
     "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
   },
   {
     "id": 5,
-    "name": "Studio photo",
-    "description": "Capturing the beauty of nature and landscapes.",
+    "nameEn": "Studio photo",
+    "nameUa": "Студійне фото",
+    "descriptionEn": "Capturing the beauty of nature and landscapes.",
+    "descriptionUa": "Захоплення красою природи і пейзажів.",
     "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
   },
   {
     "id": 6,
-    "name": "Couple photo",
-    "description": "Used to reinforce and build the brand's visual identity.",
+    "nameEn": "Couple photo",
+    "nameUa": "Сімейне фото",
+    "descriptionEn": "Used to reinforce and build the brand's visual identity.",
+    "descriptionUa": "Зображення людей, що підкреслюють їхню індивідуальність.",
     "img": ["../img/IMG_4870.jpg", "../img/IMG_4956.jpg", "../img/IMG_5106.jpg"]
   },
   {
     "id": 7,
-    "name": "LOOKBOOK",
-    "description": "Images of people, emphasizing their individuality.",
+    "nameEn": "LOOKBOOK",
+    "nameUa": "Lookbook",
+    "descriptionEn": "Images of people, emphasizing their individuality.",
+    "descriptionUa": "Використовується для посилення та побудови візуальної ідентичності бренду.",
     "img": [
       "../img/IMG_4870.jpg",
       "../img/IMG_4956.jpg",

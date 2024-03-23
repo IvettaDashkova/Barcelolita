@@ -4,7 +4,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgb(1, 1, 1, 0.9);
+  background: rgb(1, 1, 1, 0.8);
   /* background: gray; */
   z-index: 100;
   transform: translate(100%);
@@ -81,7 +81,8 @@
 }
 
 .pop-up-gallery-swiper-arrow-prev {
-  fill: rgba(249, 249, 249, 0.2);
+  fill: #f9f9f9;
+  /* fill: rgba(249, 249, 249, 0.2); */
   transform: rotate(180deg);
 }
 
@@ -130,15 +131,6 @@
   .pop-up-swiper-arrows {
     text-align: center;
     margin-top: 32px;
-  }
-
-  .pop-up-gallery-swiper-arrow-next {
-    fill: #f9f9f9;
-  }
-
-  .pop-up-gallery-swiper-arrow-prev {
-    fill: rgba(249, 249, 249, 0.2);
-    transform: rotate(180deg);
   }
 }
 
