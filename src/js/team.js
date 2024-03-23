@@ -28,10 +28,10 @@
 // };
 // gallerySwiperTeam('gallery-photo-team');
 
-// const swiperWrapper = document.querySelector('.swiper-wrapper');
-// const developerSection = document.querySelector('.developer-section');
-// const closeModal = document.querySelector('.icon-close-section-team');
-// const openModal = document.querySelector('.team-button');
+const swiperWrapper = document.getElementById('team-section-wrapper');
+const developerSection = document.querySelector('.developer-section');
+const closeModal = document.querySelector('.icon-close-section-team');
+const openModal = document.querySelector('.team-button');
 
 // function toggleModal() {
 //   const isMenuOpen = developerSection.classList.toggle('is-open-section-team');
