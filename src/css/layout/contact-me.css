@@ -170,6 +170,11 @@
   transition: color 0.25s ease-in-out;
 }
 
+.input-contact-me:-webkit-autofill {
+  -webkit-text-fill-color: var(--primary-color);
+  background-clip: text;
+}
+
 .send-btn-contact-me {
   position: absolute;
   right: 0;
