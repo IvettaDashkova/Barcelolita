@@ -56,11 +56,28 @@
     .video-container {
      margin-bottom: 140px;
     }
- }
+}
+
+.video-container img#video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.video-container video {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .video {
     width: 100%;
-    height: 574px;
+    height: auto;
 }
 
 .play-button {
@@ -81,10 +98,15 @@
     align-items: center;
 }
 
-.play-icon {
-    fill: #fff;
-    width: 80px;
-    height: 80px;
+.icon-play {
+    position: absolute;
+    fill: white;
+    width: 40%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .quote {
