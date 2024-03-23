@@ -23,6 +23,17 @@ function langSwitcher() {
       }
     }
 
+    // Add Svitlana Klymenko
+    let inputFields = document.querySelectorAll('.input-contact-me');
+    inputFields.forEach(input => {
+      if (lang === 'en') {
+        input.placeholder = input.dataset.enPlaceholder;
+      } else {
+        input.placeholder = input.dataset.uaPlaceholder;
+      }
+    });
+    // The end
+
     if (lang == 'en') {
       dataLanguage.forEach(data => {
         data.textContent = data.dataset.en;

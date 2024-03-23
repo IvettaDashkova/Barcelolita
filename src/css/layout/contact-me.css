@@ -87,11 +87,13 @@
   line-height: 1;
   letter-spacing: -0.03em;
 
-  margin-bottom: 16px;
-  padding-right: 8px;
+  /* margin-bottom: 16px; */
+  padding-right: 4px;
 }
 
 .span-subtitle-contact-me {
+  display: inline-block;
+
   font-weight: 500;
   font-size: 44px;
   line-height: 1;
@@ -104,11 +106,10 @@
   .subtitle-contact-me {
     font-size: 100px;
 
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
+    padding-right: 16px;
   }
   .span-subtitle-contact-me {
-    display: block;
-
     font-size: 100px;
 
     margin-bottom: 32px;
@@ -159,14 +160,13 @@
   transition: border 0.25s ease-in-out;
 }
 
+.input-contact-me:hover,
 .input-contact-me:focus {
   outline: none;
   border: 1px solid var(--accent-color);
 }
 
 .input-contact-me:focus::placeholder {
-  color: var(--primary-color);
-
   transition: color 0.25s ease-in-out;
 }
 
@@ -181,7 +181,7 @@
 
   min-width: 120px;
   height: 54px;
-  padding: 17px 28px;
+  padding: 18px 28px;
   border-radius: 12px;
   border: none;
 
@@ -221,7 +221,7 @@
 
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  justify-content: space-between;
 
   padding-top: 32px;
   padding-left: 16px;
@@ -233,12 +233,13 @@
 
 @media only screen and (min-width: 768px) {
   .contacts-container-contact-me {
+    justify-content: flex-start;
+    gap: 100px;
+
     padding-top: 64px;
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 64px;
-
-    gap: 100px;
   }
 }
 

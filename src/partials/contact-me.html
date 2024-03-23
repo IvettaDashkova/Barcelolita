@@ -1,4 +1,4 @@
-<div class="backdrop-modal-contact-me">
+<div class="backdrop-modal-contact-me is-hidden">
   <div class="container modal-contact-me">
     <div class="head-container-contact-me">
       <h4 class="head-title-contact-me" data-id="contact-me">Contact me</h4>
@@ -29,7 +29,8 @@
             type="text"
             name="user-message"
             class="input-contact-me"
-            placeholder="Let's talk"
+            data-en-placeholder="Let's talk"
+            data-ua-placeholder="Давайте поговоримо"
             required
           />
           <button
@@ -57,7 +58,10 @@
           </ul>
         </div>
         <div class="socials-container-contact-me">
-          <p class="contacts-paragraph-contact-me" data-id="follow-me">
+          <p
+            class="contacts-paragraph-contact-me"
+            data-id="contact-me-follow-me"
+          >
             Follow me:
           </p>
           <ul class="socials-list-contact-me">
