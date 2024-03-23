@@ -8,83 +8,12 @@ const btnPrev = document.querySelector('.icon-arrow-prev');
 const btnNext = document.querySelector('.icon-arrow-next');
 const swiperSlides = document.querySelectorAll('.swiper-slide');
 
-// const swiperParams = {
-//   modules: [Navigation],
-//   breakpoints: {
-//     375: {
-//       slidesPerView: 1,
-//     on: {
-//     slideChange: function () {
-//       const activeIndex = this.activeIndex;
-
-//       if (activeIndex === 1 || activeIndex === 2) {
-//         btnPrev.style.fill = '#f9f9f9';
-//       } else {
-//         btnPrev.style.fill = 'rgba(249, 249, 249, 0.226)';
-//       }
-
-//       if (activeIndex === 0 || activeIndex === 1) {
-//         btnNext.style.fill = '#f9f9f9';
-//       } else {
-//         btnNext.style.fill = 'rgba(249, 249, 249, 0.226)';
-//       }
-//     }
-//       },
-//   effect: 'fade',
-//   fadeEffect: { 
-//     crossFade: true,
-//   },
-//     },
-//     768: { slidesPerView: 2.2, spaceBetween: 16 },
-//     1440: { slidesPerView: 3, spaceBetween: 16 },
-//   },
-//   navigation: {
-//     nextEl: '.arrow-next',
-//     prevEl: '.arrow-prev',
-//   },
-//     grabCursor: true,
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: true,
-//     pageUpDown: true,
-//   },
-//   mousewheel: {
-//     sensitivity: 1,
-//     eventsTarget: '.swiper',
-//   },
-// }
-
-// const priceSwiper = slideData => {
-//   const swiperPrice = slideData;
-//   const swiper = new Swiper(`[data-id="${swiperPrice}"]`, swiperParams);
-//   console.log(swiperPrice);
-//   return swiper;
-// }
-
-// priceSwiper('price');
-
-
-const swiperPrice = new Swiper('.swiper', {
+const initSwiper = slideData => {
+  const swiperPrice = slideData;
+const swiper = new Swiper(`[data-id="${swiperPrice}"]`, {
   navigation: {
     nextEl: '.arrow-next',
     prevEl: '.arrow-prev',
-  },
-  on: {
-    slideChange: function () {
-      const activeIndex = this.activeIndex;
-
-      if (activeIndex === 1 || activeIndex === 2) {
-        btnPrev.style.fill = '#f9f9f9';
-      } else {
-        btnPrev.style.fill = 'rgba(249, 249, 249, 0.226)';
-      }
-
-      if (activeIndex === 0 || activeIndex === 1) {
-        btnNext.style.fill = '#f9f9f9';
-      } else {
-        btnNext.style.fill = 'rgba(249, 249, 249, 0.226)';
-      }
-    }
   },
   grabCursor: true,
   keyboard: {
@@ -96,18 +25,55 @@ const swiperPrice = new Swiper('.swiper', {
     sensitivity: 1,
     eventsTarget: '.swiper',
   },
-  effect: 'fade',
-  fadeEffect: { 
-    crossFade: true,
+  slidesPerView: 1,
+  // effect: 'fade',
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
+
+  on: {
+    slideChange: function () {
+      const activeIndex = this.activeIndex;
+      if (window.innerWidth <= 767){
+        if (activeIndex === 2) {
+          btnPrev.style.fill = '#f9f9f9';
+          btnNext.style.fill = 'rgba(249, 249, 249, 0.226)';
+        } else if (activeIndex === 1) {
+          btnPrev.style.fill = '#f9f9f9';
+          btnNext.style.fill = '#f9f9f9';
+        }
+        else {
+          btnPrev.style.fill = 'rgba(249, 249, 249, 0.226)';
+          btnNext.style.fill = '#f9f9f9';
+        }
+      } else {
+        if (activeIndex === 1 || activeIndex === 2) {
+          btnPrev.style.fill = '#f9f9f9';
+          btnNext.style.fill = 'rgba(249, 249, 249, 0.226)';
+        } else {
+          btnPrev.style.fill = 'rgba(249, 249, 249, 0.226)';
+          btnNext.style.fill = '#f9f9f9';
+        }
+      }
+    }
   },
   breakpoints: {
     768: {
-      slidesPerView: 2.2,
+      slidesPerView: 2,
       spaceBetween: 16,
-      effect: 'slide',
+      // effect: 'slide', 
+      //   fadeEffect: {
+      //     crossFade: false, 
+      //   },
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 16,
     },
   },
 });
+}
+initSwiper('price-gallery')
 
 swiperSlides.forEach(slide => {
   slide.addEventListener('click', () => { 
