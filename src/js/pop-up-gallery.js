@@ -19,8 +19,8 @@ const swiperParams = {
     375: { slidesPerView: 1, spaceBetween: 2 },
 
     1440: {
-      slidesPerView: 3,
-      spaceBetween: 76,
+      slidesPerView: 2.5,
+      spaceBetween: 50,
     },
   },
 
@@ -134,7 +134,9 @@ function renderPopUpGallery(portfolio, portfolioItemName) {
      <img
         class="pop-up-photo"
         src=${imgItem}
-        alt="foto"
+        alt="photo"
+        loading="lazy"
+
       
       />
       

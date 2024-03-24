@@ -56,7 +56,7 @@
   object-position: center;
   border-radius: 4px;
   width: 343px;
-  height: 507px;
+  /* height: 507px; */
 }
 
 .pop-up-gallery-title {
@@ -124,7 +124,7 @@
 
   .pop-up-photo {
     width: 494px;
-    height: 613px;
+    /* height: 613px; */
   }
 
   .pop-up-gallary-desc-wrapper {
