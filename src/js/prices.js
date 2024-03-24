@@ -73,18 +73,101 @@ const swiper = new Swiper(`[data-id="${swiperPrice}"]`, {
   },
 });
 }
+
 initSwiper('price-gallery')
 
-swiperSlides.forEach(slide => {
-  slide.addEventListener('click', () => { 
+
+
+let previousActiveIndex = 0; 
+
+let activeSlide = null; 
+
+document.addEventListener('click', (event) => {
+  const targetElem = event.target;
+  const isClickInsideSlide = targetElem.closest('.swiper-slide');
+
+  if (!isClickInsideSlide) { 
+    const click = document.querySelector('.overlay-click.active');
+    if (click && activeSlide) { 
+      click.classList.remove('active'); 
+      const number = activeSlide.querySelector('.number'); 
+      number.style.display = 'flex'; 
+    }
+  }
+});
+
+swiperSlides.forEach((slide, index) => {
+  slide.addEventListener('click', (e) => {
+    activeSlide = slide;
     const click = slide.querySelector('.overlay-click');
     const number = slide.querySelector('.number');
-    
+
     click.classList.toggle('active');
-    number.style.display = (click.classList.contains('active')) ? 'none' : '';
-    
+    number.style.display = click.classList.contains('active') ? 'none' : '';
+
+    if (previousActiveIndex !== index) {
+      const previousSlide = swiperSlides[previousActiveIndex];
+      const previousClick = previousSlide.querySelector('.overlay-click');
+      const previousNumber = previousSlide.querySelector('.number');
+
+      previousClick.classList.remove('active');
+      previousNumber.style.display = '';
+    }
+    previousActiveIndex = index;
   });
+
+//   document.addEventListener('keydown', (e) => { 
+//   if (e.key === 'ArrowRight') {
+//     swiperSlides[previousActiveIndex].querySelector('.overlay-click').classList.remove('active');
+//     swiperSlides[previousActiveIndex].querySelector('.number').style.display = ''; // Сховати номер попереднього активного слайду
+//     previousActiveIndex = (previousActiveIndex + 1) % swiperSlides.length; // Оновити індекс активного слайду
+//   } else if (e.key === 'ArrowLeft') { 
+//     swiperSlides[previousActiveIndex].querySelector('.overlay-click').classList.remove('active');
+//     swiperSlides[previousActiveIndex].querySelector('.number').style.display = ''; // Сховати номер попереднього активного слайду
+//     previousActiveIndex = (previousActiveIndex - 1 + swiperSlides.length) % swiperSlides.length; // Оновити індекс активного слайду
+//   }
+
+//   const currentSlide = swiperSlides[previousActiveIndex];
+//   const click = currentSlide.querySelector('.overlay-click');
+//   const number = currentSlide.querySelector('.number');
+
+//   click.classList.add('active');
+//   number.style.display = click.classList.contains('active') ? 'none' : '';
+// });
 });
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    swiperSlides.forEach((slide) => {
+      const click = slide.querySelector('.overlay-click');
+      click.classList.remove('active');
+      const number = slide.querySelector('.number');
+      number.style.display = '';
+    });
+  }
+});
+
+document.addEventListener('click', (event) => {
+  const targetElem = event.target;
+  const isClickInsideSlide = targetElem.closest('.swiper-slide');
+
+  if (!isClickInsideSlide) { 
+    const click = document.querySelector('.overlay-click.active');
+    if (click) { 
+      click.classList.remove('active'); 
+      const number = slide.querySelector('.number');
+      number.style.display = 'flex'; 
+    }
+  }
+});
+
+
+
+
+
+
+
+
 
 
 // swiperSlides.forEach((slide, index) => {

@@ -57,6 +57,8 @@
   /* transition: transform 1s;
   transform-style: preserve-3d; */
   transform-style: preserve-3d;
+  width: 343px;
+  height: 427px;
 }
 
 .name-first {
@@ -209,8 +211,9 @@
 
 .text {
   position: absolute;
-  top: 176px;
-  left: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
@@ -218,6 +221,7 @@
   width: 235px;
   height: 76px;
   text-align: center;
+  justify-content: center;
 }
 
 .price-first {
@@ -260,6 +264,10 @@
     position: relative;
   }
 
+  .text-price {
+    margin-bottom: 40px;
+  }
+
   .prices-text {
     width: 400px;
     margin-bottom: 32px;
@@ -269,22 +277,12 @@
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 16px;
+    margin-top: 0;
   }
 
   .swiper {
     width: 704px;
-  }
-
-  .swiper-slide.first {
-    background-image: url('../../img/prices/price-img-01.jpg');
-  }
-  .swiper-slide.second {
-    background-image: url('../../img/prices/price-img-02.jpg');
-  }
-
-  .swiper-slide.third {
-    background-image: url('../../img/prices/price-img-03.jpg');
+    height: 730px;
   }
 
   .overlay {
@@ -338,7 +336,7 @@
   .container-prices {
     min-width: 1312px;
     margin-top: 140px;
-    margin-bottom: 80px;
+    margin-bottom: 140px;
     margin-left: 64px;
     margin-right: 64px;
     position: relative;
@@ -352,7 +350,7 @@
   .swiper {
     width: 1037px;
     height: 730px;
-    margin-top: 50px;
+    margin-top: 70px;
   }
 
   .text-price {
