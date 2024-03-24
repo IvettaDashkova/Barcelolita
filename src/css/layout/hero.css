@@ -24,6 +24,7 @@
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: -0.03em;
+  width: 270px;
 }
 
 .hero-title {
@@ -139,8 +140,4 @@
   }
 }
 
-.is-open-modal {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
+
