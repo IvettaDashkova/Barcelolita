@@ -114,7 +114,7 @@ function renderPopUpGallery(portfolio, portfolioItemName) {
     currentType =>
       currentType.nameEn.toLowerCase() === portfolioItemName.toLowerCase()
   );
-  //   console.log(galleryCurrent);
+
   const { nameEn, nameUa, descriptionEn, descriptionUa, img } = galleryCurrent;
 
   const popUpGalleryTitle = document.querySelector('.pop-up-gallery-title');
