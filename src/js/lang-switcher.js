@@ -23,13 +23,7 @@ function langSwitcher() {
       }
     }
 
-    // Add Svitlana Klymenko
-    // let button = document.querySelector('.send-btn-contact-me');
-    // const svgContent = button.querySelector('svg');
-    // console.dir(button);
-    // button.dataset.en = 'Send' + svgContent;
-    // button.dataset.ua = 'Надіслати' + svgContent;
-
+    // Change input placeholder language
     let inputFields = document.querySelectorAll('.input-contact-me');
     inputFields.forEach(input => {
       if (lang === 'en') {
