@@ -20,24 +20,33 @@ const swiperParams = {
     // 768: { slidesPerView: 1 },
     1440: {
       slidesPerView: 3,
-      spaceBetween: 10,
+      spaceBetween: 76,
     },
   },
 
   effect: 'coverflow',
-  //   slidesPerView: 3,
+  // slidesPerView: 3,
+  // coverflowEffect: {
+  //   rotate: 50,
+  //   stretch: 0,
+  //   depth: 200,
+  //   modifier: 1,
+  //   scale: 0.7,
+  //   slideShadows: true,
+  // },
+
   coverflowEffect: {
-    rotate: 50,
+    rotate: 0,
     stretch: 0,
     depth: 200,
     modifier: 1,
-    scale: 0.7,
+    scale: 0.9,
     slideShadows: true,
   },
 
   navigation: {
-    nextEl: '.pop-up-gallery-swiper-arrow-next',
-    prevEl: '.pop-up-gallery-swiper-arrow-prev',
+    nextEl: '.pop-up-gallery-swiper-btn-next',
+    prevEl: '.pop-up-gallery-swiper-btn-prev',
   },
 
   loop: true,
@@ -63,7 +72,7 @@ const popUpGallerySlider = sliderData => {
 };
 
 const wrapper = document.querySelector('.swiper-wrapper');
-const closeBtn = document.querySelector('.pop-up-gallery-icon-close');
+const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
 const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
 const portfolioList = document.querySelector('.portfolio-list');
 const popUpGalleryArrowPrev = document.querySelector(
