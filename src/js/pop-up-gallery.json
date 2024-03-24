@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "nameEn": "Portrait photo",
+    "nameUa": "Портретне фото",
+    "descriptionEn": "Images with an emphasis on faces, facial expressions and character.",
+    "descriptionUa": "Зображення з акцентом на обличчях, міміці та характері.",
+    "img": [
+      "portrait-photo-1.jpg",
+      "portrait-photo-2.jpg",
+      "portrait-photo-3.jpg",
+      "portrait-photo-4.jpg",
+      "portrait-photo-5.jpg",
+      "portrait-photo-6.jpg"
+    ]
+  },
+
+  {
+    "id": 2,
+    "nameEn": "Fashion photo",
+    "nameUa": "Fashion фото",
+    "descriptionEn": "The art of creating expressive and stylish images that emphasize fashion and style.",
+    "descriptionUa": "Мистецтво створення виразних і стильних образів, що підкреслюють моду і стиль.",
+    "img": [
+      "fashion-photo-1.jpg",
+      "fashion-photo-2.jpg",
+      "fashion-photo-3.jpg",
+      "fashion-photo-4.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "nameEn": "Brand photo",
+    "nameUa": "Фото для брендів",
+    "descriptionEn": "Reflects the uniqueness of the brand, its values, style and character through visual elements.",
+    "descriptionUa": "Відображає унікальність бренду, його цінності, стиль і характер за допомогою візуальних елементів.",
+    "img": ["pochekun.jpg"]
+  },
+  {
+    "id": 4,
+    "nameEn": "Genre photo",
+    "nameUa": "Жанрове фото",
+    "descriptionEn": "A variety of categories and styles covering different themes, moods.",
+    "descriptionUa": "Різноманітність категорій і стилів, що охоплюють різні теми, настрої.",
+    "img": [
+      "genre-photo-1.jpg",
+      "genre-photo-2.jpg",
+      "genre-photo-3.jpg",
+      "genre-photo-4.jpg",
+      "genre-photo-5.jpg",
+      "genre-photo-6.jpg",
+      "genre-photo-7.jpg",
+      "genre-photo-8.jpg",
+      "genre-photo-9.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "nameEn": "Studio photo",
+    "nameUa": "Студійне фото",
+    "descriptionEn": "Capturing the beauty of nature and landscapes.",
+    "descriptionUa": "Захоплення красою природи і пейзажів.",
+    "img": ["pochekun.jpg"]
+  },
+  {
+    "id": 6,
+    "nameEn": "Couple photo",
+    "nameUa": "Сімейне фото",
+    "descriptionEn": "Used to reinforce and build the brand's visual identity.",
+    "descriptionUa": "Зображення людей, що підкреслюють їхню індивідуальність.",
+    "img": [
+      "couple-photo-1.jpg",
+      "couple-photo-2.jpg",
+      "couple-photo-3.jpg",
+      "couple-photo-4.jpg",
+      "couple-photo-5.jpg",
+      "couple-photo-6.jpg",
+      "couple-photo-7.jpg",
+      "couple-photo-8.jpg",
+      "couple-photo-9.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "nameEn": "LOOKBOOK",
+    "nameUa": "Lookbook",
+    "descriptionEn": "Images of people, emphasizing their individuality.",
+    "descriptionUa": "Використовується для посилення та побудови візуальної ідентичності бренду.",
+    "img": [
+      "lookbook-1.jpg",
+      "lookbook-2.jpg",
+      "lookbook-3.jpg",
+      "lookbook-4.jpg",
+      "lookbook-5.jpg",
+      "lookbook-6.jpg",
+      "lookbook-7.jpg"
+    ]
+  }
+]
