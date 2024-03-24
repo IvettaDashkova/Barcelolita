@@ -6,57 +6,18 @@
     line-height: 1.25;
 }
 
-@media screen and (min-width: 768px) {
-    .title {
-        padding-right: 339px;
-        padding-bottom: 40px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .title {
-        padding-right: 947px;
-    }
-}
-
 .description {
     line-height: 1.25;
-}
-
-@media screen and (min-width: 768px) {
-   .description {
-    text-align: right;
-    font-size: 14px;
-   }
 }
 
 .content {
     margin-bottom: 32px;
 }
 
-@media screen and (min-width: 768px) {
-    .content {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
 .video-container {
     margin-bottom: 64px;
     position: relative;
 }  
-
-@media screen and (min-width: 768px) {
-   .video-container {
-    margin-bottom: 100px;
-   }
-}
-
-@media screen and (min-width: 1440px) {
-    .video-container {
-     margin-bottom: 140px;
-    }
-}
 
 .video-container img#video-thumbnail {
     position: absolute;
@@ -122,20 +83,6 @@
     line-height: 1;
 }
 
-@media screen and (min-width: 768px) {
-   .quote-text {
-    padding-top: 80px;
-    padding-bottom: 40px;
-    font-size: 46px;
-   }
-}
-
-@media screen and (min-width: 1440px) {
-   .quote-text {
-    font-size: 86px;
-   }
-}
-
 .quote-author {
     padding-bottom: 64px;
     text-align: center;
@@ -145,7 +92,32 @@
     line-height: 1.25;
 }
 
+.highlight {
+    color: var(--accent-color);
+}
+
+
 @media screen and (min-width: 768px) {
+    .title {
+        padding-right: 339px;
+        padding-bottom: 40px;
+    }
+    .description {
+        text-align: right;
+        font-size: 14px;
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+    .video-container {
+        margin-bottom: 100px;
+    }
+    .quote-text {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        font-size: 46px;
+    }
     .quote-author {
         padding-bottom: 80px;
         font-size: 20px;
@@ -153,6 +125,14 @@
     }
 }
 
-.highlight {
-    color: var(--accent-color);
+@media screen and (min-width: 1440px) {
+    .title {
+        padding-right: 947px;
+    }
+    .video-container {
+        margin-bottom: 140px;
+    }
+    .quote-text {
+        font-size: 86px;
+    }
 }
