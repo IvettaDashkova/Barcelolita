@@ -10,7 +10,8 @@
     "follow-me": "follow me",
     "phone": "phone",
     "email": "email",
-    "message": "If you like what you see on here just say hello and drop me a message. I'd love to work with you!"
+    "message": "If you like what you see on here just say hello and drop me a message. I'd love to work with you!",
+    "message-contacts": "If you like what you see on here just say hello and drop me a message. I'd love to work with you!"
   },
   "uk": {
     "about": "про мене",
@@ -23,6 +24,7 @@
     "follow-me": "зв'язатися зі мною",
     "phone": "телефон",
     "email": "електронна пошта",
-    "message": "Якщо вам подобається те, що ви тут бачите, просто привітайтеся та надішліть мені повідомлення. Я хотіла би працювати з вами!"
+    "message": "Якщо вам подобається те, що ви тут бачите, просто привітайтеся та надішліть мені повідомлення. Я хотіла би працювати з вами!",
+    "message-contacts": "Якщо вам подобається те, що ви тут бачите, просто привітайтеся та надішліть мені повідомлення. Я хотіла би працювати з вами!"
   }
 }
