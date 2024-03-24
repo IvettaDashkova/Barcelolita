@@ -116,38 +116,7 @@ swiperSlides.forEach((slide, index) => {
     previousActiveIndex = index;
   });
 
-//   document.addEventListener('keydown', (e) => { 
-//   if (e.key === 'ArrowRight') {
-//     swiperSlides[previousActiveIndex].querySelector('.overlay-click').classList.remove('active');
-//     swiperSlides[previousActiveIndex].querySelector('.number').style.display = ''; // Сховати номер попереднього активного слайду
-//     previousActiveIndex = (previousActiveIndex + 1) % swiperSlides.length; // Оновити індекс активного слайду
-//   } else if (e.key === 'ArrowLeft') { 
-//     swiperSlides[previousActiveIndex].querySelector('.overlay-click').classList.remove('active');
-//     swiperSlides[previousActiveIndex].querySelector('.number').style.display = ''; // Сховати номер попереднього активного слайду
-//     previousActiveIndex = (previousActiveIndex - 1 + swiperSlides.length) % swiperSlides.length; // Оновити індекс активного слайду
-//   }
-
-//   const currentSlide = swiperSlides[previousActiveIndex];
-//   const click = currentSlide.querySelector('.overlay-click');
-//   const number = currentSlide.querySelector('.number');
-
-//   click.classList.add('active');
-//   number.style.display = click.classList.contains('active') ? 'none' : '';
-// });
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    swiperSlides.forEach((slide) => {
-      const click = slide.querySelector('.overlay-click');
-      click.classList.remove('active');
-      const number = slide.querySelector('.number');
-      number.style.display = '';
-    });
-  }
-});
-
-document.addEventListener('click', (event) => {
+  document.addEventListener('click', (event) => {
   const targetElem = event.target;
   const isClickInsideSlide = targetElem.closest('.swiper-slide');
 
@@ -160,6 +129,95 @@ document.addEventListener('click', (event) => {
     }
   }
 });
+});
+
+let isFirstArrowPress = true;
+let isAnySlideActivated = false;
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') {
+    if (isFirstArrowPress) {
+      isFirstArrowPress = false;
+      previousActiveIndex = 0; 
+    } else {
+      const previousSlide = swiperSlides[previousActiveIndex];
+      previousSlide.querySelector('.overlay-click').classList.remove('active');
+      previousSlide.querySelector('.number').style.display = ''; 
+      previousActiveIndex = (previousActiveIndex + 1) % swiperSlides.length; 
+    }
+  } else if (e.key === 'ArrowLeft') {
+    if (isFirstArrowPress) {
+      isFirstArrowPress = false;
+      previousActiveIndex = 0; 
+    } else {
+      const previousSlide = swiperSlides[previousActiveIndex];
+      previousSlide.querySelector('.overlay-click').classList.remove('active');
+      previousSlide.querySelector('.number').style.display = ''; 
+      previousActiveIndex = (previousActiveIndex - 1 + swiperSlides.length) % swiperSlides.length; 
+    }
+  }
+
+  const currentSlide = swiperSlides[previousActiveIndex];
+  const click = currentSlide.querySelector('.overlay-click');
+  const number = currentSlide.querySelector('.number');
+
+  click.classList.add('active');
+  number.style.display = click.classList.contains('active') ? 'none' : '';
+
+  isAnySlideActivated = true;
+});
+
+document.addEventListener('click', () => {
+  isAnySlideActivated = true;
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    swiperSlides.forEach((slide) => {
+      const click = slide.querySelector('.overlay-click');
+      click.classList.remove('active');
+      const number = slide.querySelector('.number');
+      number.style.display = '';
+    });
+    isAnySlideActivated = false;
+  }
+});
+
+swiperSlides.forEach((slide) => {
+  slide.addEventListener('click', () => {
+    isAnySlideActivated = true;
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if ((e.key === 'ArrowRight' || e.key === 'ArrowLeft') && !isAnySlideActivated) {
+    previousActiveIndex = 0;
+    const currentSlide = swiperSlides[previousActiveIndex];
+    const click = currentSlide.querySelector('.overlay-click');
+    const number = currentSlide.querySelector('.number');
+
+    click.classList.add('active');
+    number.style.display = click.classList.contains('active') ? 'none' : '';
+
+    isFirstArrowPress = false;
+  }
+});
+
+
+
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    swiperSlides.forEach((slide) => {
+      const click = slide.querySelector('.overlay-click');
+      click.classList.remove('active');
+      const number = slide.querySelector('.number');
+      number.style.display = '';
+    });
+  }
+});
+
+
 
 
 
