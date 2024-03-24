@@ -39,7 +39,8 @@
     "spain": "Spain",
     "france": "France",
     "contact":"Contact:",
-    "contact-me-follow-me": "Follow me:"
+    "contact-me-follow-me": "Follow me:",
+    "send": "Send"
   },
   "uk": {
     "about": "про мене",
@@ -81,7 +82,8 @@
     "spain": "Іспанія",
     "france": "Франція",
     "contact":"Kонтакти:",
-    "contact-me-follow-me": "Підписатись:"
+    "contact-me-follow-me": "Підписатись:",
+    "send": "Надіслати"
   }
 }
 

@@ -7,8 +7,8 @@ function sendMessage() {
     let textInput = document.querySelector('#text');
     let message = textInput.value;
 
-    const token = '6402732796:AAFAOyQjeZHjLcWHVQnx4TwxtSFVwOwlbfo';
-    const chat_id = '-4160563284';
+    const token = import.meta.env.VITE_TELEGRAM_TOKEN;
+    const chat_id = import.meta.env.VITE_CHAT_ID;
 
     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
 
