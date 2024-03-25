@@ -120,14 +120,14 @@ function renderPopUpGallery(portfolio, portfolioItemName) {
   const markup = img
     .map(imgItem => {
       return `<div class="swiper-slide swiper-slide-layout">
-     <img
+       <img
         class="pop-up-photo"
         src=${imgItem}
         alt="photo"
         loading="lazy"
 
       
-      />
+       />
       
     </div> `;
     })
