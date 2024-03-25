@@ -4,6 +4,7 @@ function mobileMenu() {
   openButton.addEventListener('click', openMenu);
   const closeButton = document.querySelector('.mobmenu-close-button');
   const allSite = document.querySelector('body');
+  const menuLinks = document.querySelectorAll('.mobmenu-menu-link');
 
   function openMenu() {
     allSite.classList.add('noscroll')
@@ -12,6 +13,9 @@ function mobileMenu() {
       backdropMenu.classList.add('mobmenu-open');
     }, 50);
     closeButton.addEventListener('click', closeMenu);
+    menuLinks.forEach(menuLink => {
+      menuLink.addEventListener('click', closeMenu);
+    })
   }
 
   function closeMenu() {
@@ -21,6 +25,9 @@ function mobileMenu() {
       backdropMenu.classList.remove('mobmenu-visible');
     }, 50);
     closeButton.removeEventListener('click', closeMenu);
+    menuLinks.forEach(menuLink => {
+      menuLink.removeEventListener('click', closeMenu);
+    })
   }
 }
 
