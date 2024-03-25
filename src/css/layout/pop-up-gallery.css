@@ -9,6 +9,9 @@
   z-index: 100;
   transform: translate(100%);
   transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .is-open {
@@ -45,6 +48,10 @@
   border: none;
   fill: var(--primary-color);
   background-color: transparent;
+}
+
+.pop-up-gallery-close-btn :hover {
+  fill: gray;
 }
 
 .pop-up-gallery-wrapper {
@@ -88,7 +95,10 @@
   background-color: transparent;
   border: none;
 }
-
+.pop-up-gallery-swiper-btn-next :hover,
+.pop-up-gallery-swiper-btn-prev :hover {
+  fill: gray;
+}
 .pop-up-gallery-swiper-arrow-next {
   fill: var(--primary-color);
 }
