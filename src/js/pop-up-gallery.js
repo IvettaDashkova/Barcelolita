@@ -16,12 +16,12 @@ const wrapper = document.querySelector('.swiper-wrapper');
 const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
 const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
 const portfolioList = document.querySelector('.portfolio-list');
-const popUpGalleryArrowPrev = document.querySelector(
-  '.pop-up-gallery-swiper-arrow-prev'
-);
-const popUpGalleryArrowNext = document.querySelector(
-  '.pop-up-gallery-swiper-arrow-next'
-);
+// const popUpGalleryArrowPrev = document.querySelector(
+//   '.pop-up-gallery-swiper-arrow-prev'
+// );
+// const popUpGalleryArrowNext = document.querySelector(
+//   '.pop-up-gallery-swiper-arrow-next'
+// );
 const bodyScroll = document.querySelector('body');
 let swiper;
 const swiperParams = {
@@ -76,11 +76,21 @@ const popUpGallerySlider = sliderData => {
 //   popUpGalleryArrowPrev.style.fill = '#f9f9f9';
 // });
 
-closeBtn.addEventListener('click', e => {
+function closePopUpGallery() {
   galleryBackdrop.classList.remove('is-open');
   bodyScroll.classList.remove('noscroll');
   swiper.destroy(true, true);
-});
+}
+
+function keydownClose(event) {
+  if (event.key === 'Escape') {
+    closePopUpGallery();
+  }
+}
+
+document.addEventListener('keydown', keydownClose);
+
+closeBtn.addEventListener('click', closePopUpGallery);
 
 portfolioList.addEventListener('click', e => {
   if (
@@ -94,11 +104,11 @@ portfolioList.addEventListener('click', e => {
     galleryBackdrop.classList.add('is-open');
     bodyScroll.classList.add('noscroll');
 
-    renderPopUpGallery(portfolio, portfolioItemName);
+    renderPopUpGallery(portfolioItemName);
     popUpGallerySlider('photo');
   }
 });
-function renderPopUpGallery(portfolio, portfolioItemName) {
+function renderPopUpGallery(portfolioItemName) {
   const galleryCurrent = portfolio.find(
     currentType =>
       currentType.nameEn.toLowerCase() === portfolioItemName.toLowerCase()
