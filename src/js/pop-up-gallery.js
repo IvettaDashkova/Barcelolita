@@ -12,6 +12,18 @@ import 'swiper/css/effect-coverflow';
 import '../css/layout/pop-up-gallery.css';
 import portfolio from './pop-up-gallery.json';
 
+const wrapper = document.querySelector('.swiper-wrapper');
+const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
+const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
+const portfolioList = document.querySelector('.portfolio-list');
+const popUpGalleryArrowPrev = document.querySelector(
+  '.pop-up-gallery-swiper-arrow-prev'
+);
+const popUpGalleryArrowNext = document.querySelector(
+  '.pop-up-gallery-swiper-arrow-next'
+);
+const bodyScroll = document.querySelector('body');
+let swiper;
 const swiperParams = {
   modules: [Navigation, Scrollbar, EffectCoverflow, Keyboard, Mousewheel],
 
@@ -19,21 +31,12 @@ const swiperParams = {
     375: { slidesPerView: 1, spaceBetween: 2 },
 
     1440: {
-      slidesPerView: 2.5,
+      slidesPerView: 2.4,
       spaceBetween: 50,
     },
   },
 
   effect: 'coverflow',
-  // slidesPerView: 3,
-  // coverflowEffect: {
-  //   rotate: 50,
-  //   stretch: 0,
-  //   depth: 200,
-  //   modifier: 1,
-  //   scale: 0.7,
-  //   slideShadows: true,
-  // },
 
   coverflowEffect: {
     rotate: 0,
@@ -66,22 +69,8 @@ const swiperParams = {
 
 const popUpGallerySlider = sliderData => {
   const gallerySlider = sliderData;
-  const swiper = new Swiper(`[data-id="${gallerySlider}"]`, swiperParams);
-
-  return swiper;
+  swiper = new Swiper(`[data-id="${gallerySlider}"]`, swiperParams);
 };
-
-const wrapper = document.querySelector('.swiper-wrapper');
-const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
-const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
-const portfolioList = document.querySelector('.portfolio-list');
-const popUpGalleryArrowPrev = document.querySelector(
-  '.pop-up-gallery-swiper-arrow-prev'
-);
-const popUpGalleryArrowNext = document.querySelector(
-  '.pop-up-gallery-swiper-arrow-next'
-);
-const bodyScroll = document.querySelector('body');
 
 // popUpGalleryArrowNext.addEventListener('click', e => {
 //   popUpGalleryArrowPrev.style.fill = '#f9f9f9';
@@ -90,6 +79,7 @@ const bodyScroll = document.querySelector('body');
 closeBtn.addEventListener('click', e => {
   galleryBackdrop.classList.remove('is-open');
   bodyScroll.classList.remove('noscroll');
+  swiper.destroy(true, true);
 });
 
 portfolioList.addEventListener('click', e => {
@@ -101,7 +91,6 @@ portfolioList.addEventListener('click', e => {
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
 
-    console.log(portfolioItemName);
     galleryBackdrop.classList.add('is-open');
     bodyScroll.classList.add('noscroll');
 
