@@ -59,9 +59,9 @@ const swiperParams = {
 
   mousewheel: true,
 
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
 };
 
 const popUpGallerySlider = sliderData => {
