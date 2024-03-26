@@ -14,10 +14,6 @@ const swiperParamsPrice = {
     768: {
       slidesPerView: 2,
       spaceBetween: 16,
-      // effect: 'slide', 
-      //   fadeEffect: {
-      //     crossFade: false, 
-      //   },
     },
     1440: {
       slidesPerView: 3,
@@ -38,11 +34,7 @@ const swiperParamsPrice = {
     sensitivity: 1,
     eventsTarget: '.swiper',
   },
-  // effect: 'fade',
-  // fadeEffect: {
-  //   crossFade: true,
-  // },
-
+  speed: 700,
   on: {
     slideChange: function () {
       const activeIndex = this.activeIndex;
