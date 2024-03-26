@@ -20,7 +20,6 @@ window.addEventListener('keydown', e => {
 function focusBtn() {
   const ontactMeBtn = document.getElementById('clickMe');
 
-
   setTimeout(() => {
     contactMeBtn.blur();
   }, 1000);
