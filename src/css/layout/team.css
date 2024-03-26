@@ -8,7 +8,8 @@
   z-index: 999;
   transform: translate(100%);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: scroll;
+  overflow: auto;
+  scrollbar-width: none;
 }
 .developer-wrapper {
   width: 100%;
