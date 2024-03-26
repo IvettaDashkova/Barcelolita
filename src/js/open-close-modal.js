@@ -31,7 +31,6 @@ function focusBtn() {
   setTimeout(() => {
     contactMeBtn.blur();
   }, 1000);
-}
 
 
     backdropModal.classList.add('is-hidden');
