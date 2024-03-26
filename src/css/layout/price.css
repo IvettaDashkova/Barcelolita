@@ -1,8 +1,6 @@
 .container-prices {
-  margin-top: 64px;
-  margin-bottom: 64px;
-  margin-left: 16px;
-  margin-right: 16px;
+  width: 343px;
+  margin: 0 auto;
 }
 
 .text-price {
@@ -249,6 +247,7 @@
   border: 1px solid rgba(249, 249, 249, 0.1);
   background: rgba(1, 1, 1, 0.05);
   margin-top: 32px;
+  margin-bottom: 64px;
 }
 
 .price-contact-btn:hover,
@@ -295,10 +294,8 @@
 
 @media screen and (min-width: 768px) {
   .container-prices {
-    min-width: 704px;
-    margin-top: 100px;
-    margin-left: 32px;
-    margin-right: 32px;
+    width: 705px;
+    margin: 0 auto;
     position: relative;
   }
 
@@ -387,11 +384,8 @@
 
 @media screen and (min-width: 1440px) {
   .container-prices {
-    max-width: 1312px;
-    margin-top: 140px;
-    margin-bottom: 140px;
-    margin-left: 64px;
-    margin-right: 64px;
+    width: 1312px;
+    margin: 0 auto;
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
