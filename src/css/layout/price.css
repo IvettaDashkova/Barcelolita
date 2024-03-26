@@ -251,6 +251,7 @@
   background: rgba(1, 1, 1, 0.05);
   margin-top: 32px;
   margin-bottom: 64px;
+  outline: none;
 }
 
 .price-contact-btn:hover,
