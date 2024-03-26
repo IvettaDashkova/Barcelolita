@@ -97,6 +97,7 @@ portfolioList.addEventListener('click', e => {
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'H3' ||
     e.target.nodeName === 'P' ||
+    e.target.nodeName === 'BUTTON' ||
     e.target.nodeName === 'LI'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
