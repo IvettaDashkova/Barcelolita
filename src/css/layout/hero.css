@@ -57,6 +57,9 @@
   padding: 0;
   border: 1px solid rgba(249, 249, 249, 0.1);
   background: rgba(1, 1, 1, 0.05);
+  outline: none;
+  transition: 0.25s ease-in-out;
+  backdrop-filter: blur(80px);
 }
 
 .contact-me-btn:hover,
