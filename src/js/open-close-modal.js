@@ -26,7 +26,7 @@ window.addEventListener('keydown', e => {
 });
 
 function focusBtn() {
-  const ontactMeBtn = document.getElementById('clickMe');
+  const contactMeBtn = document.getElementById('clickMe');
 
   setTimeout(() => {
     contactMeBtn.blur();
@@ -34,5 +34,5 @@ function focusBtn() {
 
 
     backdropModal.classList.add('is-hidden');
-});
+};
 
