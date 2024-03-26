@@ -10,11 +10,14 @@
   color: var(--accent-color);
 }
 
-.about-title,
-.about-title-phrase {
+.section-title {
   margin-bottom: 32px;
   text-transform: uppercase;
   opacity: 50%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
 }
 
 .about-title-phrase {
@@ -35,7 +38,7 @@
 .about-phrase {
   font-size: 28px;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.06em;
   text-transform: uppercase;
   padding-bottom: 64px;
 }
@@ -61,6 +64,7 @@
   }
   .about-title-phrase {
     display: block;
+    font-size: 16px;
   }
 
   .about-text-content {
@@ -92,6 +96,7 @@
   }
   .about-phrase {
     padding-bottom: 0;
+    width:215px;
   }
   .about-description-1 {
     order: 2;
@@ -116,7 +121,7 @@
   }
   .about-phrase {
     font-size: 40px;
-    width: 440px;
+    width:426px;
   }
   .about-text {
     font-size: 22px;
@@ -129,7 +134,7 @@
     width: 423px;
   }
   .about-description-2 {
-    width: 432px;
+    width: 418px;
   }
 }
 
