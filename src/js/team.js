@@ -43,20 +43,21 @@ openModal.addEventListener('click', toggleModal);
 
 const createMrkpSwiper = () => {
   const markup = team
-    .map(({ small, large, userNameEn, developer, url, userNameUa }) => {
-      return `<div class="swiper-slide">
+    .map(
+      ({ small, large, userNameEn, developer, url, userNameUa, ariaLabel }) => {
+        return `<div class="swiper-slide">
       <div class="developer-container">
   <div class="container-img">
     <div class="box-img-team">
       <div class="icon-linkedin-team">
-      <a href="${url}"  target="_blank"
+      <a href="${url}"  target="_blank" aria-label="${ariaLabel}"
         >
         <svg class="linkedin" width="16" height="16">
           <use href="${icons}#icon-linkedin"></use>
         </svg>
         </a>
       </div>
-      <a href="${url}" target="_blank"
+      <a href="${url}" target="_blank" aria-label="${ariaLabel}"
         >
 <picture>
   <source
@@ -86,7 +87,8 @@ const createMrkpSwiper = () => {
   <p class="dev-desription" >${developer}</p>
   </div>
 </div>`;
-    })
+      }
+    )
     .join('');
   return markup;
 };
