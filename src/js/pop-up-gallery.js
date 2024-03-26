@@ -88,6 +88,21 @@ function keydownClose(event) {
   }
 }
 
+history.pushState(
+  null,
+  null,
+  window.top.location.pathname + window.top.location.search
+);
+window.addEventListener('popstate', e => {
+  e.preventDefault();
+  closePopUpGallery();
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
+});
+
 document.addEventListener('keydown', keydownClose);
 
 closeBtn.addEventListener('click', closePopUpGallery);
@@ -97,6 +112,7 @@ portfolioList.addEventListener('click', e => {
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'H3' ||
     e.target.nodeName === 'P' ||
+    e.target.nodeName === 'BUTTON' ||
     e.target.nodeName === 'LI'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
