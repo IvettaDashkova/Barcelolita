@@ -1,14 +1,29 @@
 
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from 'swiper';
+import 'swiper/css';
 import 'swiper/css/navigation';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const btnPrev = document.querySelector('.icon-arrow-prev');
 const btnNext = document.querySelector('.icon-arrow-next');
 
-const initSwiper = slideData => {
-  const swiperPrice = slideData;
-const swiper = new Swiper(`[data-id="${swiperPrice}"]`, {
+const swiperParamsPrice = {
+  modules: [Navigation, Keyboard, Mousewheel],
+  breakpoints: {
+    375:{slidesPerView: 1,},
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+      // effect: 'slide', 
+      //   fadeEffect: {
+      //     crossFade: false, 
+      //   },
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+  },
   navigation: {
     nextEl: btnNext,
     prevEl: btnPrev,
@@ -23,7 +38,6 @@ const swiper = new Swiper(`[data-id="${swiperPrice}"]`, {
     sensitivity: 1,
     eventsTarget: '.swiper',
   },
-  slidesPerView: 1,
   // effect: 'fade',
   // fadeEffect: {
   //   crossFade: true,
@@ -55,22 +69,11 @@ const swiper = new Swiper(`[data-id="${swiperPrice}"]`, {
       }
     }
   },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 16,
-      // effect: 'slide', 
-      //   fadeEffect: {
-      //     crossFade: false, 
-      //   },
-    },
-    1440: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    },
-  },
-});
 }
 
-initSwiper('price-gallery')
+const initSwiper = slideData => {
+  const swiperPrice = slideData;
+const swiper = new Swiper(`[data-id="${swiperPrice}"]`, swiperParamsPrice);
+}
 
+initSwiper('price-gallery');

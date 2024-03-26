@@ -57,6 +57,9 @@
   transform-style: preserve-3d;
   width: 343px;
   height: 427px;
+  color: var(--primary-color);
+  border: none;
+  background-color: transparent;
 }
 
 .name-first {
@@ -168,6 +171,7 @@
   font-size: 28px;
   line-height: 100%;
   letter-spacing: -0.03em;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
 .price-second {
@@ -178,6 +182,7 @@
   font-size: 28px;
   line-height: 100%;
   letter-spacing: -0.03em;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
 .price-third {
@@ -188,6 +193,7 @@
   font-size: 28px;
   line-height: 100%;
   letter-spacing: -0.03em;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
 .overlay {
