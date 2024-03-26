@@ -8,7 +8,6 @@
   background-color: transparent;
   border: none;
   color: inherit;
-  width: 100%;
 }
 
 
@@ -55,9 +54,8 @@
 }
 
 .small {
-  max-width: 343px;
+  width: 343px;
   max-height: 427px;
-  width: 100%;
   height: 100%;
   object-fit: cover;
 }
