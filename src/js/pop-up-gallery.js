@@ -88,6 +88,21 @@ function keydownClose(event) {
   }
 }
 
+history.pushState(
+  null,
+  null,
+  window.top.location.pathname + window.top.location.search
+);
+window.addEventListener('popstate', e => {
+  e.preventDefault();
+  closePopUpGallery();
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
+});
+
 document.addEventListener('keydown', keydownClose);
 
 closeBtn.addEventListener('click', closePopUpGallery);
