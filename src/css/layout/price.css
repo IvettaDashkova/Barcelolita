@@ -58,6 +58,7 @@
   color: var(--primary-color);
   border: none;
   background-color: transparent;
+  border-radius: 15px;
 }
 
 .name-first {
@@ -203,6 +204,7 @@
   background-color: #a50707a0;
   opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 15px;
 }
 
 .overlay-dark {
@@ -214,6 +216,7 @@
   background-color: #010101a0;
   opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 15px;
 }
 
 .swiper-slide.third:hover .overlay {
