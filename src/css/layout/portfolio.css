@@ -3,6 +3,15 @@
   margin-bottom: 64px;
 }
 
+
+.portfolio-button{
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  width: 100%;
+}
+
+
 .portfolio-title {
   text-transform: uppercase;
   margin-bottom: 32px;
