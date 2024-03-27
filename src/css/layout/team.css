@@ -16,10 +16,6 @@
   height: 100%;
 }
 
-.is-open-section-team {
-  transform: translate(0);
-}
-
 .section-top {
   display: flex;
   flex-direction: row;
