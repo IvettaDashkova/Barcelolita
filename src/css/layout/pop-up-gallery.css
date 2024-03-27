@@ -90,10 +90,7 @@
   background-color: transparent;
   border: none;
 }
-.pop-up-gallery-swiper-btn-next :hover,
-.pop-up-gallery-swiper-btn-prev :hover {
-  fill: gray;
-}
+
 .pop-up-gallery-swiper-arrow-next {
   fill: var(--primary-color);
 }
@@ -159,5 +156,10 @@
 
   .pop-up-gallary-cont-layout {
     width: 100%;
+  }
+
+  .pop-up-gallery-swiper-btn-next :hover,
+  .pop-up-gallery-swiper-btn-prev :hover {
+    fill: gray;
   }
 }
