@@ -23,7 +23,7 @@ function mobileMenu() {
   });
 
   function openMenu() {
-    metaTag.setAttribute("content", "user-scalable=no")
+    metaTag.setAttribute("content", "width=device-width, user-scalable=no")
     allSite.classList.add('noscroll');
     backdropMenu.classList.add('mobmenu-visible');
     const timerId = setTimeout(() => {
@@ -36,7 +36,7 @@ function mobileMenu() {
   }
 
   function closeMenu() {
-    metaTag.removeAttribute("content", "user-scalable=no")
+    metaTag.removeAttribute("content", "width=device-width, user-scalable=no")
     allSite.classList.remove('noscroll');
     backdropMenu.classList.remove('mobmenu-open');
     const timerId = setTimeout(() => {
