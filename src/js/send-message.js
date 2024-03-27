@@ -1,44 +1,50 @@
-// import iziToast from 'izitoast';
+import iziToast from 'izitoast';
 
-function sendMessage() {
+async function sendMessage() {
   const form = document.querySelector('#form');
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
 
-    let textInput = document.querySelector('#text');
-    let message = textInput.value;
+    const message = `<b>Message from the BARCELOLITA website</b>\n<b>Sender:</b> ${form.name.value}\n<b>Phone:</b> ${form.number.value}\n<b>Message:</b> ${form.message.value}`;
+
+    const encodedMessage = encodeURIComponent(message);
 
     const token = import.meta.env.VITE_TELEGRAM_TOKEN;
     const chat_id = import.meta.env.VITE_CHAT_ID;
 
-    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodedMessage}&parse_mode=HTML`;
 
-    let api = new XMLHttpRequest();
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-    api.open('GET', url, true);
-    api.send();
+      if (response.ok) {
+        iziToast.success({
+          title: 'Success',
+          message: 'Message sent successfully!',
+        });
+      } else {
+        iziToast.error({
+          title: 'Error',
+          message: 'Failed to send message. Please try again later.',
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      iziToast.error({
+        title: 'Error',
+        message: 'Failed to send message. Please try again later.',
+      });
+    }
 
-    // try {
-    //   await fetch(url);
-    //   console.log('suc');
-    //   iziToast.success({
-    //     title: 'Success',
-    //     message: 'Message sent successfully!',
-    //   });
-    // } catch (error) {
-    //   iziToast.error({
-    //     title: 'Error',
-    //     message: 'Failed to send message. Please try again later.',
-    //   });
-    // }
-
-    textInput.value = '';
-    iziToast.success({
-      title: 'Success',
-      message: 'Message sent successfully!',
-      position: 'topRight',
-    });
+    form.name.value = '';
+    form.number.value = '';
+    form.message.value = '';
   });
 }
 

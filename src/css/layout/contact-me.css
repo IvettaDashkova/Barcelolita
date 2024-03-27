@@ -98,7 +98,7 @@
 }
 
 .modal-left-side {
-  margin-top: 148px;
+  margin-top: 94px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -166,26 +166,28 @@
 @media only screen and (min-width: 768px) {
   .paragraph-contact-me {
     width: 379px;
-    margin-bottom: 64px;
   }
 }
 
 .form-contact-me {
-  position: relative;
   width: 343px;
-  height: 54px;
+}
+
+.form-contact-me > :last-child {
+  margin-top: 32px;
 }
 
 @media only screen and (min-width: 768px) {
   .form-contact-me {
-    width: 397px;
-    height: 58px;
+    width: 541px;
   }
 }
 
 .input-contact-me {
   width: 100%;
   height: 100%;
+
+  margin-bottom: 16px;
 
   padding: 16px 18px;
   border-radius: 12px;
@@ -195,6 +197,10 @@
   color: var(--primary-color);
 
   transition: border 0.25s ease-in-out;
+}
+
+.input-contact-me:last-of-type {
+  margin-bottom: 0;
 }
 
 .input-contact-me:hover,
@@ -212,11 +218,21 @@
   background-clip: text;
 }
 
-.send-btn-contact-me {
-  position: absolute;
-  right: 0;
-  top: 0;
+@media only screen and (min-width: 768px) {
+  .input-contact-me {
+    width: 260px;
+  }
 
+  .input-contact-me:first-child {
+    margin-right: 16px;
+  }
+
+  .input-contact-me:last-of-type {
+    width: 536px;
+  }
+}
+
+.send-btn-contact-me {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -255,7 +271,7 @@
 
 /* Contacts */
 .contacts-container-contact-me {
-  margin-top: 264px;
+  margin-top: 94px;
 
   padding-top: 32px;
 

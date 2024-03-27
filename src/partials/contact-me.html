@@ -25,7 +25,26 @@
         </p>
         <form class="form-contact-me" id="form">
           <input
-            id="text"
+            id="name"
+            type="text"
+            name="user-name"
+            class="input-contact-me"
+            data-en-placeholder="Name"
+            data-ua-placeholder="Ім'я"
+            required
+          />
+          <input
+            id="number"
+            type="number"
+            name="user-number"
+            class="input-contact-me"
+            data-en-placeholder="Phone number"
+            data-ua-placeholder="Номер телефону"
+            pattern="^\+\d\s\d\(\d{3}\)-\d{3}-\d{2}-\d{2}$"
+            required
+          />
+          <input
+            id="message"
             type="text"
             name="user-message"
             class="input-contact-me"
