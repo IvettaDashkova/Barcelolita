@@ -1,4 +1,4 @@
-import dict from './dict.json';
+import dict from '../constants/dict.json';
 
 function langSwitcher() {
   let initialValue = 'en';
