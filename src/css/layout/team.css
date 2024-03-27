@@ -34,6 +34,11 @@
   }
 }
 
+.btn-close {
+  border: none;
+  background-color: transparent;
+}
+
 .icon-close-section-team {
   fill: #fff;
   cursor: pointer;

@@ -62,17 +62,13 @@ const swiperParams = {
 
   centeredSlides: true,
 
+  centeredSlidesBounds: true,
+
   keyboard: {
     enabled: true,
   },
 
   mousewheel: true,
-
-  // on: {
-  //   slideChange: function () {
-  //     popUpGalleryArrowNext.blur();
-  //   },
-  // },
 
   // scrollbar: {
   //   el: '.swiper-scrollbar',
@@ -88,10 +84,6 @@ const popUpGallerySlider = sliderData => {
   const gallerySlider = sliderData;
   swiper = new Swiper(`[data-id="${gallerySlider}"]`, swiperParams);
 };
-
-// popUpGalleryArrowNext.addEventListener('click', e => {
-//   popUpGalleryArrowPrev.style.fill = '#f9f9f9';
-// });
 
 function closePopUpGallery() {
   galleryBackdrop.classList.remove('is-open');
@@ -130,7 +122,6 @@ portfolioList.addEventListener('click', e => {
     e.target.nodeName === 'H3' ||
     e.target.nodeName === 'P' ||
     e.target.nodeName === 'BUTTON'
-    // e.target.nodeName === 'LI'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
 
