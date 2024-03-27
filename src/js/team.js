@@ -24,6 +24,24 @@ const swiperParams = {
 const gallerySwiperTeam = photoEl => {
   const photoId = photoEl;
   const swiper = new Swiper(`[data-id="${photoId}"]`, swiperParams);
+  const nextEl = document.querySelector('.swiper-button-next-section-team');
+  const prevEl = document.querySelector('.swiper-button-prev-section-team');
+
+  window.addEventListener('keydown', e => {
+    if (e.code === 'ArrowRight' || e.code === 'Tab') {
+      swiper.slideNext();
+    } else if (e.code === 'ArrowLeft') {
+      swiper.slidePrev();
+    }
+  });
+  // document.querySelectorAll('.icon-linkedin-team').forEach(linkedinIcon => {
+  //   linkedinIcon.addEventListener('keydown', e => {
+  //     if (e.key === 'Enter') {
+  //       const link = linkedinIcon.querySelector('a').getAttribute('href');
+  //       window.open(link, '_blank');
+  //     }
+  //   });
+  // });
   return swiper;
 };
 gallerySwiperTeam('gallery-photo-team');
@@ -60,6 +78,12 @@ window.addEventListener('popstate', e => {
   );
 });
 
+window.addEventListener('keydown', e => {
+  if (e.code === 'Escape') {
+    closeModalTeam();
+  }
+});
+
 closeModal.addEventListener('click', closeModalTeam);
 openModal.addEventListener('click', openModalTeam);
 
@@ -67,7 +91,7 @@ const createMrkpSwiper = () => {
   const markup = team
     .map(
       ({ small, large, userNameEn, developer, url, userNameUa, ariaLabel }) => {
-        return `<div class="swiper-slide">
+        return `<div class="swiper-slide swipe-slide-js">
       <div class="developer-container">
   <div class="container-img">
     <div class="box-img-team">
