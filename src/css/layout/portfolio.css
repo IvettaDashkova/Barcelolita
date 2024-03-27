@@ -9,7 +9,6 @@
   color: inherit;
   border: none;
   padding: 0;
-  cursor: pointer;
 }
 
 .portfolio-title {
@@ -25,6 +24,7 @@
 
 .portfolio-item {
   margin-bottom: 32px;
+  pointer-events: none;
 }
 
 .portfolio-item-title {
