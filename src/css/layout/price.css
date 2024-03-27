@@ -53,8 +53,8 @@
   position: relative;
   cursor: pointer;
   transform-style: preserve-3d;
-  width: 343px;
-  height: 427px;
+  width: 331px;
+  height: 425px;
   color: var(--primary-color);
   border: none;
   background-color: transparent;
@@ -197,11 +197,12 @@
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #a50707a0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 331px;
+  height: 425px;
+  background-color: #a5070774;
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 15px;
@@ -275,6 +276,7 @@
   background-image: url('../../img/prices/price-3-mob.webp');
   background-repeat: no-repeat;
   background-position: center;
+  background-clip: content-box;
 }
 
 @media screen and (max-width: 767px) and (min-resolution: 192dpi),
@@ -325,8 +327,13 @@
   }
 
   .swiper-slide.price {
-    width: 335px;
-    height: 730px;
+    width: 324px;
+    height: 725px;
+  }
+
+  .overlay {
+    width: 324px;
+    height: 725px;
   }
 
   .icon-arrow-prev {
