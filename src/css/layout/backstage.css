@@ -1,138 +1,136 @@
 .title {
-    text-transform: uppercase;
-    color: #272727;
-    padding-bottom: 32px;
-    font-size: 16px;
-    line-height: 1.25;
+  text-transform: uppercase;
+  color: #272727;
+  padding-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 .description {
-    line-height: 1.25;
+  line-height: 1.25;
 }
 
 .content {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .video-container {
-    margin-bottom: 64px;
-    position: relative;
-}  
+  margin-bottom: 64px;
+  position: relative;
+}
 
 .video-container img#video-thumbnail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .video-container video {
-    position: relative;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .video {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .play-button {
-    position: absolute;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-play {
-    position: absolute;
-    fill: white;
-    width: 40%;
-    height: 40%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+  position: absolute;
+  fill: white;
+  width: 40%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .quote {
-    border-top: 1px solid #272727;
-    border-bottom: 1px solid #272727;
+  border-top: 1px solid #272727;
+  border-bottom: 1px solid #272727;
 }
 
 .quote-text {
-    padding-top: 64px;
-    padding-bottom: 32px;
-    text-align: center; 
-    font-size: 26px;
-    line-height: 1;
+  padding-top: 64px;
+  padding-bottom: 32px;
+  text-align: center;
+  font-size: 26px;
+  line-height: 1;
 }
 
 .quote-author {
-    padding-bottom: 64px;
-    text-align: center;
-    font-size: 16px;
-    text-transform: uppercase;
-    color:#272727;
-    line-height: 1.25;
+  padding-bottom: 64px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #272727;
+  line-height: 1.25;
 }
 
 .highlight {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
-
 @media screen and (min-width: 768px) {
-    .title {
-        padding-right: 339px;
-        padding-bottom: 40px;
-    }
-    .description {
-        text-align: right;
-        font-size: 14px;
-    }
-    .content {
-        display: flex;
-        justify-content: space-between;
-    }
-    .video-container {
-        margin-bottom: 100px;
-    }
-    .quote-text {
-        padding-top: 80px;
-        padding-bottom: 40px;
-        font-size: 46px;
-    }
-    .quote-author {
-        padding-bottom: 80px;
-        font-size: 20px;
-        line-height: 1;
-    }
+  .title {
+    padding-right: 339px;
+    padding-bottom: 40px;
+  }
+  .description {
+    text-align: right;
+    font-size: 14px;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .video-container {
+    margin-bottom: 100px;
+  }
+  .quote-text {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    font-size: 46px;
+  }
+  .quote-author {
+    padding-bottom: 80px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .title {
-        padding-right: 947px;
-    }
-    .video-container {
-        margin-bottom: 140px;
-    }
-    .quote-text {
-        font-size: 86px;
-    }
+  .title {
+    padding-right: 947px;
+  }
+  .video-container {
+    margin-bottom: 140px;
+  }
+  .quote-text {
+    font-size: 86px;
+  }
 }
