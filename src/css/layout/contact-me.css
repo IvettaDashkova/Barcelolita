@@ -72,31 +72,31 @@
   opacity: 0.5;
 }
 
-.close-btn-contact-me {
+/* .close-btn-contact-me {
   background-color: transparent;
   height: fit-content;
   width: fit-content;
   padding: 0;
   border: none;
-}
+} */
 
-.close-icon {
+/* .close-icon {
   width: 26px;
   height: 26px;
   fill: var(--primary-color);
   transition: fill 0.25s ease-in-out;
-}
+} */
 
-.close-icon:hover,
+/* .close-icon:hover,
 .close-icon:focus {
   fill: gray;
-}
+} */
 
 @media only screen and (min-width: 768px) {
-  .close-icon {
+  /* .close-icon {
     width: 40px;
     height: 40px;
-  }
+  } */
 }
 
 .modal-left-side {
