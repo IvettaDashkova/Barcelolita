@@ -9,6 +9,7 @@
   color: inherit;
   border: none;
   padding: 0;
+  pointer-events: all;
 }
 
 .portfolio-title {
