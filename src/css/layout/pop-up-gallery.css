@@ -162,4 +162,9 @@
   .pop-up-gallery-swiper-btn-prev :hover {
     fill: gray;
   }
+
+  .pop-up-gallary-desc-wrapper {
+    max-width: 560px;
+    padding-right: 65px;
+  }
 }
