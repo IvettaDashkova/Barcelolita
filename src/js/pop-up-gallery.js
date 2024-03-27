@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import '../css/layout/pop-up-gallery.css';
-import portfolio from './pop-up-gallery.json';
+import portfolio from '../constants/pop-up-gallery.json';
 
 const wrapper = document.querySelector('.swiper-wrapper');
 const closeBtn = document.querySelector('.pop-up-gallery-close-btn');

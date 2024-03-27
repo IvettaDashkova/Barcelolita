@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
-import team from './team.json';
+import team from '../constants/team.json';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import icons from '../img/icons/symbol.svg';
