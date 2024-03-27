@@ -75,7 +75,7 @@
   opacity: 1;
 }
 
-.mobmenu-backdrop {
+/* .mobmenu-backdrop {
   display: none;
   position: fixed;
   background-color: var(--accent-color);
@@ -92,7 +92,7 @@
 
 .mobmenu-open {
   transform: translate(0, 0);
-}
+} */
 
 .mobmenu {
   display: flex;
