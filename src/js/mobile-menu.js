@@ -5,7 +5,6 @@ function mobileMenu() {
   const closeButton = document.querySelector('.mobmenu-close-button');
   const allSite = document.querySelector('body');
   const menuLinks = document.querySelectorAll('.mobmenu-menu-link');
-  const metaTag = document.querySelector('meta');
 
   history.pushState(
     null,
@@ -23,7 +22,6 @@ function mobileMenu() {
   });
 
   function openMenu() {
-    metaTag.setAttribute("content", "user-scalable=no")
     allSite.classList.add('noscroll');
     backdropMenu.classList.add('mobmenu-visible');
     const timerId = setTimeout(() => {
@@ -36,7 +34,6 @@ function mobileMenu() {
   }
 
   function closeMenu() {
-    metaTag.removeAttribute("content", "user-scalable=no")
     allSite.classList.remove('noscroll');
     backdropMenu.classList.remove('mobmenu-open');
     const timerId = setTimeout(() => {
