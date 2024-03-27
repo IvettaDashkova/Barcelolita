@@ -6,7 +6,6 @@ function mobileMenu() {
   const allSite = document.querySelector('body');
   const menuLinks = document.querySelectorAll('.mobmenu-menu-link');
   const metaTag = document.querySelector('meta');
-  console.log(metaTag)
 
   history.pushState(
     null,
