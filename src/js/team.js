@@ -1,12 +1,12 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Keyboard, Navigation } from 'swiper/modules';
 import team from '../constants/team.json';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import icons from '../img/icons/symbol.svg';
 
 const swiperParams = {
-  modules: [Navigation],
+  modules: [Navigation, Keyboard],
   breakpoints: {
     375: { slidesPerView: 2, spaceBetween: 35 },
     768: { slidesPerView: 3, spaceBetween: 50 },
@@ -19,6 +19,9 @@ const swiperParams = {
   },
   slidesOffsetAfter: 25,
   slidesOffsetBefore: 10,
+  keyboard: {
+    enabled: true,
+  },
 };
 
 const gallerySwiperTeam = photoEl => {
@@ -27,21 +30,12 @@ const gallerySwiperTeam = photoEl => {
   const nextEl = document.querySelector('.swiper-button-next-section-team');
   const prevEl = document.querySelector('.swiper-button-prev-section-team');
 
-  window.addEventListener('keydown', e => {
-    if (e.code === 'ArrowRight' || e.code === 'Tab') {
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Tab') {
       swiper.slideNext();
-    } else if (e.code === 'ArrowLeft') {
-      swiper.slidePrev();
     }
   });
-  // document.querySelectorAll('.icon-linkedin-team').forEach(linkedinIcon => {
-  //   linkedinIcon.addEventListener('keydown', e => {
-  //     if (e.key === 'Enter') {
-  //       const link = linkedinIcon.querySelector('a').getAttribute('href');
-  //       window.open(link, '_blank');
-  //     }
-  //   });
-  // });
+
   return swiper;
 };
 gallerySwiperTeam('gallery-photo-team');
