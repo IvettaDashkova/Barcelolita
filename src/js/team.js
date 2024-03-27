@@ -93,4 +93,19 @@ const createMrkpSwiper = () => {
   return markup;
 };
 
+history.pushState(
+  null,
+  null,
+  window.top.location.pathname + window.top.location.search
+);
+window.addEventListener('popstate', e => {
+  e.preventDefault();
+  toggleModal();
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
+});
+
 swiperWrapper.innerHTML = createMrkpSwiper();
