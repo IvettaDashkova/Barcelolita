@@ -32,14 +32,36 @@ const swiperWrapper = document.getElementById('team-section-wrapper');
 const developerSection = document.querySelector('.developer-section');
 const closeModal = document.querySelector('.icon-close-section-team');
 const openModal = document.querySelector('.team-button');
+const bodyScroll = document.querySelector('body');
 
-function toggleModal() {
-  const isMenuOpen = developerSection.classList.toggle('is-open-section-team');
-  document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+function openModalTeam() {
+  bodyScroll.classList.add('noscroll');
+  developerSection.classList.add('is-open-section-team');
+}
+function closeModalTeam() {
+  bodyScroll.classList.remove('noscroll');
+  developerSection.classList.remove('is-open-section-team');
 }
 
-closeModal.addEventListener('click', toggleModal);
-openModal.addEventListener('click', toggleModal);
+history.pushState(
+  null,
+  null,
+  window.top.location.pathname + window.top.location.search
+);
+window.addEventListener('popstate', e => {
+  e.preventDefault();
+
+  closeModalTeam();
+
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
+});
+
+closeModal.addEventListener('click', closeModalTeam);
+openModal.addEventListener('click', openModalTeam);
 
 const createMrkpSwiper = () => {
   const markup = team
@@ -92,20 +114,5 @@ const createMrkpSwiper = () => {
     .join('');
   return markup;
 };
-
-history.pushState(
-  null,
-  null,
-  window.top.location.pathname + window.top.location.search
-);
-window.addEventListener('popstate', e => {
-  e.preventDefault();
-  toggleModal();
-  history.pushState(
-    null,
-    null,
-    window.top.location.pathname + window.top.location.search
-  );
-});
 
 swiperWrapper.innerHTML = createMrkpSwiper();
