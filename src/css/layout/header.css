@@ -128,9 +128,9 @@
       rgba(249, 249, 249, 0.04) 100%
     )
     1 100%;
-  padding-left: 32px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .mobmenu-menu-list {
@@ -188,7 +188,6 @@
 
   .mobmenu-menu {
     width: 404px;
-    padding-left: 80px;
   }
 
   .mobmenu-menu-link {
