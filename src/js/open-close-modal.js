@@ -4,20 +4,20 @@ const contactMeCloseBtn = document.querySelector('.close-btn-contact-me');
 const contactMeBtnPrice = document.querySelector('.price-contact-btn');
 
 contactMeBtnPrice.addEventListener('click', () => {
-  backdropModal.classList.remove('is-hidden');
+  backdropModal.classList.add('is-open');
 });
 
 contactMeBtn.addEventListener('click', () => {
-  backdropModal.classList.remove('is-hidden');
+  backdropModal.classList.add('is-open');
 });
 
 contactMeCloseBtn.addEventListener('click', () => {
-  backdropModal.classList.add('is-hidden');
+  backdropModal.classList.remove('is-open');
 });
 
 window.addEventListener('keydown', e => {
   if (e.code === 'Escape') {
-    backdropModal.classList.add('is-hidden');
+    backdropModal.classList.remove('is-open');
     focusBtn();
   }
 });

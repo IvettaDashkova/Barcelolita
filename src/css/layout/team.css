@@ -1,4 +1,4 @@
-.developer-section {
+/* .developer-section {
   background-color: #010101;
   position: fixed;
   top: 0;
@@ -10,14 +10,10 @@
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
   scrollbar-width: none;
-}
+} */
 .developer-wrapper {
   width: 100%;
   height: 100%;
-}
-
-.is-open-section-team {
-  transform: translate(0);
 }
 
 .section-top {

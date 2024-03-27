@@ -54,11 +54,11 @@ const bodyScroll = document.querySelector('body');
 
 function openModalTeam() {
   bodyScroll.classList.add('noscroll');
-  developerSection.classList.add('is-open-section-team');
+  developerSection.classList.add('is-open');
 }
 function closeModalTeam() {
   bodyScroll.classList.remove('noscroll');
-  developerSection.classList.remove('is-open-section-team');
+  developerSection.classList.remove('is-open');
 }
 
 history.pushState(
