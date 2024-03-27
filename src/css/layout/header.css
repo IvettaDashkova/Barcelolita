@@ -174,7 +174,7 @@
 .menu-lang {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, calc(100vh - 88px));
+  transform: translate(-50%, calc(100vh - 108px));
 }
 
 @media screen and (min-width: 768px) {
