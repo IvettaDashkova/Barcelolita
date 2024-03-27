@@ -71,6 +71,11 @@ const swiperParams = {
 };
 
 const popUpGallerySlider = sliderData => {
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
   const gallerySlider = sliderData;
   swiper = new Swiper(`[data-id="${gallerySlider}"]`, swiperParams);
 };

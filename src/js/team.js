@@ -53,6 +53,11 @@ const openModal = document.querySelector('.team-button');
 const bodyScroll = document.querySelector('body');
 
 function openModalTeam() {
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
   bodyScroll.classList.add('noscroll');
   developerSection.classList.add('is-open');
 }
