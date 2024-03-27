@@ -1,23 +1,31 @@
-function sendMessage() {
-  const form = document.querySelector('#form');
+// import iziToast from 'izitoast';
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
+const form = document.querySelector('#form');
 
-    let textInput = document.querySelector('#text');
-    let message = textInput.value;
+form.addEventListener('submit', async e => {
+  e.preventDefault();
 
-    const token = import.meta.env.VITE_TELEGRAM_TOKEN;
-    const chat_id = import.meta.env.VITE_CHAT_ID;
+  let textInput = document.querySelector('#text');
+  let message = textInput.value;
 
-    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
+  const token = import.meta.env.VITE_TELEGRAM_TOKEN;
+  const chat_id = import.meta.env.VITE_CHAT_ID;
 
-    let api = new XMLHttpRequest();
-    api.open('GET', url, true);
-    api.send();
+  const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
 
-    textInput.value = '';
-  });
-}
+  try {
+    await fetch(url);
+    console.log('suc');
+    iziToast.success({
+      title: 'Success',
+      message: 'Message sent successfully!',
+    });
+  } catch (error) {
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to send message. Please try again later.',
+    });
+  }
 
-export default sendMessage;
+  textInput.value = '';
+});
