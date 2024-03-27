@@ -24,7 +24,7 @@
 
 .portfolio-item {
   margin-bottom: 32px;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .portfolio-item-title {
@@ -170,6 +170,10 @@
 
   .portfolio-item:nth-child(even) {
     grid-column: 2;
+  }
+
+  .portfolio-item:nth-child(even){
+    margin-top: 0;
   }
 
   .portfolio-item-description-small {
