@@ -17,14 +17,17 @@ const wrapper = document.querySelector('.swiper-wrapper');
 const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
 const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
 const portfolioList = document.querySelector('.portfolio-list');
-// const popUpGalleryArrowPrev = document.querySelector(
-//   '.pop-up-gallery-swiper-arrow-prev'
-// );
-// const popUpGalleryArrowNext = document.querySelector(
-//   '.pop-up-gallery-swiper-arrow-next'
-// );
+const popUpGalleryArrowPrev = document.querySelector(
+  'pop-up-gallery-swiper-btn-prev'
+);
+const popUpGalleryArrowNext = document.querySelector(
+  '.pop-up-gallery-swiper-btn-next'
+);
+
+console.log(popUpGalleryArrowPrev);
 const bodyScroll = document.querySelector('body');
 let swiper;
+
 const swiperParams = {
   modules: [Navigation, Scrollbar, EffectCoverflow, Keyboard, Mousewheel],
 
@@ -64,6 +67,12 @@ const swiperParams = {
   },
 
   mousewheel: true,
+
+  // on: {
+  //   slideChange: function () {
+  //     popUpGalleryArrowNext.blur();
+  //   },
+  // },
 
   // scrollbar: {
   //   el: '.swiper-scrollbar',
@@ -120,8 +129,8 @@ portfolioList.addEventListener('click', e => {
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'H3' ||
     e.target.nodeName === 'P' ||
-    e.target.nodeName === 'BUTTON' ||
-    e.target.nodeName === 'LI'
+    e.target.nodeName === 'BUTTON'
+    // e.target.nodeName === 'LI'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
 
