@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
-import team from './team.json';
+import team from '../constants/team.json';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import icons from '../img/icons/symbol.svg';
@@ -24,6 +24,24 @@ const swiperParams = {
 const gallerySwiperTeam = photoEl => {
   const photoId = photoEl;
   const swiper = new Swiper(`[data-id="${photoId}"]`, swiperParams);
+  const nextEl = document.querySelector('.swiper-button-next-section-team');
+  const prevEl = document.querySelector('.swiper-button-prev-section-team');
+
+  window.addEventListener('keydown', e => {
+    if (e.code === 'ArrowRight' || e.code === 'Tab') {
+      swiper.slideNext();
+    } else if (e.code === 'ArrowLeft') {
+      swiper.slidePrev();
+    }
+  });
+  // document.querySelectorAll('.icon-linkedin-team').forEach(linkedinIcon => {
+  //   linkedinIcon.addEventListener('keydown', e => {
+  //     if (e.key === 'Enter') {
+  //       const link = linkedinIcon.querySelector('a').getAttribute('href');
+  //       window.open(link, '_blank');
+  //     }
+  //   });
+  // });
   return swiper;
 };
 gallerySwiperTeam('gallery-photo-team');
@@ -32,31 +50,60 @@ const swiperWrapper = document.getElementById('team-section-wrapper');
 const developerSection = document.querySelector('.developer-section');
 const closeModal = document.querySelector('.icon-close-section-team');
 const openModal = document.querySelector('.team-button');
+const bodyScroll = document.querySelector('body');
 
-function toggleModal() {
-  const isMenuOpen = developerSection.classList.toggle('is-open-section-team');
-  document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+function openModalTeam() {
+  bodyScroll.classList.add('noscroll');
+  developerSection.classList.add('is-open');
+}
+function closeModalTeam() {
+  bodyScroll.classList.remove('noscroll');
+  developerSection.classList.remove('is-open');
 }
 
-closeModal.addEventListener('click', toggleModal);
-openModal.addEventListener('click', toggleModal);
+history.pushState(
+  null,
+  null,
+  window.top.location.pathname + window.top.location.search
+);
+window.addEventListener('popstate', e => {
+  e.preventDefault();
+
+  closeModalTeam();
+
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
+});
+
+window.addEventListener('keydown', e => {
+  if (e.code === 'Escape') {
+    closeModalTeam();
+  }
+});
+
+closeModal.addEventListener('click', closeModalTeam);
+openModal.addEventListener('click', openModalTeam);
 
 const createMrkpSwiper = () => {
   const markup = team
-    .map(({ small, large, userNameEn, developer, url, userNameUa }) => {
-      return `<div class="swiper-slide">
+    .map(
+      ({ small, large, userNameEn, developer, url, userNameUa, ariaLabel }) => {
+        return `<div class="swiper-slide swipe-slide-js">
       <div class="developer-container">
   <div class="container-img">
     <div class="box-img-team">
       <div class="icon-linkedin-team">
-      <a href="${url}"  target="_blank"
+      <a href="${url}"  target="_blank" aria-label="${ariaLabel}"
         >
         <svg class="linkedin" width="16" height="16">
           <use href="${icons}#icon-linkedin"></use>
         </svg>
         </a>
       </div>
-      <a href="${url}" target="_blank"
+      <a href="${url}" target="_blank" aria-label="${ariaLabel}"
         >
 <picture>
   <source
@@ -86,7 +133,8 @@ const createMrkpSwiper = () => {
   <p class="dev-desription" >${developer}</p>
   </div>
 </div>`;
-    })
+      }
+    )
     .join('');
   return markup;
 };
