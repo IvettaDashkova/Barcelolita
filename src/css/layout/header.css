@@ -128,9 +128,9 @@
       rgba(249, 249, 249, 0.04) 100%
     )
     1 100%;
-  padding-left: 32px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .mobmenu-menu-list {
@@ -174,7 +174,7 @@
 .menu-lang {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, calc(100vh - 88px));
+  transform: translate(-50%, calc(100vh - 108px));
 }
 
 @media screen and (min-width: 768px) {
@@ -188,7 +188,6 @@
 
   .mobmenu-menu {
     width: 404px;
-    padding-left: 80px;
   }
 
   .mobmenu-menu-link {

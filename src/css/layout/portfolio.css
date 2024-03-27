@@ -3,15 +3,13 @@
   margin-bottom: 64px;
 }
 
-
-.portfolio-button{
+.portfolio-button {
   background-color: transparent;
   border: none;
   color: inherit;
   border: none;
   padding: 0;
 }
-
 
 .portfolio-title {
   text-transform: uppercase;
@@ -32,7 +30,7 @@
 .portfolio-item-title {
   font-size: 20px;
   font-weight: 500;
-  line-height: 1.0;
+  line-height: 1;
   letter-spacing: -0.03em;
   text-align: left;
   text-transform: uppercase;
