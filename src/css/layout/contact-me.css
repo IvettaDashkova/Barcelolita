@@ -26,10 +26,8 @@
   position: relative;
   margin: 0 auto;
 
-  /* width: 100%; */
-
+  width: 375px;
   min-height: 812px;
-  min-width: 375px;
 
   padding-top: 32px;
   padding-bottom: 32px;
@@ -318,12 +316,19 @@
 
 .contacts-paragraph-contact-me {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 1.28;
   letter-spacing: -0.03em;
 
   color: var(--primary-color);
   opacity: 0.5;
+}
+
+@media only screen and (min-width: 768px) {
+  .contacts-paragraph-contact-me {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .socials-list-contact-me {
@@ -335,16 +340,18 @@
 .socials-item-contact-me {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.33;
+  font-size: 14px;
+  line-height: 1.28;
   letter-spacing: -0.02em;
 }
 
 @media only screen and (min-width: 768px) {
   .socials-item-contact-me {
-    line-height: 1.12;
+    font-size: 18px;
+    line-height: 1.33;
   }
 }
+
 .social-link-hover {
   transition: color 0.25s ease-in-out;
 }
