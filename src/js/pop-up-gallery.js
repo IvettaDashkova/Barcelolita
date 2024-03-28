@@ -17,15 +17,10 @@ const wrapper = document.querySelector('.swiper-wrapper');
 const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
 const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
 const portfolioList = document.querySelector('.portfolio-list');
-const popUpGalleryArrowPrev = document.querySelector(
-  'pop-up-gallery-swiper-btn-prev'
-);
-const popUpGalleryArrowNext = document.querySelector(
-  '.pop-up-gallery-swiper-btn-next'
-);
-
 const bodyScroll = document.querySelector('body');
 let swiper;
+
+galleryBackdrop.style.display = 'none';
 
 const swiperParams = {
   modules: [Navigation, Scrollbar, EffectCoverflow, Keyboard, Mousewheel],
@@ -68,10 +63,6 @@ const swiperParams = {
   },
 
   mousewheel: true,
-
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
 };
 
 const popUpGallerySlider = sliderData => {
@@ -87,7 +78,12 @@ const popUpGallerySlider = sliderData => {
 function closePopUpGallery() {
   galleryBackdrop.classList.remove('is-open');
   bodyScroll.classList.remove('noscroll');
-  swiper.destroy(true, true);
+  if (!swiper) {
+    return;
+  } else {
+    swiper.destroy(true, true);
+  }
+  // swiper.destroy(true, true);
 }
 
 function keydownClose(event) {
@@ -120,10 +116,11 @@ portfolioList.addEventListener('click', e => {
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'H3' ||
     e.target.nodeName === 'P' ||
-    e.target.nodeName === 'BUTTON'
+    e.target.nodeName === 'DIV'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
 
+    galleryBackdrop.style.display = 'block';
     galleryBackdrop.classList.add('is-open');
     bodyScroll.classList.add('noscroll');
 

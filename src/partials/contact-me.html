@@ -2,7 +2,7 @@
   <div class="modal-contact-me">
     <div class="container head-container-contact-me">
       <h4 class="head-title-contact-me" data-id="contact-me">Contact me</h4>
-      <button type="button" class="close-btn-contact-me pop-up-close-btn">
+      <button  type="button" class="close-btn-contact-me pop-up-close-btn">
         <svg class="close-icon" width="26" height="26">
           <use href="./img/icons/symbol.svg#icon-close"></use>
         </svg>
@@ -23,18 +23,20 @@
           If you like what you see on here just say hello and drop me a message.
           I’d love to work with you!
         </p>
-        <form class="form-contact-me" id="form">
+        <form  class="form-contact-me" id="form">
           <input
-            id="name"
+                      id="name"
             type="text"
             name="user-name"
             class="input-contact-me"
             data-en-placeholder="Name"
             data-ua-placeholder="Ім'я"
             required
+            pattern="[A-Za-zÀ-ÿ']+"
+            title="Please enter a valid name"
           />
           <input
-            id="number"
+               id="number"
             type="tel"
             name="user-number"
             class="input-contact-me"
@@ -50,8 +52,7 @@
             data-en-placeholder="Let's talk"
             data-ua-placeholder="Давай спілкуватися"
             required
-          >
-          </input>
+/>                        
           <button class="send-btn-contact-me" type="submit">
             <span data-id="send">Send</span>
 
@@ -82,7 +83,7 @@
             </p>
             <ul class="socials-list-contact-me">
               <li class="socials-item-contact-me">
-                <a
+                <a 
                   class="socials-link-contact-me social-link-hover"
                   href="https://www.instagram.com/barcelolitta?igsh=bXFuaGpzazZjMnJo"
                   target="_blank"
@@ -90,7 +91,7 @@
                 >
               </li>
               <li class="socials-item-contact-me">
-                <a
+                <a 
                   class="socials-link-contact-me social-link-hover"
                   href="https://www.facebook.com/alyona.stulina"
                   target="_blank"
@@ -98,7 +99,7 @@
                 >
               </li>
               <li class="socials-item-contact-me">
-                <a
+                <a 
                   class="socials-link-contact-me social-link-hover"
                   href="https://t.me/barcelolita"
                   target="_blank"
@@ -114,14 +115,14 @@
             <address class="adress-contact-me">
               <ul class="socials-list-contact-me">
                 <li class="socials-item-contact-me">
-                  <a
+                  <a 
                     class="socials-link-contact-me social-link-hover"
                     href="mailto:barcelolita@ukr.net"
                     >barcelolita@ukr.net</a
                   >
                 </li>
                 <li class="socials-item-contact-me">
-                  <a
+                  <a 
                     class="socials-link-contact-me social-link-hover"
                     href="tel:+380637780314"
                     >+380637780314</a
