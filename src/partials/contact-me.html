@@ -32,6 +32,8 @@
             data-en-placeholder="Name"
             data-ua-placeholder="Ім'я"
             required
+            pattern="[A-Za-zÀ-ÿ']+"
+            title="Please enter a valid name"
           />
           <input
             id="number"
@@ -50,8 +52,7 @@
             data-en-placeholder="Let's talk"
             data-ua-placeholder="Давай спілкуватися"
             required
-          >
-          </input>
+          />
           <button class="send-btn-contact-me" type="submit">
             <span data-id="send">Send</span>
 
