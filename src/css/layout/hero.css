@@ -24,7 +24,7 @@
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: -0.03em;
-  width: 270px;
+  width: 310px;
 }
 
 .hero-title {
@@ -33,6 +33,7 @@
   line-height: 0.95;
   margin-bottom: 28px;
   letter-spacing: -0.03em;
+  
 }
 
 .hero-title-accent {
@@ -81,7 +82,7 @@
   }
 
   .text-wrapper {
-    width: 566px;
+    width: 600px;
   }
 
   .hero-title {
@@ -95,7 +96,7 @@
     height: 200px;
     position: absolute;
     right: 32px;
-    bottom: -132px;
+    bottom: -134px;
     font-size: 16px;
     background: var(--secondary-color);
   }
@@ -128,7 +129,7 @@
   }
 
   .text-wrapper {
-    width: 1048px;
+    width: 1000px;
     margin-right: 64px;
   }
 

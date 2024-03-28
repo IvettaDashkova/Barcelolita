@@ -22,6 +22,11 @@ function mobileMenu() {
   });
 
   function openMenu() {
+    history.pushState(
+      null,
+      null,
+      window.top.location.pathname + window.top.location.search
+    );
     allSite.classList.add('noscroll');
     backdropMenu.classList.add('is-open');
     // backdropMenu.classList.add('mobmenu-visible');

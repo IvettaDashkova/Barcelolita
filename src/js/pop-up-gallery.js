@@ -17,14 +17,9 @@ const wrapper = document.querySelector('.swiper-wrapper');
 const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
 const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
 const portfolioList = document.querySelector('.portfolio-list');
-// const popUpGalleryArrowPrev = document.querySelector(
-//   '.pop-up-gallery-swiper-arrow-prev'
-// );
-// const popUpGalleryArrowNext = document.querySelector(
-//   '.pop-up-gallery-swiper-arrow-next'
-// );
 const bodyScroll = document.querySelector('body');
 let swiper;
+
 const swiperParams = {
   modules: [Navigation, Scrollbar, EffectCoverflow, Keyboard, Mousewheel],
 
@@ -59,25 +54,24 @@ const swiperParams = {
 
   centeredSlides: true,
 
+  centeredSlidesBounds: true,
+
   keyboard: {
     enabled: true,
   },
 
   mousewheel: true,
-
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
 };
 
 const popUpGallerySlider = sliderData => {
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
   const gallerySlider = sliderData;
   swiper = new Swiper(`[data-id="${gallerySlider}"]`, swiperParams);
 };
-
-// popUpGalleryArrowNext.addEventListener('click', e => {
-//   popUpGalleryArrowPrev.style.fill = '#f9f9f9';
-// });
 
 function closePopUpGallery() {
   galleryBackdrop.classList.remove('is-open');
@@ -115,8 +109,7 @@ portfolioList.addEventListener('click', e => {
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'H3' ||
     e.target.nodeName === 'P' ||
-    e.target.nodeName === 'BUTTON' ||
-    e.target.nodeName === 'LI'
+    e.target.nodeName === 'DIV'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
 

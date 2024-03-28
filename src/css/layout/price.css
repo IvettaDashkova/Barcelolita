@@ -41,7 +41,7 @@
   fill: var(--primary-color);
 }
 
-.swiper {
+.swiper.price {
   margin-top: 16px;
   width: 343px;
   height: 427px;
@@ -49,12 +49,12 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.swiper-slide {
+.swiper-slide.price {
   position: relative;
   cursor: pointer;
   transform-style: preserve-3d;
-  width: 343px;
-  height: 427px;
+  width: 331px;
+  height: 425px;
   color: var(--primary-color);
   border: none;
   background-color: transparent;
@@ -197,11 +197,12 @@
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #a50707a0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 331px;
+  height: 425px;
+  background-color: #a5070774;
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 15px;
@@ -219,15 +220,15 @@
   border-radius: 15px;
 }
 
-.swiper-slide.third:hover .overlay {
+.swiper-slide.price.third:hover .overlay {
   opacity: 1;
 }
 
-.swiper-slide:hover .overlay-dark {
+.swiper-slide.price:hover .overlay-dark {
   opacity: 1;
 }
 
-.swiper-slide:hover .number {
+.swiper-slide.price:hover .number {
   display: none;
 }
 
@@ -251,6 +252,7 @@
   background: rgba(1, 1, 1, 0.05);
   margin-top: 32px;
   margin-bottom: 64px;
+  outline: none;
 }
 
 .price-contact-btn:hover,
@@ -258,38 +260,39 @@
   background-color: var(--accent-color);
 }
 
-.swiper-slide.first {
+.swiper-slide.price.first {
   background-image: url('../../img/prices/price-1-mob.webp');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.swiper-slide.second {
+.swiper-slide.price.second {
   background-image: url('../../img/prices/price-2-mob.webp');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.swiper-slide.third {
+.swiper-slide.price.third {
   background-image: url('../../img/prices/price-3-mob.webp');
   background-repeat: no-repeat;
   background-position: center;
+  background-clip: content-box;
 }
 
 @media screen and (max-width: 767px) and (min-resolution: 192dpi),
   screen and (max-width: 767px) and (min-resolution: 2dppx),
   screen and (max-width: 767px) and (min-device-pixel-ratio: 2) {
-  .swiper-slide.first {
+  .swiper-slide.price.first {
     background-size: 343px 427px;
     background-image: url('../../img/prices/price-1-mob-2x.webp');
   }
 
-  .swiper-slide.second {
+  .swiper-slide.price.second {
     background-size: 343px 427px;
     background-image: url('../../img/prices/price-2-mob-2x.webp');
   }
 
-  .swiper-slide.third {
+  .swiper-slide.price.third {
     background-size: 343px 427px;
     background-image: url('../../img/prices/price-3-mob-2x.webp');
   }
@@ -318,14 +321,19 @@
     margin-top: 0;
   }
 
-  .swiper {
+  .swiper.price {
     width: 704px;
     height: 730px;
   }
 
-  .swiper-slide {
-    width: 335px;
-    height: 730px;
+  .swiper-slide.price {
+    width: 324px;
+    height: 725px;
+  }
+
+  .overlay {
+    width: 324px;
+    height: 725px;
   }
 
   .icon-arrow-prev {
@@ -353,32 +361,32 @@
     margin-bottom: 100px;
   }
 
-  .swiper-slide.first {
+  .swiper-slide.price.first {
     background-image: url('../../img/prices/price-1-tab.webp');
   }
 
-  .swiper-slide.second {
+  .swiper-slide.price.second {
     background-image: url('../../img/prices/price-2-tab.webp');
   }
 
-  .swiper-slide.third {
+  .swiper-slide.price.third {
     background-image: url('../../img/prices/price-3-tab.webp');
   }
 
   @media screen and (min-width: 768px) and (min-resolution: 192dpi),
     screen and (min-width: 768px) and (min-resolution: 2dppx),
     screen and (min-width: 768px) and (min-device-pixel-ratio: 2) {
-    .swiper-slide.first {
+    .swiper-slide.price.first {
       background-image: url('../../img/prices/price-1-tab-2x.webp');
       background-size: 335px 730px;
     }
 
-    .swiper-slide.second {
+    .swiper-slide.price.second {
       background-image: url('../../img/prices/price-2-tab-2x.webp');
       background-size: 335px 730px;
     }
 
-    .swiper-slide.third {
+    .swiper-slide.price.third {
       background-image: url('../../img/prices/price-3-tab-2x.webp');
       background-size: 335px 730px;
     }
@@ -398,7 +406,7 @@
     margin: 0 auto;
   }
 
-  .swiper {
+  .swiper.price {
     width: 1037px;
     height: 730px;
     margin-top: 70px;
