@@ -100,8 +100,6 @@
 
 .box-img-team {
   overflow: hidden;
-  border: 2px solid rgb(165, 8, 7);
-  border-radius: 50%;
   width: 180px;
   height: 180px;
 }
@@ -114,7 +112,15 @@
 }
 
 .dev-photo {
-  filter: grayscale(100%);
+  width: 180px;
+  height: 180px;
+}
+
+@media screen and (min-width: 768px) {
+  .dev-photo {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .dev-name {
@@ -160,7 +166,7 @@
   }
 }
 
-.icon-linkedin-team {
+.link-linkedin-team {
   width: 40px;
   height: 40px;
   background-color: var(--accent-color);
@@ -172,7 +178,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .icon-linkedin-team {
+  .link-linkedin-team {
     top: 160px;
   }
 }
