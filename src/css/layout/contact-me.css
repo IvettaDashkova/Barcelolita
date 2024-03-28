@@ -1,3 +1,7 @@
+.backdrop-modal-contact-me {
+  display: none;
+}
+
 .modal-contact-me {
   position: relative;
   margin: 0 auto;

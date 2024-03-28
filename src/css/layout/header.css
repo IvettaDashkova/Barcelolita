@@ -74,6 +74,10 @@
   opacity: 1;
 }
 
+.mobmenu-backdrop {
+  display: none;
+}
+
 .mobmenu {
   display: flex;
   height: 100%;
