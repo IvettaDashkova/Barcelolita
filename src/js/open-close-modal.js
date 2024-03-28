@@ -3,8 +3,6 @@ const backdropModal = document.querySelector('.backdrop-modal-contact-me');
 const contactMeCloseBtn = document.querySelector('.close-btn-contact-me');
 const contactMeBtnPrice = document.querySelector('.price-contact-btn');
 
-console.log(contactMeBtnPrice);
-
 history.pushState(
   null,
   null,
