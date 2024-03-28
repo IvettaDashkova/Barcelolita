@@ -7,14 +7,8 @@
 
 @font-face {
   font-family: 'Helvetica Neue';
-  src: url('../../fonts/HelveticaNueu/HelveticaNeueBoldCondensed.ttf');
+  src: url('../../fonts/HelveticaNueu/HelveticaNeueCyr-Bold.ttf');
   font-weight: bold;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('../../fonts/HelveticaNueu/HelveticaNeueBlackCondensed.ttf');
-  font-weight: 900;
-  font-style: normal;
-}

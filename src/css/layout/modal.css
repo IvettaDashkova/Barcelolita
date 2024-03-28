@@ -15,6 +15,7 @@
 
 .mobmenu-backdrop {
   background-color: var(--accent-color);
+  height: calc(100% + 40px);
 }
 
 .is-open {
@@ -32,6 +33,7 @@
   border: none;
   fill: var(--primary-color);
   background-color: transparent;
+  padding: 0;
 }
 .pop-up-close-btn:hover,
 .pop-up-close-btn:focus {

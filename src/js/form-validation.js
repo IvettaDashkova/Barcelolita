@@ -1,5 +1,3 @@
-// import iziToast from 'izitoast';
-
 // const numberInput = document.getElementById('number');
 
 // numberInput.addEventListener('input', () => {
