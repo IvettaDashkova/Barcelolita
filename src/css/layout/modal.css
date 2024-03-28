@@ -15,6 +15,7 @@
 
 .mobmenu-backdrop {
   background-color: var(--accent-color);
+  height: calc(100% + 40px);
 }
 
 .is-open {
