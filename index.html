@@ -14,9 +14,9 @@
     />
     
     <script type="module" crossorigin src="/Barcelolita/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/Barcelolita/assets/vendor-ed843280.js">
+    <link rel="modulepreload" crossorigin href="/Barcelolita/assets/vendor-b578028c.js">
     <link rel="stylesheet" href="/Barcelolita/assets/vendor-33907c93.css">
-    <link rel="stylesheet" href="/Barcelolita/assets/index-d6becdcb.css">
+    <link rel="stylesheet" href="/Barcelolita/assets/index-532642cd.css">
   </head>
 
   <body>
@@ -153,7 +153,7 @@
     </div>
     <div class="modal-left-side">
       <div class="container main-container-contact-me">
-        <h2 class="subtitle-contact-me" data-en="Work" data-ua="Працюйте">
+        <h2 class="subtitle-contact-me" data-en="Work" data-ua="Працювати">
           Work
         </h2>
         <span
@@ -168,14 +168,33 @@
         </p>
         <form class="form-contact-me" id="form">
           <input
-            id="text"
+            id="name"
+            type="text"
+            name="user-name"
+            class="input-contact-me"
+            data-en-placeholder="Name"
+            data-ua-placeholder="Ім'я"
+            required
+          />
+          <input
+            id="number"
+            type="tel"
+            name="user-number"
+            class="input-contact-me"
+            data-en-placeholder="Phone number"
+            data-ua-placeholder="Номер телефону"
+            required
+          />
+          <input
+            id="message"
             type="text"
             name="user-message"
             class="input-contact-me"
             data-en-placeholder="Let's talk"
-            data-ua-placeholder="Давайте поговоримо"
+            data-ua-placeholder="Давай спілкуватися"
             required
-          />
+          >
+          </input>
           <button class="send-btn-contact-me" type="submit">
             <span data-id="send">Send</span>
 
