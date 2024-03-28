@@ -20,7 +20,7 @@
     <script type="module" crossorigin src="/Barcelolita/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/Barcelolita/assets/vendor-b578028c.js">
     <link rel="stylesheet" href="/Barcelolita/assets/vendor-33907c93.css">
-    <link rel="stylesheet" href="/Barcelolita/assets/index-84e55850.css">
+    <link rel="stylesheet" href="/Barcelolita/assets/index-d2f19e70.css">
   </head>
 
   <body>
@@ -232,6 +232,8 @@
             data-en-placeholder="Name"
             data-ua-placeholder="Ім'я"
             required
+            pattern="[A-Za-zÀ-ÿ']+"
+            title="Please enter a valid name"
           />
           <input
             id="number"
@@ -250,8 +252,7 @@
             data-en-placeholder="Let's talk"
             data-ua-placeholder="Давай спілкуватися"
             required
-          >
-          </input>
+          />
           <button class="send-btn-contact-me" type="submit">
             <span data-id="send">Send</span>
 
