@@ -44,15 +44,13 @@
   opacity: 0.5;
 }
 
-@media only screen and (min-width: 768px) {
-  .modal-left-side {
-    margin-top: 94px;
-  }
+.modal-left-side {
+  margin-top: 62px;
 }
 
 @media only screen and (min-width: 768px) {
   .modal-left-side {
-    margin-top: 112px;
+    margin-top: 121px;
   }
 }
 
@@ -60,7 +58,7 @@
   .modal-left-side {
     width: 698px;
 
-    margin-top: 64px;
+    margin-top: 74px;
   }
 }
 
