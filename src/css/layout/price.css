@@ -156,6 +156,7 @@
   font-size: 20px;
   line-height: 100%;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
   width: 235px;
   height: 76px;
   text-align: center;
@@ -170,6 +171,7 @@
   font-size: 28px;
   line-height: 100%;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
   text-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
@@ -181,6 +183,7 @@
   font-size: 28px;
   line-height: 100%;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
   text-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
@@ -192,6 +195,7 @@
   font-size: 28px;
   line-height: 100%;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
   text-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
@@ -329,6 +333,24 @@
   .swiper-slide.price {
     width: 324px;
     height: 725px;
+  }
+
+  .price-first {
+    font-size: 40px;
+    bottom: 32px;
+    left: 82px;
+  }
+
+  .price-second {
+    font-size: 40px;
+    top: 32px;
+    left: 72px;
+  }
+
+  .price-third {
+    font-size: 40px;
+    bottom: 32px;
+    left: 55px;
   }
 
   .overlay {
