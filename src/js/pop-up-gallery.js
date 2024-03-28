@@ -115,9 +115,8 @@ closeBtn.addEventListener('click', closePopUpGallery);
 portfolioList.addEventListener('click', e => {
   if (
     e.target.nodeName === 'IMG' ||
-    e.target.nodeName === 'H3' ||
-    e.target.nodeName === 'P' ||
-    e.target.nodeName === 'DIV'
+    e.target.nodeName === 'SPAN' ||
+    e.target.nodeName === 'BUTTON'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
 
