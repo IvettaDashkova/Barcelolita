@@ -22,11 +22,17 @@ function mobileMenu() {
   });
 
   function openMenu() {
+    history.pushState(
+      null,
+      null,
+      window.top.location.pathname + window.top.location.search
+    );
     allSite.classList.add('noscroll');
-    backdropMenu.classList.add('mobmenu-visible');
-    const timerId = setTimeout(() => {
-      backdropMenu.classList.add('mobmenu-open');
-    }, 50);
+    backdropMenu.classList.add('is-open');
+    // backdropMenu.classList.add('mobmenu-visible');
+    // const timerId = setTimeout(() => {
+    //   backdropMenu.classList.add('is-open');
+    // }, 50);
     closeButton.addEventListener('click', closeMenu);
     menuLinks.forEach(menuLink => {
       menuLink.addEventListener('click', closeMenu);
@@ -35,10 +41,10 @@ function mobileMenu() {
 
   function closeMenu() {
     allSite.classList.remove('noscroll');
-    backdropMenu.classList.remove('mobmenu-open');
-    const timerId = setTimeout(() => {
-      backdropMenu.classList.remove('mobmenu-visible');
-    }, 50);
+    backdropMenu.classList.remove('is-open');
+    // const timerId = setTimeout(() => {
+    //   backdropMenu.classList.remove('mobmenu-visible');
+    // }, 50);
     closeButton.removeEventListener('click', closeMenu);
     menuLinks.forEach(menuLink => {
       menuLink.removeEventListener('click', closeMenu);

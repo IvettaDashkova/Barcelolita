@@ -1,0 +1,162 @@
+.title {
+  text-transform: uppercase;
+  color: #272727;
+  padding-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+
+.content {
+  margin-bottom: 32px;
+}
+
+.video-container {
+  margin-bottom: 64px;
+  position: relative;
+  width: 100%;
+  height: 54vh;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.video-container img#video-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 1;
+  width: 100%;
+}
+
+.play-button {
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.play-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 2;
+}
+
+.play-button:hover {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.icon-play {
+  position: absolute;
+  fill: white;
+  width: 40%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quote {
+  border-top: 1px solid #272727;
+  border-bottom: 1px solid #272727;
+}
+
+.quote-text {
+  padding-top: 64px;
+  padding-bottom: 32px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.quote-author {
+  padding-bottom: 64px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #272727;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.highlight {
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    padding-right: 339px;
+    padding-bottom: 40px;
+  }
+
+  .description {
+    text-align: right;
+    font-size: 15px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .video-container {
+    margin-bottom: 100px;
+    height: 72vh;
+  }
+
+  .quote-text {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    font-size: 50px;
+  }
+
+  .quote-author {
+    padding-bottom: 80px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title {
+    padding-right: 947px;
+  }
+
+  .video-container {
+    margin-bottom: 140px;
+    height: 50vh;
+  }
+
+  .video-container img#video-thumbnail {
+    height: 50vh;
+  }
+
+  .quote-text {
+    font-size: 92px;
+  }
+}

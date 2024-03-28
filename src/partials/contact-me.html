@@ -1,16 +1,16 @@
-<div class="backdrop-modal-contact-me is-hidden">
+<div class="backdrop-modal-contact-me backdrop">
   <div class="modal-contact-me">
     <div class="container head-container-contact-me">
       <h4 class="head-title-contact-me" data-id="contact-me">Contact me</h4>
-      <button type="button" class="close-btn-contact-me">
-        <svg class="close-icon">
+      <button type="button" class="close-btn-contact-me pop-up-close-btn">
+        <svg class="close-icon" width="26" height="26">
           <use href="./img/icons/symbol.svg#icon-close"></use>
         </svg>
       </button>
     </div>
     <div class="modal-left-side">
       <div class="container main-container-contact-me">
-        <h2 class="subtitle-contact-me" data-en="Work" data-ua="Працюйте">
+        <h2 class="subtitle-contact-me" data-en="Work" data-ua="Працювати">
           Work
         </h2>
         <span
@@ -25,14 +25,33 @@
         </p>
         <form class="form-contact-me" id="form">
           <input
-            id="text"
+            id="name"
+            type="text"
+            name="user-name"
+            class="input-contact-me"
+            data-en-placeholder="Name"
+            data-ua-placeholder="Ім'я"
+            required
+          />
+          <input
+            id="number"
+            type="tel"
+            name="user-number"
+            class="input-contact-me"
+            data-en-placeholder="Phone number"
+            data-ua-placeholder="Номер телефону"
+            required
+          />
+          <input
+            id="message"
             type="text"
             name="user-message"
             class="input-contact-me"
             data-en-placeholder="Let's talk"
-            data-ua-placeholder="Давайте поговоримо"
+            data-ua-placeholder="Давай спілкуватися"
             required
-          />
+          >
+          </input>
           <button class="send-btn-contact-me" type="submit">
             <span data-id="send">Send</span>
 

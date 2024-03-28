@@ -3,15 +3,11 @@
   margin-bottom: 64px;
 }
 
-
-.portfolio-button{
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  border: none;
-  padding: 0;
+.portfolio-item-container {
+  width: fit-content;
+  pointer-events: all;
+  cursor: pointer;
 }
-
 
 .portfolio-title {
   text-transform: uppercase;
@@ -26,13 +22,13 @@
 
 .portfolio-item {
   margin-bottom: 32px;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .portfolio-item-title {
   font-size: 20px;
   font-weight: 500;
-  line-height: 1.0;
+  line-height: 1;
   letter-spacing: -0.03em;
   text-align: left;
   text-transform: uppercase;
@@ -172,6 +168,10 @@
 
   .portfolio-item:nth-child(even) {
     grid-column: 2;
+  }
+
+  .portfolio-item:nth-child(even){
+    margin-top: 0;
   }
 
   .portfolio-item-description-small {
