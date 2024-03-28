@@ -17,13 +17,6 @@ const wrapper = document.querySelector('.swiper-wrapper');
 const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
 const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
 const portfolioList = document.querySelector('.portfolio-list');
-const popUpGalleryArrowPrev = document.querySelector(
-  'pop-up-gallery-swiper-btn-prev'
-);
-const popUpGalleryArrowNext = document.querySelector(
-  '.pop-up-gallery-swiper-btn-next'
-);
-
 const bodyScroll = document.querySelector('body');
 let swiper;
 
@@ -68,10 +61,6 @@ const swiperParams = {
   },
 
   mousewheel: true,
-
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
 };
 
 const popUpGallerySlider = sliderData => {
@@ -120,7 +109,7 @@ portfolioList.addEventListener('click', e => {
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'H3' ||
     e.target.nodeName === 'P' ||
-    e.target.nodeName === 'BUTTON'
+    e.target.nodeName === 'DIV'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
 

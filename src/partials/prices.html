@@ -2,15 +2,15 @@
     <p class="text-price" data-ua="(Ціни)" data-en="(PRICE)">(PRICE)</p>
     <p class="prices-text" data-id="price-desc">Photo sessions are specially designed to remember and convey your story,
         your emotions and
-        your style.I guarantee a
+        your style. I guarantee a
         unique experience and quality images.</p>
     <div class="arrows">
-        <button class="arrow-prev" type="button" aria-label="previous photo">
+        <button tabindex="0" class="arrow-prev" type="button" aria-label="previous photo">
             <svg class="icon-arrow-prev" width="28" height="28">
                 <use href="./img/icons/symbol.svg#icon-arrow-prev"></use>
             </svg>
         </button>
-        <button class="arrow-next" type="button" aria-label="next photo">>
+        <button tabindex="0" class="arrow-next" type="button" aria-label="next photo">
             <svg class="icon-arrow-next" width="28" height="28">
                 <use href="./img/icons/symbol.svg#icon-arrow-next"></use>
             </svg>
@@ -19,7 +19,7 @@
     <div class="swiper-container-price">
         <div class="swiper price" data-id="price-gallery">
             <div class="swiper-wrapper price">
-                <button class="swiper-slide price first">
+                <div tabindex="1" class="swiper-slide price first">
                     <div class="name-first">BASIC</div>
                     <div class="number-first number">01</div>
                     <div class="overlay-dark">
@@ -28,8 +28,8 @@
                             editing time 5-10 days</p>
                         <p class="price-first">55 $ / 50 €</p>
                     </div>
-                </button>
-                <button class="swiper-slide price second">
+                </div>
+                <div tabindex="2" class="swiper-slide price second">
                     <div class="name-second">STANDART</div>
                     <div class="number-second number">02</div>
                     <div class="overlay-dark">
@@ -38,8 +38,8 @@
                             up to 50 edited photos
                             editing time 10-14 days</p>
                     </div>
-                </button>
-                <button class="swiper-slide price third">
+                </div>
+                <div tabindex="3" class="swiper-slide price third">
                     <div class="name-third">PREMIUM</div>
                     <div class="number-third number">03</div>
                     <div class="overlay">
@@ -48,13 +48,12 @@
                             editing time 14-21 days</p>
                         <p class="price-third">175 $ / 160 €</p>
                     </div>
-                </button>
+                </div>
             </div>
         </div>
     </div>
-    </div>
 
     <button class="price-contact-btn" type="button" data-ua="Зв'яжіться зі мною" data-en="Contact me">
-        Contact me</button>
-    </div>
+        Contact me
+    </button>
 </section>
