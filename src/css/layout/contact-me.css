@@ -71,7 +71,6 @@
 }
 
 /* .close-btn-contact-me {
-  background-color: transparent;
   height: fit-content;
   width: fit-content;
   padding: 0;
@@ -98,12 +97,12 @@
 }
 
 .modal-left-side {
-  margin-top: 94px;
+  margin-top: 62px;
 }
 
 @media only screen and (min-width: 768px) {
   .modal-left-side {
-    margin-top: 112px;
+    margin-top: 121px;
   }
 }
 
@@ -111,7 +110,7 @@
   .modal-left-side {
     width: 698px;
 
-    margin-top: 64px;
+    margin-top: 74px;
   }
 }
 
