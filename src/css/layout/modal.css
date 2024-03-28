@@ -20,3 +20,33 @@
 .is-open {
   transform: translate(0);
 }
+
+.noscroll {
+  overflow: hidden;
+}
+
+.pop-up-close-btn {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  border: none;
+  fill: var(--primary-color);
+  background-color: transparent;
+}
+.pop-up-close-btn:hover,
+.pop-up-close-btn:focus {
+  fill: gray;
+}
+@media screen and (min-width: 768px) {
+  .pop-up-close-btn {
+    right: 32px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .pop-up-close-btn {
+    right: 64px;
+  }
+}

@@ -24,7 +24,6 @@ const popUpGalleryArrowNext = document.querySelector(
   '.pop-up-gallery-swiper-btn-next'
 );
 
-console.log(popUpGalleryArrowPrev);
 const bodyScroll = document.querySelector('body');
 let swiper;
 

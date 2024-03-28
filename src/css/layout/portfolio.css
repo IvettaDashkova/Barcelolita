@@ -3,13 +3,10 @@
   margin-bottom: 64px;
 }
 
-.portfolio-button {
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  border: none;
-  padding: 0;
+.portfolio-item-container {
+  width: fit-content;
   pointer-events: all;
+  cursor: pointer;
 }
 
 .portfolio-title {
