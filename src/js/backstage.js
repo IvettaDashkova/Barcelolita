@@ -7,23 +7,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
   playButton.addEventListener('click', function () {
     if (!isPlaying) {
-      video.play();
-      isPlaying = true;
-      video.style.display = 'block';
-      videoThumbnail.style.display = 'none';
-      playButton.style.display = 'none';
+      playVideo();
     }
   });
+
+  video.addEventListener('click', function () {
+    if (isPlaying) {
+      pauseVideo();
+    }
+  });
+
+  function playVideo() {
+    video.play();
+    isPlaying = true;
+    video.style.display = 'block';
+    videoThumbnail.style.display = 'none';
+    playButton.style.display = 'none';
+  }
+
+  function pauseVideo() {
+    video.pause();
+    isPlaying = false;
+    video.currentTime = 0;
+    videoThumbnail.style.display = 'block';
+    playButton.style.display = 'block';
+  }
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
         if (isPlaying) {
-          video.pause();
-          isPlaying = false;
-          video.currentTime = 0;
-          videoThumbnail.style.display = 'block';
-          playButton.style.display = 'block';
+          pauseVideo();
         }
       }
     });
