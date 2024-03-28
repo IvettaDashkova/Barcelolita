@@ -1,16 +1,3 @@
-/* .developer-section {
-  background-color: #010101;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  transform: translate(100%);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: auto;
-  scrollbar-width: none;
-} */
 .developer-wrapper {
   width: 100%;
   height: 100%;
@@ -33,20 +20,6 @@
     margin: 32px 64px 64px;
   }
 }
-
-/* .btn-close {
-  border: none;
-  background-color: transparent;
-} */
-
-/* .icon-close-section-team {
-  fill: #fff;
-  cursor: pointer;
-} */
-
-/* .icon-close-section-team:hover {
-  fill: gray;
-} */
 
 .team {
   font-family: Inter Tight, sans-serif;
