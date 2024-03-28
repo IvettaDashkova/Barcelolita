@@ -22,7 +22,7 @@
 .video-container {
   margin-bottom: 64px;
   position: relative;
-height: 450px;
+  height: 450px;
 }
 
 .video {
@@ -136,7 +136,7 @@ height: 450px;
   }
 }
 
-@media screen and (min-width: 1440px)  {
+@media screen and (min-width: 1440px) {
   .title {
     padding-right: 947px;
   }
