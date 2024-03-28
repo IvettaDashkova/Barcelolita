@@ -105,22 +105,28 @@
     padding-right: 339px;
     padding-bottom: 40px;
   }
+
   .description {
     text-align: right;
-    font-size: 14px;
+    font-size: 15px;
   }
+
   .content {
     display: flex;
     justify-content: space-between;
   }
+
   .video-container {
     margin-bottom: 100px;
+    height: 72vh;
   }
+
   .quote-text {
     padding-top: 80px;
     padding-bottom: 40px;
-    font-size: 46px;
+    font-size: 50px;
   }
+
   .quote-author {
     padding-bottom: 80px;
     font-size: 20px;
@@ -132,10 +138,13 @@
   .title {
     padding-right: 947px;
   }
+
   .video-container {
     margin-bottom: 140px;
+    height: 50vh;
   }
+
   .quote-text {
-    font-size: 86px;
+    font-size: 92px;
   }
 }
