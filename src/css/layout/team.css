@@ -39,14 +39,14 @@
   background-color: transparent;
 }
 
-.icon-close-section-team {
+/* .icon-close-section-team {
   fill: #fff;
   cursor: pointer;
-}
+} */
 
-.icon-close-section-team:hover {
+/* .icon-close-section-team:hover {
   fill: gray;
-}
+} */
 
 .team {
   font-family: Inter Tight, sans-serif;
