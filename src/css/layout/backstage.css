@@ -52,12 +52,21 @@
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  z-index: 2;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.play-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 2;
+}
+
+.play-button:hover {
+  background-color: var(--accent-color);
+  border: none;
 }
 
 .icon-play {
