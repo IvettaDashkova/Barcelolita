@@ -42,7 +42,7 @@ gallerySwiperTeam('gallery-photo-team');
 
 const swiperWrapper = document.getElementById('team-section-wrapper');
 const developerSection = document.querySelector('.developer-section');
-const closeModal = document.querySelector('.icon-close-section-team');
+const closeModal = document.querySelector('.btn-close');
 const openModal = document.querySelector('.team-button');
 const bodyScroll = document.querySelector('body');
 
