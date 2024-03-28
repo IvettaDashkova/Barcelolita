@@ -70,32 +70,6 @@
   opacity: 0.5;
 }
 
-/* .close-btn-contact-me {
-  height: fit-content;
-  width: fit-content;
-  padding: 0;
-  border: none;
-} */
-
-/* .close-icon {
-  width: 26px;
-  height: 26px;
-  fill: var(--primary-color);
-  transition: fill 0.25s ease-in-out;
-} */
-
-/* .close-icon:hover,
-.close-icon:focus {
-  fill: gray;
-} */
-
-@media only screen and (min-width: 768px) {
-  /* .close-icon {
-    width: 40px;
-    height: 40px;
-  } */
-}
-
 .modal-left-side {
   margin-top: 62px;
 }
