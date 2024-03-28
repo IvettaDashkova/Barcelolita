@@ -25,18 +25,18 @@
         </p>
         <form  class="form-contact-me" id="form">
           <input
-          
-            id="name"
+                      id="name"
             type="text"
             name="user-name"
             class="input-contact-me"
             data-en-placeholder="Name"
             data-ua-placeholder="Ім'я"
             required
+            pattern="[A-Za-zÀ-ÿ']+"
+            title="Please enter a valid name"
           />
           <input
-         
-            id="number"
+               id="number"
             type="tel"
             name="user-number"
             class="input-contact-me"
@@ -45,7 +45,6 @@
             required
           />
           <input
-          
             id="message"
             type="text"
             name="user-message"
@@ -53,9 +52,8 @@
             data-en-placeholder="Let's talk"
             data-ua-placeholder="Давай спілкуватися"
             required
-          >
-          </input>
-          <button  class="send-btn-contact-me" type="submit">
+/>                        
+          <button class="send-btn-contact-me" type="submit">
             <span data-id="send">Send</span>
 
             <svg class="telegram-icon" width="18" height="16">
