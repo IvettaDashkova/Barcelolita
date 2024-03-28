@@ -10,7 +10,23 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import '../css/layout/pop-up-gallery.css';
-import portfolio from './pop-up-gallery.json';
+import '../css/layout/modal.css';
+import portfolio from '../constants/pop-up-gallery.json';
+
+const wrapper = document.querySelector('.swiper-wrapper');
+const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
+const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
+const portfolioList = document.querySelector('.portfolio-list');
+const popUpGalleryArrowPrev = document.querySelector(
+  'pop-up-gallery-swiper-btn-prev'
+);
+const popUpGalleryArrowNext = document.querySelector(
+  '.pop-up-gallery-swiper-btn-next'
+);
+
+console.log(popUpGalleryArrowPrev);
+const bodyScroll = document.querySelector('body');
+let swiper;
 
 const swiperParams = {
   modules: [Navigation, Scrollbar, EffectCoverflow, Keyboard, Mousewheel],
@@ -18,22 +34,15 @@ const swiperParams = {
   breakpoints: {
     375: { slidesPerView: 1, spaceBetween: 2 },
 
+    768: { slidesPerView: 1, spaceBetween: 70 },
+
     1440: {
-      slidesPerView: 2.5,
+      slidesPerView: 2.4,
       spaceBetween: 50,
     },
   },
 
   effect: 'coverflow',
-  // slidesPerView: 3,
-  // coverflowEffect: {
-  //   rotate: 50,
-  //   stretch: 0,
-  //   depth: 200,
-  //   modifier: 1,
-  //   scale: 0.7,
-  //   slideShadows: true,
-  // },
 
   coverflowEffect: {
     rotate: 0,
@@ -53,63 +62,77 @@ const swiperParams = {
 
   centeredSlides: true,
 
+  centeredSlidesBounds: true,
+
   keyboard: {
     enabled: true,
   },
 
   mousewheel: true,
 
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
 };
 
 const popUpGallerySlider = sliderData => {
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
   const gallerySlider = sliderData;
-  const swiper = new Swiper(`[data-id="${gallerySlider}"]`, swiperParams);
-
-  return swiper;
+  swiper = new Swiper(`[data-id="${gallerySlider}"]`, swiperParams);
 };
 
-const wrapper = document.querySelector('.swiper-wrapper');
-const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
-const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
-const portfolioList = document.querySelector('.portfolio-list');
-const popUpGalleryArrowPrev = document.querySelector(
-  '.pop-up-gallery-swiper-arrow-prev'
-);
-const popUpGalleryArrowNext = document.querySelector(
-  '.pop-up-gallery-swiper-arrow-next'
-);
-const bodyScroll = document.querySelector('body');
-
-// popUpGalleryArrowNext.addEventListener('click', e => {
-//   popUpGalleryArrowPrev.style.fill = '#f9f9f9';
-// });
-
-closeBtn.addEventListener('click', e => {
+function closePopUpGallery() {
   galleryBackdrop.classList.remove('is-open');
   bodyScroll.classList.remove('noscroll');
+  swiper.destroy(true, true);
+}
+
+function keydownClose(event) {
+  if (event.key === 'Escape') {
+    closePopUpGallery();
+  }
+}
+
+history.pushState(
+  null,
+  null,
+  window.top.location.pathname + window.top.location.search
+);
+window.addEventListener('popstate', e => {
+  e.preventDefault();
+  closePopUpGallery();
+  history.pushState(
+    null,
+    null,
+    window.top.location.pathname + window.top.location.search
+  );
 });
+
+document.addEventListener('keydown', keydownClose);
+
+closeBtn.addEventListener('click', closePopUpGallery);
 
 portfolioList.addEventListener('click', e => {
   if (
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'H3' ||
     e.target.nodeName === 'P' ||
-    e.target.nodeName === 'LI'
+    e.target.nodeName === 'BUTTON'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
 
-    console.log(portfolioItemName);
     galleryBackdrop.classList.add('is-open');
     bodyScroll.classList.add('noscroll');
 
-    renderPopUpGallery(portfolio, portfolioItemName);
+    renderPopUpGallery(portfolioItemName);
     popUpGallerySlider('photo');
   }
 });
-function renderPopUpGallery(portfolio, portfolioItemName) {
+function renderPopUpGallery(portfolioItemName) {
   const galleryCurrent = portfolio.find(
     currentType =>
       currentType.nameEn.toLowerCase() === portfolioItemName.toLowerCase()
@@ -131,14 +154,14 @@ function renderPopUpGallery(portfolio, portfolioItemName) {
   const markup = img
     .map(imgItem => {
       return `<div class="swiper-slide swiper-slide-layout">
-     <img
+       <img
         class="pop-up-photo"
         src=${imgItem}
         alt="photo"
         loading="lazy"
 
       
-      />
+       />
       
     </div> `;
     })

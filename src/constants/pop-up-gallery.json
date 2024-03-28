@@ -2,9 +2,9 @@
   {
     "id": 1,
     "nameEn": "Portrait photo",
-    "nameUa": "Портретне фото",
+    "nameUa": "Особиста зйомка",
     "descriptionEn": "Images with an emphasis on faces, facial expressions and character.",
-    "descriptionUa": "Зображення з акцентом на обличчях, міміці та характері.",
+    "descriptionUa": "Зйомка з акцентом на обличчя, міміку та характер",
     "img": [
       "portrait-photo-1.jpg",
       "portrait-photo-2.jpg",
@@ -18,9 +18,9 @@
   {
     "id": 2,
     "nameEn": "Fashion photo",
-    "nameUa": "Fashion фото",
+    "nameUa": "Fashion зйомка",
     "descriptionEn": "The art of creating expressive and stylish images that emphasize fashion and style.",
-    "descriptionUa": "Мистецтво створення виразних і стильних образів, що підкреслюють моду і стиль.",
+    "descriptionUa": "Зйомка стильних образів, які підкреслюють моду і трендовість.",
     "img": [
       "fashion-photo-1.jpg",
       "fashion-photo-2.jpg",
@@ -31,15 +31,15 @@
   {
     "id": 3,
     "nameEn": "Brand photo",
-    "nameUa": "Фото для брендів",
+    "nameUa": "Зйомка для брендів",
     "descriptionEn": "Reflects the uniqueness of the brand, its values, style and character through visual elements.",
-    "descriptionUa": "Відображає унікальність бренду, його цінності, стиль і характер за допомогою візуальних елементів.",
+    "descriptionUa": "Відображає унікальність бренду, його цінності, стиль і характер через візуальні елементи.",
     "img": ["pochekun.jpg"]
   },
   {
     "id": 4,
     "nameEn": "Genre photo",
-    "nameUa": "Жанрове фото",
+    "nameUa": "Жанрова зйомка",
     "descriptionEn": "A variety of categories and styles covering different themes, moods.",
     "descriptionUa": "Різноманітність категорій і стилів, що охоплюють різні теми, настрої.",
     "img": [
@@ -57,17 +57,17 @@
   {
     "id": 5,
     "nameEn": "Studio photo",
-    "nameUa": "Студійне фото",
-    "descriptionEn": "Capturing the beauty of nature and landscapes.",
-    "descriptionUa": "Захоплення красою природи і пейзажів.",
+    "nameUa": "Студійна зйомка",
+    "descriptionEn": "Shooting in a studio format with an emphasis on a personal idea, mood ",
+    "descriptionUa": "Зйомка в студійному форматі з акцентом на особисту задумку і настрій .",
     "img": ["pochekun.jpg"]
   },
   {
     "id": 6,
     "nameEn": "Couple photo",
-    "nameUa": "Сімейне фото",
+    "nameUa": "Зйомка пари",
     "descriptionEn": "Used to reinforce and build the brand's visual identity.",
-    "descriptionUa": "Зображення людей, що підкреслюють їхню індивідуальність.",
+    "descriptionUa": "Романтична зйомка пари, що підкреслює їх індивідуальність.",
     "img": [
       "couple-photo-1.jpg",
       "couple-photo-2.jpg",
@@ -83,9 +83,9 @@
   {
     "id": 7,
     "nameEn": "LOOKBOOK",
-    "nameUa": "Lookbook",
+    "nameUa": "Лукбук",
     "descriptionEn": "Images of people, emphasizing their individuality.",
-    "descriptionUa": "Використовується для посилення та побудови візуальної ідентичності бренду.",
+    "descriptionUa": "Зйомка моделей для підсилення та створення візуальної ідентичності бренду.",
     "img": [
       "lookbook-1.jpg",
       "lookbook-2.jpg",

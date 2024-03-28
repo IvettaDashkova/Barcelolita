@@ -1,7 +1,10 @@
-import dict from './dict.json';
+import dict from '../constants/dict.json';
 
 function langSwitcher() {
   let initialValue = 'en';
+  if (navigator.language == 'uk-UA') {
+    initialValue = 'uk'
+  }
   const chekerFields = document.querySelectorAll('.svitcher-text');
   let dataLanguage = document.querySelectorAll('[data-en]');
 
