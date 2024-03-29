@@ -27,38 +27,42 @@
           <!-- <div class="input-box-contact-me"> -->
           <input
             required
+            pattern="^[а-яїґієА-ЯЇҐІЄa-zA-Z]{3,}( [а-яїґієА-ЯЇҐІЄa-zA-Z]+)?$"
             id="name"
             type="text"
             name="user-name"
             class="input-contact-me"
             data-en-placeholder="Name"
             data-ua-placeholder="Ім'я"
-            pattern="^[а-яїґієА-ЯЇҐІЄa-zA-Z]{3,}( [а-яїґієА-ЯЇҐІЄa-zA-Z]+)?$"
-            title="Please, enter your name"
+            data-en-title="Please, enter your name"
+            data-ua-title="Будь ласка, введіть своє ім'я"
           />
           <!-- <p class="text-valid">Success</p>
             <p class="text-invalid">Please, enter your name</p> -->
           <!-- </div> -->
           <input
             required
+            pattern="^\+\d{2}-\d{3}-\d{3}-\d{3}$"
             id="number"
             type="tel"
             name="user-number"
             class="input-contact-me"
             data-en-placeholder="Phone number"
             data-ua-placeholder="Номер телефону"
-            pattern="^\+\d{2}-\d{3}-\d{3}-\d{3}$"
-            title="Please enter a valid number like +XX-XXX-XXX-XXX"
+            data-en-title="Please, enter a valid phone number as shown in the example: +XX-XXX-XXX-XXX"
+            data-ua-title="Будь ласка, введіть дійсний номер телефону відповідно до прикладу: +XX-XXX-XXX-XXX"
           />
           <input
             required
+            pattern="^[a-zA-Zа-яїґієА-ЯЇҐІЄ\s,.!?':;-]{3,}( [a-zA-Zа-яїґієА-ЯЇҐІЄ\s,.!?':;-]+)?$"
             id="message"
             type="text"
             name="user-message"
             class="input-contact-me"
             data-en-placeholder="Let's talk"
             data-ua-placeholder="Давай спілкуватися"
-            pattern="^[a-zA-Zа-яїґієА-ЯЇҐІЄ\s,.!?':;-]{3,}( [a-zA-Zа-яїґієА-ЯЇҐІЄ\s,.!?':;-]+)?$"
+            data-en-title="Please, leave a message"
+            data-ua-title="Будь ласка, залиште повідомлення"
           />
           <button class="send-btn-contact-me" type="submit">
             <span data-id="send">Send</span>
