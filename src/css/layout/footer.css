@@ -54,7 +54,6 @@
 }
 .footer-contacts-box-child {
   overflow-wrap: break-word;
-
   width: 112px;
 }
 .mobile-last {
@@ -64,46 +63,8 @@
   padding: 16px 8px;
   border-top: 1px solid rgba(249, 249, 249, 0.15);
   background-color: var(--secondary-color);
-  display: block;
-  flex-wrap: wrap;
-}
-.footer-team {
-  margin-bottom: 0;
-}
-.team-button {
-  padding: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.29em;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: rgba(249, 249, 249, 0.5);
-  border: none;
-}
-.team-button:hover,
-.team-button:focus {
-  color: rgba(249, 249, 249, 0.3);
-}
-.team-button::after {
-  content: '|';
-  padding-left: 4px;
-  padding-right: 4px;
-  vertical-align: text-bottom;
-}
-.team-watermark {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.29em;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: rgba(249, 249, 249, 0.5);
-}
-.team-watermark::before {
-  content: '©';
-  padding-right: 4px;
+  display: flex;
+  justify-content: center;
 }
 .footer-team {
   margin-bottom: 0;
