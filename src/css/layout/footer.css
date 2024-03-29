@@ -54,7 +54,7 @@
 }
 .footer-contacts-box-child {
   overflow-wrap: break-word;
-  width: 108px;
+  width: 112px;
 }
 .mobile-last {
   width: 148px;
@@ -63,8 +63,8 @@
   padding: 16px 8px;
   border-top: 1px solid rgba(249, 249, 249, 0.15);
   background-color: var(--secondary-color);
-  display: block;
-  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
 }
 .footer-team {
   margin-bottom: 0;
