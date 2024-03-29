@@ -1,14 +1,19 @@
-// const numberInput = document.getElementById('number');
+const numberInput = document.getElementById('number');
 
-// numberInput.addEventListener('input', () => {
-//   const phoneNumber = numberInput.value.trim();
-//   console.log(phoneNumber);
-//   if (phoneNumber.startsWith('+38')) {
-//     if (phoneNumber.length !== 13) {
-//       return iziToast.info({
-//         title: 'Error',
-//         message: 'Failed to send message. Please try again later.',
-//       });
-//     }
-//   }
-// });
+numberInput.addEventListener('input', () => {
+  const countryCode = numberInput.value.substring(0, 3);
+  console.dir(countryCode);
+  if (countryCode.startsWith('+38')) {
+    numberInput.setAttribute('pattern', `^\+\d{2}-\d{3}-\d{3}-\d{2}-\d{2}$`);
+    numberInput.setAttribute(
+      'title',
+      'Please enter a valid number like +XX-XXX-XXX-XX-XX'
+    );
+  } else {
+    numberInput.setAttribute('pattern', `^\+\d{2}-\d{3}-\d{3}-\d{3}$`);
+    numberInput.setAttribute(
+      'title',
+      'Please enter a valid number like +XX-XXX-XXX-XXX'
+    );
+  }
+});
