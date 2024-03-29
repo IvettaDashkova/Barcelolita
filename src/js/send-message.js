@@ -1,5 +1,19 @@
 import iziToast from 'izitoast';
 
+// const iziToastStyles = {
+//   titleFont: {
+//     family: 'inherit',
+//     size: '20px',
+//     weight: '500',
+//   },
+//   messageFont: {
+//     family: 'inherit',
+//     size: '16px',
+//     weight: '500',
+//   },
+//   borderRadius: '12px',
+// };
+
 async function sendMessage() {
   const form = document.querySelector('#form');
 
@@ -25,20 +39,29 @@ async function sendMessage() {
 
       if (response.ok) {
         iziToast.success({
-          title: 'Success',
+          title: 'Thank you!',
           message: 'Message sent successfully!',
+          backgroundColor: 'var(--primary-color)',
+          titleColor: 'var(--secondary-color)',
+          messageColor: 'var(--secondary-color)',
         });
       } else {
         iziToast.error({
-          title: 'Error',
-          message: 'Failed to send message. Please try again later.',
+          title: 'Oops...',
+          message: 'Something went wrong. Please try again.',
+          backgroundColor: 'var(--accent-color)',
+          titleColor: 'var(--primary-color)',
+          messageColor: 'var(--primary-color)',
         });
       }
     } catch (error) {
       console.error('Error:', error);
       iziToast.error({
-        title: 'Error',
-        message: 'Failed to send message. Please try again later.',
+        title: 'Oops...',
+        message: 'Something went wrong. Please try again.',
+        backgroundColor: 'var(--accent-color)',
+        titleColor: 'var(--primary-color)',
+        messageColor: 'var(--primary-color)',
       });
     }
 

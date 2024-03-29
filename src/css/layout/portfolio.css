@@ -9,6 +9,7 @@
   border: none;
   pointer-events: all;
   cursor: pointer;
+  padding: 0;
 }
 
 .portfolio-title {
