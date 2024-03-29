@@ -1,4 +1,4 @@
-.hero-section {
+/* .hero-section {
   margin: 0 auto;
   padding-top: 422px;
   padding-bottom: 40px;
@@ -14,19 +14,48 @@
   .hero-section {
     background-image: url('../../img/hero/hero-tablet.webp');
   }
+} */
+
+.hero-section {
+  margin: 0 auto;
+  padding-top: 422px;
+  padding-bottom: 40px;
+  background-repeat: no-repeat;
+  background-size: auto 700px;
+  background-position-x: center;
+  background-position-y: 20px;
+}
+
+@supports (background-image: url('../../img/hero/hero-tablet.webp')) {
+  .hero-section {
+    background-image: url('../../img/hero/hero-tablet.webp');
+  }
+}
+
+/* Якщо формат WebP не підтримується, встановлюється фонове зображення у форматі JPG */
+@supports not (background-image: url('../../img/hero/hero-tablet.webp')) {
+  .hero-section {
+    background-image: url('../../img/hero/hero-tablet.jpg');
+  }
 }
 
 @media only screen and (min-resolution: 192dpi) {
-  .hero-section {
+  /* .hero-section {
     background-image: url('../../img/hero/hero-tablet_@2x.webp'),
       url('../../img/hero/hero-tablet_@2x.jpg');
-  }
+  } */
 
   @supports (background-image: url('../../img/hero/hero-tablet_@2x.webp')) {
     .hero-section {
       background-image: url('../../img/hero/hero-tablet_@2x.webp');
     }
   }
+
+  @supports not (background-image: url('../../img/hero/hero-tablet_@2x.webp')) {
+  .hero-section {
+    background-image: url('../../img/hero/hero-tablet_@2x.jpg');
+  }
+}
 }
 
 .text-wrapper {
