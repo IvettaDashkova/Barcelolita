@@ -110,6 +110,10 @@
     margin-top: 32px;
   }
 
+  .pop-up-gallery-text {
+    max-width: 100%;
+  }
+
   .pop-up-swiper-arrows {
     margin-top: 32px;
   }
