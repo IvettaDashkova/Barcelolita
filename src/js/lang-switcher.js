@@ -3,7 +3,7 @@ import dict from '../constants/dict.json';
 function langSwitcher() {
   let initialValue = 'en';
   if (navigator.language == 'uk-UA') {
-    initialValue = 'uk'
+    initialValue = 'uk';
   }
   const chekerFields = document.querySelectorAll('.svitcher-text');
   let dataLanguage = document.querySelectorAll('[data-en]');
@@ -26,13 +26,15 @@ function langSwitcher() {
       }
     }
 
-    // Change input placeholder language
+    // Change input placeholder & title language
     let inputFields = document.querySelectorAll('.input-contact-me');
     inputFields.forEach(input => {
       if (lang === 'en') {
         input.placeholder = input.dataset.enPlaceholder;
+        input.title = input.dataset.enTitle;
       } else {
         input.placeholder = input.dataset.uaPlaceholder;
+        input.title = input.dataset.uaTitle;
       }
     });
     // The end
