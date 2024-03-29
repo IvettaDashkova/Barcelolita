@@ -34,7 +34,13 @@
     "nameUa": "Зйомка для брендів",
     "descriptionEn": "Reflects the uniqueness of the brand, its values, style and character through visual elements.",
     "descriptionUa": "Відображає унікальність бренду, його цінності, стиль і характер через візуальні елементи.",
-    "img": ["pochekun.jpg"]
+    "img": [
+      "brand-photo-1.jpg",
+      "brand-photo-2.jpg",
+      "brand-photo-3.jpg",
+      "brand-photo-4.jpg",
+      "brand-photo-5.jpg"
+    ]
   },
   {
     "id": 4,
@@ -60,12 +66,12 @@
     "descriptionEn": "Shooting in a studio format with an emphasis on a personal idea, mood ",
     "descriptionUa": "Зйомка в студійному форматі з акцентом на особисту задумку і настрій .",
     "img": [
-      "studio-photo-1",
-      "studio-photo-2",
-      "studio-photo-3",
-      "studio-photo-4",
-      "studio-photo-5",
-      "studio-photo-6"
+      "studio-photo-1.jpg",
+      "studio-photo-2.jpg",
+      "studio-photo-3.jpg",
+      "studio-photo-4.jpg",
+      "studio-photo-5.jpg",
+      "studio-photo-6.jpg"
     ]
   },
   {
