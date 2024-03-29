@@ -195,12 +195,13 @@
             class="input-contact-me"
             data-en-placeholder="Name"
             data-ua-placeholder="Ім'я"
-            data-en-title="Please, enter your name"
-            data-ua-title="Будь ласка, введіть своє ім'я"
+            data-en-title="Please, enter your name (at least 3 characters)"
+            data-ua-title="Будь ласка, введіть своє ім'я (мінімум 3 літери)"
           />
           <!-- <p class="text-valid">Success</p>
             <p class="text-invalid">Please, enter your name</p> -->
-          <!-- </div> -->
+          <!-- </div> data-en-title="Please, enter a valid phone number as shown in the example: +XX-XXX-XXX-XXX"
+            data-ua-title="Будь ласка, введіть дійсний номер телефону відповідно до прикладу: +XX-XXX-XXX-XXX"-->
           <input
             required
             pattern="^\+\d{2}-\d{3}-\d{3}-\d{3}$"
@@ -214,8 +215,6 @@
             data-ua-title="Будь ласка, введіть дійсний номер телефону відповідно до прикладу: +XX-XXX-XXX-XXX"
           />
           <input
-            required
-            pattern="^[a-zA-Zа-яїґієА-ЯЇҐІЄ\s,.!?':;-]{3,}( [a-zA-Zа-яїґієА-ЯЇҐІЄ\s,.!?':;-]+)?$"
             id="message"
             type="text"
             name="user-message"
