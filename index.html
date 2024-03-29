@@ -20,7 +20,7 @@
     <script type="module" crossorigin src="/Barcelolita/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/Barcelolita/assets/vendor-b578028c.js">
     <link rel="stylesheet" href="/Barcelolita/assets/vendor-33907c93.css">
-    <link rel="stylesheet" href="/Barcelolita/assets/index-0f7dd220.css">
+    <link rel="stylesheet" href="/Barcelolita/assets/index-50b1e3eb.css">
   </head>
 
   <body>
@@ -166,7 +166,7 @@
   <div class="modal-contact-me">
     <div class="container head-container-contact-me">
       <h4 class="head-title-contact-me" data-id="contact-me">Contact me</h4>
-      <button  type="button" class="close-btn-contact-me pop-up-close-btn">
+      <button type="button" class="close-btn-contact-me pop-up-close-btn">
         <svg class="close-icon" width="26" height="26">
           <use href="/Barcelolita/assets/symbol-c455baf7.svg#icon-close"></use>
         </svg>
@@ -187,39 +187,49 @@
           If you like what you see on here just say hello and drop me a message.
           I’d love to work with you!
         </p>
-        <form  class="form-contact-me" id="form">
+        <form class="form-contact-me" id="form">
+          <!-- <div class="input-box-contact-me"> -->
           <input
-                      id="name"
+            required
+            pattern="^[а-яїґієА-ЯЇҐІЄa-zA-Z]{3,}( [а-яїґієА-ЯЇҐІЄa-zA-Z]+)?$"
+            id="name"
             type="text"
             name="user-name"
             class="input-contact-me"
             data-en-placeholder="Name"
             data-ua-placeholder="Ім'я"
-            required
-            pattern="[A-Za-zÀ-ÿ']+"
-            title="Please enter a valid name"
+            data-en-title="Please, enter your name"
+            data-ua-title="Будь ласка, введіть своє ім'я"
           />
+          <!-- <p class="text-valid">Success</p>
+            <p class="text-invalid">Please, enter your name</p> -->
+          <!-- </div> -->
           <input
-               id="number"
+            required
+            pattern="^\+\d{2}-\d{3}-\d{3}-\d{3}$"
+            id="number"
             type="tel"
             name="user-number"
             class="input-contact-me"
             data-en-placeholder="Phone number"
             data-ua-placeholder="Номер телефону"
-            required
+            data-en-title="Please, enter a valid phone number as shown in the example: +XX-XXX-XXX-XXX"
+            data-ua-title="Будь ласка, введіть дійсний номер телефону відповідно до прикладу: +XX-XXX-XXX-XXX"
           />
           <input
+            required
+            pattern="^[a-zA-Zа-яїґієА-ЯЇҐІЄ\s,.!?':;-]{3,}( [a-zA-Zа-яїґієА-ЯЇҐІЄ\s,.!?':;-]+)?$"
             id="message"
             type="text"
             name="user-message"
             class="input-contact-me"
             data-en-placeholder="Let's talk"
             data-ua-placeholder="Давай спілкуватися"
-            required
-/>                        
+            data-en-title="Please, leave a message"
+            data-ua-title="Будь ласка, залиште повідомлення"
+          />
           <button class="send-btn-contact-me" type="submit">
             <span data-id="send">Send</span>
-
             <svg class="telegram-icon" width="18" height="16">
               <use href="/Barcelolita/assets/symbol-c455baf7.svg#icon-telegram"></use>
             </svg>
@@ -247,7 +257,7 @@
             </p>
             <ul class="socials-list-contact-me">
               <li class="socials-item-contact-me">
-                <a 
+                <a
                   class="socials-link-contact-me social-link-hover"
                   href="https://www.instagram.com/barcelolitta?igsh=bXFuaGpzazZjMnJo"
                   target="_blank"
@@ -255,7 +265,7 @@
                 >
               </li>
               <li class="socials-item-contact-me">
-                <a 
+                <a
                   class="socials-link-contact-me social-link-hover"
                   href="https://www.facebook.com/alyona.stulina"
                   target="_blank"
@@ -263,7 +273,7 @@
                 >
               </li>
               <li class="socials-item-contact-me">
-                <a 
+                <a
                   class="socials-link-contact-me social-link-hover"
                   href="https://t.me/barcelolita"
                   target="_blank"
@@ -279,14 +289,14 @@
             <address class="adress-contact-me">
               <ul class="socials-list-contact-me">
                 <li class="socials-item-contact-me">
-                  <a 
+                  <a
                     class="socials-link-contact-me social-link-hover"
                     href="mailto:barcelolita@ukr.net"
                     >barcelolita@ukr.net</a
                   >
                 </li>
                 <li class="socials-item-contact-me">
-                  <a 
+                  <a
                     class="socials-link-contact-me social-link-hover"
                     href="tel:+380637780314"
                     >+380637780314</a
