@@ -48,11 +48,18 @@ function focusBtn() {
 function closePopUpContact() {
   backdropModal.classList.remove('is-open');
   bodyScroll.classList.remove('noscroll');
+  setTimeout(() => {
+    backdropModal.style.display = 'none';
+  }, 1000);
 }
 
 function openPopUpContact() {
-  backdropModal.classList.add('is-open');
-  bodyScroll.classList.add('noscroll');
+  backdropModal.style.display = 'block';
+  setTimeout(() => {
+    backdropModal.classList.add('is-open');
+    bodyScroll.classList.add('noscroll');
+  }, 300);
+
   history.pushState(
     null,
     null,

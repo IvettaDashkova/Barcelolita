@@ -38,7 +38,6 @@ const gallerySwiperTeam = photoEl => {
 
   return swiper;
 };
-gallerySwiperTeam('gallery-photo-team');
 
 const swiperWrapper = document.getElementById('team-section-wrapper');
 const developerSection = document.querySelector('.developer-section');
@@ -52,12 +51,20 @@ function openModalTeam() {
     null,
     window.top.location.pathname + window.top.location.search
   );
-  bodyScroll.classList.add('noscroll');
-  developerSection.classList.add('is-open');
+  developerSection.style.display = 'block';
+  setTimeout(() => {
+    bodyScroll.classList.add('noscroll');
+    developerSection.classList.add('is-open');
+  }, 300);
+  createMrkpSwiper();
+  gallerySwiperTeam('gallery-photo-team');
 }
 function closeModalTeam() {
   bodyScroll.classList.remove('noscroll');
   developerSection.classList.remove('is-open');
+  setTimeout(() => {
+    developerSection.style.display = 'none';
+  }, 1000);
 }
 
 history.pushState(
@@ -146,7 +153,6 @@ const createMrkpSwiper = () => {
       }
     )
     .join('');
-  return markup;
-};
 
-swiperWrapper.innerHTML = createMrkpSwiper();
+  swiperWrapper.innerHTML = markup;
+};
