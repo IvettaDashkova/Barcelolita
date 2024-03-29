@@ -34,6 +34,11 @@
   /* height: 507px; */
 }
 
+.pop-up-gallary-desc-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .pop-up-gallery-title {
   font-weight: 500;
   font-size: 20px;
@@ -51,11 +56,12 @@
   line-height: 1.25;
   letter-spacing: -0.03em;
   color: rgba(249, 249, 249, 0.3);
+  max-width: 231px;
 }
 
 .pop-up-swiper-arrows {
   text-align: center;
-  margin-top: 32px;
+  margin-top: 10px;
 }
 
 .pop-up-gallery-swiper-btn-next,
@@ -95,8 +101,6 @@
   .pop-up-gallary-desc-wrapper {
     margin: 0 auto;
     max-width: 494px;
-    display: flex;
-    justify-content: space-between;
   }
   .pop-up-gallery-descr {
     max-width: 354px;
@@ -106,8 +110,11 @@
     margin-top: 32px;
   }
 
+  .pop-up-gallery-text {
+    max-width: 100%;
+  }
+
   .pop-up-swiper-arrows {
-    text-align: center;
     margin-top: 32px;
   }
 }
