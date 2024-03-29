@@ -111,15 +111,16 @@ const createMrkpSwiper = () => {
   <div class="container-img">
     <div class="box-img-team">
       
-      <a class="link-linkedin-team" href="${url}"  target="_blank" aria-label="${ariaLabel}"
+      <a href="${url}"  target="_blank" aria-label="${ariaLabel}"
         >
+        <div  class="link-linkedin-team">
         <svg class="linkedin" width="16" height="16">
           <use href="${icons}#icon-linkedin"></use>
         </svg>
-        </a>
+        </div>
+        
       
-      <a href="${url}" target="_blank" aria-label="${ariaLabel}"
-        >
+      
 <picture>
   <source
     media="(min-width: 768px )"
@@ -143,7 +144,7 @@ const createMrkpSwiper = () => {
     alt="${userNameEn}"
   />
 </picture>
-        </a>
+       </a>
     </div>
   </div>
   <h3 class="dev-name" data-ua="${userNameUa}" data-en="${userNameEn}">${userNameEn}</h3>
