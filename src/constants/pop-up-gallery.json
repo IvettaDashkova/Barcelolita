@@ -25,7 +25,8 @@
       "fashion-photo-1.jpg",
       "fashion-photo-2.jpg",
       "fashion-photo-3.jpg",
-      "fashion-photo-4.jpg"
+      "fashion-photo-4.jpg",
+      "fashion-photo-test.jpg"
     ]
   },
   {
@@ -59,7 +60,7 @@
     "nameUa": "Студійна зйомка",
     "descriptionEn": "Shooting in a studio format with an emphasis on a personal idea, mood ",
     "descriptionUa": "Зйомка в студійному форматі з акцентом на особисту задумку і настрій .",
-    "img": ["pochekun.jpg"]
+    "img": ["pochekun.jpg", "test.jpg"]
   },
   {
     "id": 6,
