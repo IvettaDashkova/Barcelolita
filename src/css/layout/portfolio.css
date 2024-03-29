@@ -3,8 +3,10 @@
   margin-bottom: 64px;
 }
 
-.portfolio-item-container {
+.item-button-portfolio {
+  background-color: transparent;
   width: fit-content;
+  border: none;
   pointer-events: all;
   cursor: pointer;
 }
@@ -17,8 +19,10 @@
   line-height: 1.25;
   letter-spacing: -0.03em;
   text-align: left;
-  opacity: 0.3;
+  opacity: 50%;
 }
+
+
 
 .portfolio-item {
   margin-bottom: 32px;
@@ -26,6 +30,8 @@
 }
 
 .portfolio-item-title {
+  display: block;
+  color: var(--primary-color);
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
@@ -36,6 +42,8 @@
 }
 
 .portfolio-item-description {
+  display: block;
+  color: var(--primary-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.25;
@@ -73,6 +81,8 @@
 }
 
 .portfolio-item-date {
+  display: block;
+  color: var(--primary-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.25;
@@ -170,7 +180,7 @@
     grid-column: 2;
   }
 
-  .portfolio-item:nth-child(even){
+  .portfolio-item:nth-child(even) {
     margin-top: 0;
   }
 
