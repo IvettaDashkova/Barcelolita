@@ -1,5 +1,6 @@
 .pop-up-gallery-backdrop {
-  /* display: none; */
+  display: none;
+  /* pointer-events: none; */
 }
 
 .pop-up-gallery-container {
