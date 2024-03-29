@@ -1,3 +1,8 @@
+.pop-up-gallery-backdrop {
+  display: none;
+  /* pointer-events: none; */
+}
+
 .pop-up-gallery-container {
   position: relative;
   width: 375px;
