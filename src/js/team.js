@@ -4,7 +4,7 @@ import team from '../constants/team.json';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import icons from '../img/icons/symbol.svg';
-
+let swiper;
 const swiperParams = {
   modules: [Navigation, Keyboard],
   breakpoints: {
@@ -26,9 +26,7 @@ const swiperParams = {
 
 const gallerySwiperTeam = photoEl => {
   const photoId = photoEl;
-  const swiper = new Swiper(`[data-id="${photoId}"]`, swiperParams);
-  const nextEl = document.querySelector('.swiper-button-next-section-team');
-  const prevEl = document.querySelector('.swiper-button-prev-section-team');
+  swiper = new Swiper(`[data-id="${photoId}"]`, swiperParams);
 
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Tab') {
@@ -65,6 +63,11 @@ function closeModalTeam() {
   setTimeout(() => {
     developerSection.style.display = 'none';
   }, 1000);
+  if (!swiper) {
+    return;
+  } else {
+    swiper.destroy(true, true);
+  }
 }
 
 history.pushState(
