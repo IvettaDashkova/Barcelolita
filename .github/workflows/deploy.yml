@@ -3,7 +3,9 @@ name: Build and deploy to GitHub Pages
 on:
   push:
     branches: [main]
-
+env:
+  VITE_TELEGRAM_TOKEN: ${{secrets.VITE_TELEGRAM_TOKEN}}
+  VITE_CHAT_ID: ${{secrets.VITE_CHAT_ID}}
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
