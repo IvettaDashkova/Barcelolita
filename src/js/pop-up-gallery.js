@@ -100,7 +100,6 @@ function keydownClose(event) {
 
 function keydownTabModal(event) {
   if (event.key === 'Tab') {
-    console.log(event.target);
     if (
       event.target === closeBtn ||
       event.target === btnNext ||
