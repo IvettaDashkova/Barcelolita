@@ -1,16 +1,41 @@
-// import iziToast from 'izitoast';
+const numberInput = document.getElementById('number');
 
-// const numberInput = document.getElementById('number');
+numberInput.addEventListener('input', () => {
+  const countryCode = numberInput.value.substring(0, 3);
+  let lang = localStorage.getItem('lang');
 
-// numberInput.addEventListener('input', () => {
-//   const phoneNumber = numberInput.value.trim();
-//   console.log(phoneNumber);
-//   if (phoneNumber.startsWith('+38')) {
-//     if (phoneNumber.length !== 13) {
-//       return iziToast.info({
-//         title: 'Error',
-//         message: 'Failed to send message. Please try again later.',
-//       });
-//     }
-//   }
-// });
+  if (countryCode.startsWith('+38')) {
+    numberInput.setAttribute(
+      'pattern',
+      '^\\+\\d{2}-\\d{3}-\\d{3}-\\d{2}-\\d{2}$'
+    );
+
+    numberInput.setAttribute(
+      'data-en-title',
+      'Please, enter a valid phone number as shown in the example: +XX-XXX-XXX-XX-XX'
+    );
+
+    numberInput.setAttribute(
+      'data-ua-title',
+      'Будь ласка, введіть дійсний номер телефону відповідно до прикладу: +XX-XXX-XXX-XX-XX'
+    );
+  } else {
+    numberInput.setAttribute('pattern', '^\\+\\d{2}-\\d{3}-\\d{3}-\\d{3}$');
+
+    numberInput.setAttribute(
+      'data-en-title',
+      'Please, enter a valid phone number as shown in the example: +XX-XXX-XXX-XXX'
+    );
+
+    numberInput.setAttribute(
+      'data-ua-title',
+      'Будь ласка, введіть дійсний номер телефону відповідно до прикладу: +XX-XXX-XXX-XXX'
+    );
+  }
+
+  if (lang === 'en') {
+    numberInput.title = numberInput.dataset.enTitle;
+  } else {
+    numberInput.title = numberInput.dataset.uaTitle;
+  }
+});

@@ -254,6 +254,7 @@
   margin-top: 32px;
   margin-bottom: 64px;
   outline: none;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .price-contact-btn:hover,

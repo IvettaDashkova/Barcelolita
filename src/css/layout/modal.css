@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   background: var(--secondary-color);
+
   z-index: 100;
   transform: translate(100%);
   transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -15,6 +16,7 @@
 
 .mobmenu-backdrop {
   background-color: var(--accent-color);
+  height: calc(100% + 40px);
 }
 
 .is-open {
@@ -32,11 +34,16 @@
   border: none;
   fill: var(--primary-color);
   background-color: transparent;
+  padding: 0;
+
+  transition: fill 0.25s ease-in-out;
 }
+
 .pop-up-close-btn:hover,
 .pop-up-close-btn:focus {
   fill: gray;
 }
+
 @media screen and (min-width: 768px) {
   .pop-up-close-btn {
     right: 32px;
@@ -49,4 +56,9 @@
   .pop-up-close-btn {
     right: 64px;
   }
+}
+
+.close-icon {
+  width: 100%;
+  height: 100%;
 }

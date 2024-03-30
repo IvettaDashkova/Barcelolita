@@ -4,7 +4,7 @@ import team from '../constants/team.json';
 import 'swiper/css/navigation';
 import 'swiper/css';
 import icons from '../img/icons/symbol.svg';
-
+let swiper;
 const swiperParams = {
   modules: [Navigation, Keyboard],
   breakpoints: {
@@ -26,9 +26,7 @@ const swiperParams = {
 
 const gallerySwiperTeam = photoEl => {
   const photoId = photoEl;
-  const swiper = new Swiper(`[data-id="${photoId}"]`, swiperParams);
-  const nextEl = document.querySelector('.swiper-button-next-section-team');
-  const prevEl = document.querySelector('.swiper-button-prev-section-team');
+  swiper = new Swiper(`[data-id="${photoId}"]`, swiperParams);
 
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Tab') {
@@ -38,7 +36,6 @@ const gallerySwiperTeam = photoEl => {
 
   return swiper;
 };
-gallerySwiperTeam('gallery-photo-team');
 
 const swiperWrapper = document.getElementById('team-section-wrapper');
 const developerSection = document.querySelector('.developer-section');
@@ -52,12 +49,25 @@ function openModalTeam() {
     null,
     window.top.location.pathname + window.top.location.search
   );
-  bodyScroll.classList.add('noscroll');
-  developerSection.classList.add('is-open');
+  developerSection.style.display = 'block';
+  setTimeout(() => {
+    bodyScroll.classList.add('noscroll');
+    developerSection.classList.add('is-open');
+  }, 300);
+  createMrkpSwiper();
+  gallerySwiperTeam('gallery-photo-team');
 }
 function closeModalTeam() {
   bodyScroll.classList.remove('noscroll');
   developerSection.classList.remove('is-open');
+  setTimeout(() => {
+    developerSection.style.display = 'none';
+  }, 1000);
+  if (!swiper) {
+    return;
+  } else {
+    swiper.destroy(true, true);
+  }
 }
 
 history.pushState(
@@ -104,15 +114,16 @@ const createMrkpSwiper = () => {
   <div class="container-img">
     <div class="box-img-team">
       
-      <a class="link-linkedin-team" href="${url}"  target="_blank" aria-label="${ariaLabel}"
+      <a href="${url}"  target="_blank" aria-label="${ariaLabel}"
         >
+        <div  class="link-linkedin-team">
         <svg class="linkedin" width="16" height="16">
           <use href="${icons}#icon-linkedin"></use>
         </svg>
-        </a>
+        </div>
+        
       
-      <a href="${url}" target="_blank" aria-label="${ariaLabel}"
-        >
+      
 <picture>
   <source
     media="(min-width: 768px )"
@@ -136,7 +147,7 @@ const createMrkpSwiper = () => {
     alt="${userNameEn}"
   />
 </picture>
-        </a>
+       </a>
     </div>
   </div>
   <h3 class="dev-name" data-ua="${userNameUa}" data-en="${userNameEn}">${userNameEn}</h3>
@@ -146,7 +157,6 @@ const createMrkpSwiper = () => {
       }
     )
     .join('');
-  return markup;
-};
 
-swiperWrapper.innerHTML = createMrkpSwiper();
+  swiperWrapper.innerHTML = markup;
+};

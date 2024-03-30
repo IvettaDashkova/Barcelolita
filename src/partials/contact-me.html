@@ -25,22 +25,28 @@
         </p>
         <form class="form-contact-me" id="form">
           <input
+            required
+            pattern="^[а-яїґієА-ЯЇҐІЄa-zA-Z]{2,}( [а-яїґієА-ЯЇҐІЄa-zA-Z]+)?$"
             id="name"
             type="text"
             name="user-name"
             class="input-contact-me"
             data-en-placeholder="Name"
             data-ua-placeholder="Ім'я"
-            required
+            data-en-title="Please, enter your name (at least 2 letters)"
+            data-ua-title="Будь ласка, введіть своє ім'я (мінімум 2 літери)"
           />
           <input
+            required
+            pattern="^\+\d{2}-\d{3}-\d{3}-\d{3}$"
             id="number"
             type="tel"
             name="user-number"
             class="input-contact-me"
             data-en-placeholder="Phone number"
             data-ua-placeholder="Номер телефону"
-            required
+            data-en-title="Please, enter a valid phone number as shown in the example: +XX-XXX-XXX-XXX"
+            data-ua-title="Будь ласка, введіть дійсний номер телефону відповідно до прикладу: +XX-XXX-XXX-XXX"
           />
           <input
             id="message"
@@ -49,12 +55,11 @@
             class="input-contact-me"
             data-en-placeholder="Let's talk"
             data-ua-placeholder="Давай спілкуватися"
-            required
-          >
-          </input>
+            data-en-title="Please, leave a message"
+            data-ua-title="Будь ласка, залиште повідомлення"
+          />
           <button class="send-btn-contact-me" type="submit">
             <span data-id="send">Send</span>
-
             <svg class="telegram-icon" width="18" height="16">
               <use href="./img/icons/symbol.svg#icon-telegram"></use>
             </svg>

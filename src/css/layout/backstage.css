@@ -1,6 +1,6 @@
 .title {
   text-transform: uppercase;
-  color: #272727;
+  color: rgba(249, 249, 249, 0.5);
   padding-bottom: 32px;
   font-size: 16px;
   line-height: 1.25;
@@ -22,8 +22,7 @@
 .video-container {
   margin-bottom: 64px;
   position: relative;
-  width: 100%;
-  height: 54vh;
+  height: 450px;
 }
 
 .video {
@@ -34,11 +33,6 @@
 
 .video-container img#video-thumbnail {
   position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  z-index: 1;
-  width: 100%;
 }
 
 .play-button {
@@ -98,7 +92,7 @@
   text-align: center;
   font-size: 16px;
   text-transform: uppercase;
-  color: #272727;
+  color: rgba(249, 249, 249, 0.5);
   line-height: 1.25;
   letter-spacing: -0.03em;
   font-weight: 500;
@@ -106,6 +100,20 @@
 
 .highlight {
   color: var(--accent-color);
+}
+
+.quote .first-highlight::before {
+  content: '″';
+  color: white;
+  margin-right: 3px;
+}
+
+@media screen and (min-width: 320px) {
+  .video-container img#video-thumbnail {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -126,7 +134,7 @@
 
   .video-container {
     margin-bottom: 100px;
-    height: 72vh;
+    height: 640px;
   }
 
   .quote-text {
@@ -149,11 +157,7 @@
 
   .video-container {
     margin-bottom: 140px;
-    height: 50vh;
-  }
-
-  .video-container img#video-thumbnail {
-    height: 50vh;
+    height: 700px;
   }
 
   .quote-text {
