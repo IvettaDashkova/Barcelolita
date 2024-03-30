@@ -19,6 +19,8 @@ const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
 const portfolioList = document.querySelector('.portfolio-list');
 const bodyScroll = document.querySelector('body');
 let swiper;
+const btnPrev = document.querySelector('.pop-up-gallery-swiper-btn-prev');
+const btnNext = document.querySelector('.pop-up-gallery-swiper-btn-next');
 
 const swiperParams = {
   modules: [Navigation, Scrollbar, EffectCoverflow, Keyboard, Mousewheel],
@@ -74,10 +76,11 @@ const popUpGallerySlider = sliderData => {
 };
 
 function closePopUpGallery() {
-  modalGallery.removeEventListener('transitionend', focusFirstElementGallery);
-  modalGallery.removeEventListener('keydown', nextFocusTabGallery);
+  // modalGallery.removeEventListener('transitionend', focusFirstElementGallery);
+  // modalGallery.removeEventListener('keydown', nextFocusTabGallery);
   galleryBackdrop.classList.remove('is-open');
   bodyScroll.classList.remove('noscroll');
+  document.removeEventListener('keyup', keydownTabModal);
   setTimeout(() => {
     galleryBackdrop.style.display = 'none';
   }, 1000);
@@ -92,6 +95,21 @@ function closePopUpGallery() {
 function keydownClose(event) {
   if (event.key === 'Escape') {
     closePopUpGallery();
+  }
+}
+
+function keydownTabModal(event) {
+  if (event.key === 'Tab') {
+    console.log(event.target);
+    if (
+      event.target === closeBtn ||
+      event.target === btnNext ||
+      event.target === btnPrev
+    ) {
+      return;
+    } else {
+      closeBtn.focus();
+    }
   }
 }
 
@@ -127,9 +145,12 @@ portfolioList.addEventListener('click', e => {
       galleryBackdrop.classList.add('is-open');
       bodyScroll.classList.add('noscroll');
     }, 300);
-    modalGallery.addEventListener('transitionend', focusFirstElementGallery);
+    document.getElementById('photo-gallery').focus();
+    document.addEventListener('keyup', keydownTabModal);
 
-    modalGallery.addEventListener('keydown', nextFocusTabGallery);
+    // modalGallery.addEventListener('transitionend', focusFirstElementGallery);
+
+    // modalGallery.addEventListener('keydown', nextFocusTabGallery);
     renderPopUpGallery(portfolioItemName);
     popUpGallerySlider('photo');
   }
@@ -168,49 +189,49 @@ function renderPopUpGallery(portfolioItemName) {
 
   wrapper.innerHTML = markup;
 }
-const modalGallery = document.querySelector('.tab-js-gallery');
+// const modalGallery = document.querySelector('.tab-js-gallery');
 
-const focusElementsGallery = modalGallery.querySelectorAll(
-  'button,[tabindex]:not([tabindex="-1"])'
-);
-const firstFocusleElementGallery = focusElementsGallery[0];
-const lastFocusElementGallery =
-  focusElementsGallery[focusElementsGallery.length - 1];
+// const focusElementsGallery = modalGallery.querySelectorAll(
+//   'button,[tabindex]:not([tabindex="-1"])'
+// );
+// const firstFocusleElementGallery = focusElementsGallery[0];
+// const lastFocusElementGallery =
+//   focusElementsGallery[focusElementsGallery.length - 1];
 
-const focusFirstElementGallery = () => {
-  firstFocusleElementGallery.focus();
-};
+// const focusFirstElementGallery = () => {
+//   firstFocusleElementGallery.focus();
+// };
 
-const focusLastElementGallery = () => {
-  lastFocusElementGallery.focus();
-};
+// const focusLastElementGallery = () => {
+//   lastFocusElementGallery.focus();
+// };
 
-function nextFocusTabGallery(event) {
-  if (event.key === 'Tab') {
-    event.preventDefault();
+// function nextFocusTabGallery(event) {
+//   if (event.key === 'Tab') {
+//     event.preventDefault();
 
-    if (event.shiftKey) {
-      if (document.activeElement === firstFocusleElementGallery) {
-        focusLastElementGallery();
-      } else {
-        focusElementsGallery[
-          Array.prototype.indexOf.call(
-            focusElementsGallery,
-            document.activeElement
-          ) - 1
-        ].focus();
-      }
-    } else {
-      if (document.activeElement === lastFocusElementGallery) {
-        focusFirstElementGallery();
-      } else {
-        focusElementsGallery[
-          Array.prototype.indexOf.call(
-            focusElementsGallery,
-            document.activeElement
-          ) + 1
-        ].focus();
-      }
-    }
-  }
-}
+//     if (event.shiftKey) {
+//       if (document.activeElement === firstFocusleElementGallery) {
+//         focusLastElementGallery();
+//       } else {
+//         focusElementsGallery[
+//           Array.prototype.indexOf.call(
+//             focusElementsGallery,
+//             document.activeElement
+//           ) - 1
+//         ].focus();
+//       }
+//     } else {
+//       if (document.activeElement === lastFocusElementGallery) {
+//         focusFirstElementGallery();
+//       } else {
+//         focusElementsGallery[
+//           Array.prototype.indexOf.call(
+//             focusElementsGallery,
+//             document.activeElement
+//           ) + 1
+//         ].focus();
+//       }
+//     }
+//   }
+// }
