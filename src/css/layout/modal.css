@@ -35,6 +35,7 @@
   background-color: transparent;
   padding: 0;
 }
+
 .pop-up-close-btn:hover,
 .pop-up-close-btn:focus {
   fill: gray;
