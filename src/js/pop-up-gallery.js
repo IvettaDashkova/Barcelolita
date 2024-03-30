@@ -82,7 +82,7 @@ function closePopUpGallery() {
   galleryBackdrop.classList.remove('is-open');
   bodyScroll.classList.remove('noscroll');
   document.removeEventListener('keyup', keydownTabModal);
-  console.log(fixFocusPortfolio);
+
   fixFocusPortfolio.focus();
   setTimeout(() => {
     galleryBackdrop.style.display = 'none';
@@ -141,7 +141,7 @@ portfolioList.addEventListener('click', e => {
     e.target.nodeName === 'BUTTON'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
-    fixFocusPortfolio = e.currentTarget;
+    fixFocusPortfolio = e.target.closest('.item-button-portfolio');
 
     galleryBackdrop.style.display = 'block';
     setTimeout(() => {
