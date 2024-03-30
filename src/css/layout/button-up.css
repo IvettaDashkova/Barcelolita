@@ -1,0 +1,39 @@
+.go-up {
+  position: fixed;
+  right: 16px;
+  bottom: 46px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  background-color: var(--secondary-color);
+  padding: 0;
+  box-shadow: inset -13px -5px 13px 0 rgba(255, 255, 255, 0.05),
+    inset 13px 10px 13px 0 rgba(8, 8, 8, 0.05);
+  transition: all 2500ms easy-in-out;
+}
+.go-up:hover {
+  background-color: var(--accent-color);
+}
+.btn-hide {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .go-up {
+    width: 150px;
+    height: 150px;
+    right: 32px;
+    bottom: 57px;
+  }
+  .go-up-svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .go-up {
+    right: 64px;
+  }
+}
