@@ -34,6 +34,8 @@
   fill: var(--primary-color);
   background-color: transparent;
   padding: 0;
+
+  transition: fill 0.25s ease-in-out;
 }
 
 .pop-up-close-btn:hover,
