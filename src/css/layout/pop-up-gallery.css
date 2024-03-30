@@ -11,6 +11,10 @@
   padding-bottom: 64px;
 }
 
+.pop-up-gallery-close-btn {
+  z-index: 99;
+}
+
 .pop-up-gallary-cont-layout {
   display: block;
   margin: 0 auto;
