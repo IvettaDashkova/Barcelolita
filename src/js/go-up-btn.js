@@ -16,10 +16,8 @@ function scrollFunction() {
 }
 goToTopButton.addEventListener('click', () => {
   goToTopButton.style.display = 'none';
-  window.scroll({
+  window.scrollTo({
     top: 0,
     behavior: 'smooth',
   });
 });
-
-export default scrollFunction;
