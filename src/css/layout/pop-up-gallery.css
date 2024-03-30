@@ -11,10 +11,14 @@
   padding-bottom: 64px;
 }
 
+.pop-up-gallery-close-btn {
+  z-index: 99;
+}
+
 .pop-up-gallary-cont-layout {
   display: block;
   margin: 0 auto;
-  width: 343px;
+  width: 311px;
 }
 
 .pop-up-gallery-swiper {
@@ -22,21 +26,19 @@
   margin-right: auto;
 }
 
-.pop-up-gallery-wrapper {
-  width: 343px;
-}
-
 .pop-up-photo {
   object-fit: cover;
   object-position: center;
   border-radius: 4px;
-  width: 343px;
-  /* height: 507px; */
+  width: 311px;
 }
 
 .pop-up-gallary-desc-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-top: 16px;
+  width: 311px;
+  position: relative;
 }
 
 .pop-up-gallery-title {
@@ -46,7 +48,6 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin-top: 16px;
   margin-bottom: 8px;
 }
 
@@ -56,12 +57,14 @@
   line-height: 1.25;
   letter-spacing: -0.03em;
   color: rgba(249, 249, 249, 0.3);
-  max-width: 231px;
+  width: 231px;
 }
 
 .pop-up-swiper-arrows {
-  text-align: center;
-  margin-top: 10px;
+  display: flex;
+  position: absolute;
+  top: -5px;
+  right: -5px;
 }
 
 .pop-up-gallery-swiper-btn-next,
@@ -76,46 +79,31 @@
 
 .pop-up-gallery-swiper-arrow-prev {
   fill: var(--primary-color);
-  /* fill: rgba(249, 249, 249, 0.2); */
   transform: rotate(180deg);
 }
 
 @media screen and (min-width: 768px) {
   .pop-up-gallery-container {
     width: 768px;
+    padding-top: 50px;
   }
 
   .pop-up-gallary-cont-layout {
-    width: 494px;
-  }
-
-  .pop-up-gallery-wrapper {
-    width: 494px;
+    width: 442px;
   }
 
   .pop-up-photo {
-    width: 494px;
-    /* height: 613px; */
+    width: 442px;
   }
 
   .pop-up-gallary-desc-wrapper {
-    margin: 0 auto;
-    max-width: 494px;
-  }
-  .pop-up-gallery-descr {
-    max-width: 354px;
-  }
-
-  .pop-up-gallery-title {
-    margin-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 442px;
   }
 
   .pop-up-gallery-text {
-    max-width: 100%;
-  }
-
-  .pop-up-swiper-arrows {
-    margin-top: 32px;
+    width: 324px;
   }
 }
 
@@ -128,13 +116,20 @@
     width: 100%;
   }
 
+  .pop-up-gallery-text {
+    width: 319px;
+  }
+
   .pop-up-gallery-swiper-btn-next :hover,
   .pop-up-gallery-swiper-btn-prev :hover {
     fill: gray;
   }
 
   .pop-up-gallary-desc-wrapper {
-    max-width: 560px;
-    padding-right: 65px;
+    width: 565px;
+  }
+
+  .pop-up-swiper-arrows {
+    right: 120px;
   }
 }

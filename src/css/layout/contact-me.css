@@ -1,13 +1,12 @@
 .backdrop-modal-contact-me {
   display: none;
-  /* display: none; */
 }
 
 .modal-contact-me {
   position: relative;
   margin: 0 auto;
 
-  width: 375px;
+  max-width: 375px;
   min-height: 812px;
 
   padding-top: 32px;
@@ -25,7 +24,7 @@
 
 @media only screen and (min-width: 1440px) {
   .modal-contact-me {
-    width: 1440px;
+    max-width: 1440px;
     min-height: 930px;
 
     padding-bottom: 64px;
@@ -55,7 +54,7 @@
 
 @media only screen and (min-width: 768px) {
   .modal-left-side {
-    margin-top: 121px;
+    margin-top: 120px;
   }
 }
 
@@ -100,6 +99,7 @@
 
     padding-right: 16px;
   }
+
   .span-subtitle-contact-me {
     display: block;
     font-size: 100px;
@@ -114,7 +114,7 @@
   line-height: 1.25;
   letter-spacing: -0.03em;
 
-  width: 342px;
+  max-width: 342px;
   margin-bottom: 32px;
 }
 
@@ -129,7 +129,7 @@
   flex-wrap: wrap;
   gap: 16px;
 
-  width: 343px;
+  max-width: 343px;
 }
 
 .form-contact-me > :last-child {
@@ -138,15 +138,9 @@
 
 @media only screen and (min-width: 768px) {
   .form-contact-me {
-    width: 536px;
+    max-width: 536px;
   }
 }
-
-/* .input-box-contact-me {
-  width: 100%;
-  height: 70px;
-  position: relative;
-} */
 
 .input-contact-me {
   height: 54px;
@@ -155,11 +149,23 @@
   padding: 16px 18px;
   border-radius: 12px;
 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+
   background-color: transparent;
   border: 1px solid rgba(249, 249, 249, 0.15);
   color: var(--primary-color);
 
   transition: border 0.25s ease-in-out;
+}
+
+.input-contact-me::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 .input-contact-me:hover,
@@ -179,8 +185,8 @@
 
 @media only screen and (min-width: 768px) {
   .input-contact-me {
-    height: 58px;
     width: 260px;
+    height: 58px;
   }
 
   .input-contact-me:last-of-type {
@@ -188,45 +194,6 @@
     height: 58px;
   }
 }
-
-/* .input-contact-me:not(:placeholder-shown):invalid {
-  border-color: red;
-}
-
-/* стилізація інпута при валідному значенні */
-/* .input-contact-me:not(:placeholder-shown):valid {
-  border-color: green;
-} */
-
-/* .text-valid,
-.text-invalid {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: -0.03em; */
-/* padding-left: 18px; */
-/* display: none;
-} */
-
-/* .text-valid {
-  color: green;
-}
-
-.text-invalid {
-  color: red;
-} */
-
-/* стилізація інформаційного текста при валідному значенні в інпуті */
-/* .input-contact-me:not(:placeholder-shown):valid ~ .text-valid {
-  display: block;
-} */
-
-/* стилізація інформаційного текста при не валідному значенні в інпуті */
-/* .input-contact-me:not(:placeholder-shown):invalid ~ .text-invalid {
-  display: block;
-} */
 
 .send-btn-contact-me {
   display: flex;
