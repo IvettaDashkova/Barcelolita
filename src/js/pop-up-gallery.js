@@ -19,6 +19,7 @@ const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
 const portfolioList = document.querySelector('.portfolio-list');
 const bodyScroll = document.querySelector('body');
 let swiper;
+let fixFocusPortfolio;
 const btnPrev = document.querySelector('.pop-up-gallery-swiper-btn-prev');
 const btnNext = document.querySelector('.pop-up-gallery-swiper-btn-next');
 
@@ -81,6 +82,8 @@ function closePopUpGallery() {
   galleryBackdrop.classList.remove('is-open');
   bodyScroll.classList.remove('noscroll');
   document.removeEventListener('keyup', keydownTabModal);
+  console.log(fixFocusPortfolio);
+  fixFocusPortfolio.focus();
   setTimeout(() => {
     galleryBackdrop.style.display = 'none';
   }, 1000);
@@ -138,6 +141,7 @@ portfolioList.addEventListener('click', e => {
     e.target.nodeName === 'BUTTON'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
+    fixFocusPortfolio = e.currentTarget;
 
     galleryBackdrop.style.display = 'block';
     setTimeout(() => {
