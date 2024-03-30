@@ -42,6 +42,7 @@
   line-height: 1em;
   letter-spacing: -0.03em;
   color: var(--primary-color);
+  transition: color 0.25s ease-in-out;
 }
 .footer-title-link:hover,
 .footer-title-link:focus {
