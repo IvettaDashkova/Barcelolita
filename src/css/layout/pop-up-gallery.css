@@ -125,6 +125,11 @@
     fill: gray;
   }
 
+  .pop-up-gallery-swiper-btn-next :focus,
+  .pop-up-gallery-swiper-btn-prev :focus {
+    fill: gray;
+  }
+
   .pop-up-gallary-desc-wrapper {
     width: 565px;
   }
