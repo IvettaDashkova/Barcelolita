@@ -23,9 +23,10 @@
     "descriptionUa": "Зйомка стильних образів, які підкреслюють моду і трендовість.",
     "img": [
       "fashion-photo-1.jpg",
-      "fashion-photo-2.jpg",
+
       "fashion-photo-3.jpg",
-      "fashion-photo-4.jpg"
+      "fashion-photo-4.jpg",
+      "fashion-photo-2.jpg"
     ]
   },
   {
@@ -67,9 +68,9 @@
     "descriptionUa": "Зйомка в студійному форматі з акцентом на особисту задумку і настрій .",
     "img": [
       "studio-photo-1.jpg",
-      "studio-photo-2.jpg",
       "studio-photo-3.jpg",
       "studio-photo-5.jpg",
+      "studio-photo-2.jpg",
       "studio-photo-6.jpg"
     ]
   },
