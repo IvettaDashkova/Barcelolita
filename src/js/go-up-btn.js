@@ -6,8 +6,8 @@ window.onscroll = () => {
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 930 ||
-    document.documentElement.scrollTop > 930
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
   ) {
     goToTopButton.style.display = 'block';
   } else {

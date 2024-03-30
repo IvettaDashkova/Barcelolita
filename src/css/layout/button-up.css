@@ -3,12 +3,13 @@ html {
 }
 
 .go-up {
+  display: none;
   position: fixed;
   right: 16px;
   bottom: 46px;
   width: 80px;
   height: 80px;
-  z-index: 100;
+  z-index: 20;
   border-radius: 50%;
   border: 1px solid rgba(249, 249, 249, 0.2);
   background-color: var(--secondary-color);
