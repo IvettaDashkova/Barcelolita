@@ -1,25 +1,8 @@
-/* .hero-section {
-  margin: 0 auto;
-  padding-top: 422px;
-  padding-bottom: 40px;
-  background-image: url('../../img/hero/hero-tablet.webp'),
-    url('../../img/hero/hero-tablet.jpg');
-  background-repeat: no-repeat;
-  background-size: auto 700px;
-  background-position-x: center;
-  background-position-y: 20px;
-}
-
-@supports (background-image: url('../../img/hero/hero-tablet.webp')) {
-  .hero-section {
-    background-image: url('../../img/hero/hero-tablet.webp');
-  }
-} */
-
 .hero-section {
   margin: 0 auto;
   padding-top: 422px;
   padding-bottom: 40px;
+  background-image: url('../../img/hero/hero-tablet.jpg');
   background-repeat: no-repeat;
   background-size: auto 700px;
   background-position-x: center;
@@ -32,30 +15,16 @@
   }
 }
 
-/* Якщо формат WebP не підтримується, встановлюється фонове зображення у форматі JPG */
-@supports not (background-image: url('../../img/hero/hero-tablet.webp')) {
-  .hero-section {
-    background-image: url('../../img/hero/hero-tablet.jpg');
-  }
-}
-
 @media only screen and (min-resolution: 192dpi) {
-  /* .hero-section {
-    background-image: url('../../img/hero/hero-tablet_@2x.webp'),
-      url('../../img/hero/hero-tablet_@2x.jpg');
-  } */
+  .hero-section {
+    background-image: url('../../img/hero/hero-tablet_@2x.jpg');
+  }
 
   @supports (background-image: url('../../img/hero/hero-tablet_@2x.webp')) {
     .hero-section {
       background-image: url('../../img/hero/hero-tablet_@2x.webp');
     }
   }
-
-  @supports not (background-image: url('../../img/hero/hero-tablet_@2x.webp')) {
-  .hero-section {
-    background-image: url('../../img/hero/hero-tablet_@2x.jpg');
-  }
-}
 }
 
 .text-wrapper {
@@ -102,7 +71,6 @@
   background: rgba(1, 1, 1, 0.05);
   outline: none;
   transition: 0.25s ease-in-out;
-  /* backdrop-filter: blur(80px); */
 }
 
 .contact-me-btn:hover,
@@ -145,8 +113,7 @@
 
 @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
   .hero-section {
-    background-image: url('../../img/hero/hero-tablet_@2x.webp'),
-      url('../../img/hero/hero-tablet_@2x.jpg');
+    background-image: url('../../img/hero/hero-tablet_@2x.jpg');
   }
 
   @supports (background-image: url('../../img/hero/hero-tablet_@2x.webp')) {
@@ -161,8 +128,7 @@
     padding-top: 612px;
     padding-bottom: 140px;
     background-color: var(--secondary-color);
-    background-image: url('../../img/hero/hero-desc.webp'),
-      url('../../img/hero/hero-desc.jpg');
+    background-image: url('../../img/hero/hero-desc.jpg');
   }
 
   @supports (background-image: url('../../img/hero/hero-desc.webp')) {
@@ -195,8 +161,7 @@
 
 @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
   .hero-section {
-    background-image: url('../../img/hero/hero-desc_@2x.webp'),
-      url('../../img/hero/hero-desc_@2x.jpg');
+    background-image: url('../../img/hero/hero-desc_@2x.jpg');
   }
 
   @supports (background-image: url('../../img/hero/hero-desc_@2x.webp')) {
