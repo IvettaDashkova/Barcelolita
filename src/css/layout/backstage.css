@@ -102,12 +102,6 @@
   color: var(--accent-color);
 }
 
-.quote .first-highlight::before {
-  content: '″';
-  color: white;
-  margin-right: 3px;
-}
-
 @media screen and (min-width: 320px) {
   .video-container img#video-thumbnail {
     height: 100%;
