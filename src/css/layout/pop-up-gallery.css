@@ -1,6 +1,5 @@
 .pop-up-gallery-backdrop {
   display: none;
-  /* pointer-events: none; */
 }
 
 .pop-up-gallery-container {
@@ -71,14 +70,10 @@
 .pop-up-gallery-swiper-btn-prev {
   background-color: transparent;
   border: none;
-}
-
-.pop-up-gallery-swiper-arrow-next {
   fill: var(--primary-color);
 }
 
 .pop-up-gallery-swiper-arrow-prev {
-  fill: var(--primary-color);
   transform: rotate(180deg);
 }
 
@@ -122,6 +117,11 @@
 
   .pop-up-gallery-swiper-btn-next :hover,
   .pop-up-gallery-swiper-btn-prev :hover {
+    fill: gray;
+  }
+
+  .pop-up-gallery-swiper-btn-next :focus,
+  .pop-up-gallery-swiper-btn-prev :focus {
     fill: gray;
   }
 

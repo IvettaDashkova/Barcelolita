@@ -1,19 +1,5 @@
 import iziToast from 'izitoast';
 
-// const iziToastStyles = {
-//   titleFont: {
-//     family: 'inherit',
-//     size: '20px',
-//     weight: '500',
-//   },
-//   messageFont: {
-//     family: 'inherit',
-//     size: '16px',
-//     weight: '500',
-//   },
-//   borderRadius: '12px',
-// };
-
 async function sendMessage() {
   const form = document.querySelector('#form');
 
