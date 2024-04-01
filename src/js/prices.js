@@ -71,11 +71,68 @@ const swiper = new Swiper(`[data-id="${swiperPrice}"]`, swiperParamsPrice);
 
 initSwiper('price-gallery');
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const swiperSlides = document.querySelectorAll('.swiper-slide.price');
 
+  //логіка ховеру для моб. та таб.
+
   swiperSlides.forEach(function (slide) {
-    if (window.innerWidth >= 1440) {
+    if (window.innerWidth <= 1440) {
+      slide.addEventListener('click', function () {
+        slide.classList.toggle('hovered');
+      });
+      slide.addEventListener('mouseleave', function () {
+        slide.classList.remove('hovered');
+      });
+    }
+  });
+
+//логіка ховеру та перемикання стрілками для десктопу
+
+  if (window.innerWidth >= 1440) {
+    const swiperWrapPrice = document.querySelector('.swiper-wrapper.price');
+    const swiperArray = Array.from(swiperWrapPrice.children);
+    let currentIndex = null;
+    let prevIndex = null;
+
+    function addHoverClass(index) {
+      swiperArray.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('hovered');
+        } else {
+          slide.classList.remove('hovered');
+        }
+      });
+    }
+
+    function keydownHandler(e) {
+      if ((e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+        if (currentIndex === null) {
+          currentIndex = 0;
+        } else {
+          if (e.key === 'ArrowRight' && currentIndex < swiperArray.length - 1) {
+            prevIndex = currentIndex;
+            currentIndex += 1;
+          } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+            prevIndex = currentIndex;
+            currentIndex -= 1;
+          } else if (e.key === 'ArrowRight' && currentIndex === swiperArray.length - 1) {
+            prevIndex = swiperArray.length - 1;
+            currentIndex = 0;
+          } else if (e.key === 'ArrowLeft' && currentIndex === 0) {
+            prevIndex = 0;
+            currentIndex = swiperArray.length - 1;
+          }
+        }
+        addHoverClass(currentIndex);
+      }
+    }
+
+    function removeHoveredClass() {
+      swiperArray.forEach(slide => slide.classList.remove('hovered'));
+    }
+
+    swiperSlides.forEach(function (slide) {
       slide.addEventListener('mouseenter', function () {
         slide.classList.add('hovered');
       });
@@ -85,15 +142,16 @@ document.addEventListener("DOMContentLoaded", function() {
       slide.addEventListener('click', function () {
         slide.classList.remove('hovered');
       });
-    } else {
-      slide.addEventListener('click', function() {
-            slide.classList.toggle('hovered');
-      });
-    slide.addEventListener('mouseleave', function () {
-        slide.classList.remove('hovered');
     });
-    }
-  });
+
+    window.addEventListener('keydown', keydownHandler);
+
+    window.addEventListener('click', function () {
+      removeHoveredClass();
+    });
+  }
+
+  //видалення ховеру коли секція поза зоною видимості користувача
 
   const swiperSection = document.querySelector('.container-prices');
 
@@ -106,6 +164,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const observer = new IntersectionObserver(handleIntersect);
   observer.observe(swiperSection);
 });
+
+
 
 
 
