@@ -1,12 +1,15 @@
-const contactMeBackdrop = document.querySelector('.backdrop-modal-contact-me');
+const contactMeBackdrop = document.getElementById('contact-me-backdrop');
 const modalLastElem = document.querySelector('.socials-contact-me-last-el');
 const closeBtn = document.querySelector('.close-btn-contact-me');
 
-contactMeBackdrop.addEventListener('keydown', logKey);
+contactMeBackdrop.addEventListener('keydown', keydownTabModal);
 
-function logKey(e) {
+function keydownTabModal(e) {
   console.dir(e.target);
   if (e.key === 'Tab') {
-    if (e.target === modalLastElem) closeBtn.focus();
+    if (e.target === modalLastElem) {
+      e.preventDefault();
+      closeBtn.focus();
+    }
   }
 }
