@@ -72,7 +72,7 @@ const swiper = new Swiper(`[data-id="${swiperPrice}"]`, swiperParamsPrice);
 initSwiper('price-gallery');
 
 document.addEventListener("DOMContentLoaded", function() {
-    const swiperSlides = document.querySelectorAll('.swiper-slide.price');
+  const swiperSlides = document.querySelectorAll('.swiper-slide.price');
 
   swiperSlides.forEach(function (slide) {
     if (window.innerWidth >= 1440) {
@@ -93,8 +93,18 @@ document.addEventListener("DOMContentLoaded", function() {
         slide.classList.remove('hovered');
     });
     }
-      
-    });
+  });
+
+  const swiperSection = document.querySelector('.container-prices');
+
+  function handleIntersect(entries) {
+    if (!entries[0].isIntersecting) {
+      swiperSlides.forEach(slide => slide.classList.remove('hovered'));
+    }
+  }
+
+  const observer = new IntersectionObserver(handleIntersect);
+  observer.observe(swiperSection);
 });
 
 
