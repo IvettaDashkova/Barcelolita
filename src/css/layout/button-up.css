@@ -3,13 +3,14 @@ html {
 }
 
 .go-up {
-  display: none;
-  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   right: 16px;
   bottom: 46px;
   width: 80px;
   height: 80px;
-  z-index: 20;
   border-radius: 50%;
   border: 1px solid rgba(249, 249, 249, 0.2);
   background-color: var(--secondary-color);
@@ -18,19 +19,18 @@ html {
     inset 13px 10px 13px 0 rgba(8, 8, 8, 0.05);
   transition: background-color 250ms ease-in-out;
 }
-.go-up:hover {
+.go-up:hover,
+.go-up:focus {
+  outline: transparent;
   background-color: var(--accent-color);
-}
-.btn-hide {
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
   .go-up {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     right: 32px;
-    bottom: 57px;
+    bottom: 56px;
   }
   .go-up-svg {
     width: 36px;
