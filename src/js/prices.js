@@ -7,6 +7,7 @@ import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 const btnPrev = document.querySelector('.icon-arrow-prev');
 const btnNext = document.querySelector('.icon-arrow-next');
 
+
 const swiperParamsPrice = {
   modules: [Navigation, Keyboard, Mousewheel],
   breakpoints: {
@@ -69,3 +70,32 @@ const swiper = new Swiper(`[data-id="${swiperPrice}"]`, swiperParamsPrice);
 }
 
 initSwiper('price-gallery');
+
+document.addEventListener("DOMContentLoaded", function() {
+    const swiperSlides = document.querySelectorAll('.swiper-slide.price');
+
+  swiperSlides.forEach(function (slide) {
+    if (window.innerWidth >= 1440) {
+      slide.addEventListener('mouseenter', function () {
+        slide.classList.add('hovered');
+      });
+      slide.addEventListener('mouseleave', function () {
+        slide.classList.remove('hovered');
+      });
+      slide.addEventListener('click', function () {
+        slide.classList.remove('hovered');
+      });
+    } else {
+      slide.addEventListener('click', function() {
+            slide.classList.toggle('hovered');
+      });
+    slide.addEventListener('mouseleave', function () {
+        slide.classList.remove('hovered');
+    });
+    }
+      
+    });
+});
+
+
+

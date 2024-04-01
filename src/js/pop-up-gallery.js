@@ -19,6 +19,9 @@ const galleryBackdrop = document.querySelector('.pop-up-gallery-backdrop');
 const portfolioList = document.querySelector('.portfolio-list');
 const bodyScroll = document.querySelector('body');
 let swiper;
+let fixFocusPortfolio;
+const btnPrev = document.querySelector('.pop-up-gallery-swiper-btn-prev');
+const btnNext = document.querySelector('.pop-up-gallery-swiper-btn-next');
 
 const swiperParams = {
   modules: [Navigation, Scrollbar, EffectCoverflow, Keyboard, Mousewheel],
@@ -74,10 +77,11 @@ const popUpGallerySlider = sliderData => {
 };
 
 function closePopUpGallery() {
-  modalGallery.removeEventListener('transitionend', focusFirstElementGallery);
-  modalGallery.removeEventListener('keydown', nextFocusTabGallery);
   galleryBackdrop.classList.remove('is-open');
   bodyScroll.classList.remove('noscroll');
+  document.removeEventListener('keyup', keydownTabModal);
+
+  fixFocusPortfolio.focus();
   setTimeout(() => {
     galleryBackdrop.style.display = 'none';
   }, 1000);
@@ -92,6 +96,20 @@ function closePopUpGallery() {
 function keydownClose(event) {
   if (event.key === 'Escape') {
     closePopUpGallery();
+  }
+}
+
+function keydownTabModal(event) {
+  if (event.key === 'Tab') {
+    if (
+      event.target === closeBtn ||
+      event.target === btnNext ||
+      event.target === btnPrev
+    ) {
+      return;
+    } else {
+      closeBtn.focus();
+    }
   }
 }
 
@@ -116,20 +134,22 @@ closeBtn.addEventListener('click', closePopUpGallery);
 
 portfolioList.addEventListener('click', e => {
   if (
+    e.target instanceof SVGElement ||
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'SPAN' ||
     e.target.nodeName === 'BUTTON'
   ) {
     let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
+    fixFocusPortfolio = e.target.closest('.item-button-portfolio');
 
     galleryBackdrop.style.display = 'block';
     setTimeout(() => {
       galleryBackdrop.classList.add('is-open');
       bodyScroll.classList.add('noscroll');
     }, 300);
-    modalGallery.addEventListener('transitionend', focusFirstElementGallery);
+    document.getElementById('photo-gallery').focus();
+    document.addEventListener('keyup', keydownTabModal);
 
-    modalGallery.addEventListener('keydown', nextFocusTabGallery);
     renderPopUpGallery(portfolioItemName);
     popUpGallerySlider('photo');
   }
@@ -167,50 +187,4 @@ function renderPopUpGallery(portfolioItemName) {
     .join('');
 
   wrapper.innerHTML = markup;
-}
-const modalGallery = document.querySelector('.tab-js-gallery');
-
-const focusElementsGallery = modalGallery.querySelectorAll(
-  'button,[tabindex]:not([tabindex="-1"])'
-);
-const firstFocusleElementGallery = focusElementsGallery[0];
-const lastFocusElementGallery =
-  focusElementsGallery[focusElementsGallery.length - 1];
-
-const focusFirstElementGallery = () => {
-  firstFocusleElementGallery.focus();
-};
-
-const focusLastElementGallery = () => {
-  lastFocusElementGallery.focus();
-};
-
-function nextFocusTabGallery(event) {
-  if (event.key === 'Tab') {
-    event.preventDefault();
-
-    if (event.shiftKey) {
-      if (document.activeElement === firstFocusleElementGallery) {
-        focusLastElementGallery();
-      } else {
-        focusElementsGallery[
-          Array.prototype.indexOf.call(
-            focusElementsGallery,
-            document.activeElement
-          ) - 1
-        ].focus();
-      }
-    } else {
-      if (document.activeElement === lastFocusElementGallery) {
-        focusFirstElementGallery();
-      } else {
-        focusElementsGallery[
-          Array.prototype.indexOf.call(
-            focusElementsGallery,
-            document.activeElement
-          ) + 1
-        ].focus();
-      }
-    }
-  }
 }
