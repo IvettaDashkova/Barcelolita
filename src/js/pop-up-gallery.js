@@ -134,6 +134,7 @@ closeBtn.addEventListener('click', closePopUpGallery);
 
 portfolioList.addEventListener('click', e => {
   if (
+    e.target instanceof SVGElement ||
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'SPAN' ||
     e.target.nodeName === 'BUTTON'
