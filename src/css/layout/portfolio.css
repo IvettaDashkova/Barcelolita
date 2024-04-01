@@ -12,6 +12,10 @@
   padding: 0;
 }
 
+.arrow-icon{
+  fill: var(--primary-color);
+}
+
 .portfolio-title {
   text-transform: uppercase;
   margin-bottom: 32px;
@@ -21,6 +25,13 @@
   letter-spacing: -0.03em;
   text-align: left;
   opacity: 50%;
+}
+
+
+.data-svg-container{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
 }
 
 
@@ -90,6 +101,7 @@
   letter-spacing: -0.03em;
   text-align: left;
   opacity: 0.3;
+  width: fit-content;
 }
 
 @media screen and (min-width: 768px) {
@@ -98,6 +110,12 @@
     margin-bottom: 100px;
   }
 
+  .arrow-icon{
+    width: 28px;
+    height: 28px;
+  }
+
+  
   .portfolio-list {
     display: grid;
     grid-template-columns: auto auto;
@@ -168,6 +186,12 @@
     margin-left: 126px;
     margin-bottom: 117px;
   }
+
+  .arrow-icon:hover{
+    opacity: 50%;
+    transition: background-color 0.5s ease-in-out;
+  }
+
 
   .position-down-container {
     max-width: 310px;

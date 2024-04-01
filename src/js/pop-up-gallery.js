@@ -136,6 +136,7 @@ closeBtn.addEventListener('click', closePopUpGallery);
 
 portfolioList.addEventListener('click', e => {
   if (
+    e.target instanceof SVGElement ||
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'SPAN' ||
     e.target.nodeName === 'BUTTON'
@@ -151,9 +152,6 @@ portfolioList.addEventListener('click', e => {
     document.getElementById('photo-gallery').focus();
     document.addEventListener('keyup', keydownTabModal);
 
-    // modalGallery.addEventListener('transitionend', focusFirstElementGallery);
-
-    // modalGallery.addEventListener('keydown', nextFocusTabGallery);
     renderPopUpGallery(portfolioItemName);
     popUpGallerySlider('photo');
   }
