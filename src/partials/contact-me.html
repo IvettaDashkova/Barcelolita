@@ -1,4 +1,11 @@
-<div class="backdrop-modal-contact-me backdrop">
+<div
+  class="backdrop-modal-contact-me backdrop"
+  id="contact-me-backdrop"
+  tabindex="-1"
+  aria-modal="true"
+  aria-label="Contact me"
+  role="dialog"
+>
   <div class="modal-contact-me">
     <div class="container head-container-contact-me">
       <h4 class="head-title-contact-me" data-id="contact-me">Contact me</h4>
@@ -44,8 +51,8 @@
             class="input-contact-me"
             data-en-placeholder="Phone number"
             data-ua-placeholder="Номер телефону"
-            data-en-title="Please, enter a valid phone number as shown in the example: +XX-XXX-XXX-XXX"
-            data-ua-title="Будь ласка, введіть дійсний номер телефону відповідно до прикладу: +XX-XXX-XXX-XXX"
+            data-en-title="Please, enter a valid phone number"
+            data-ua-title="Будь ласка, введіть дійсний номер телефону"
           />
           <input
             id="message"
@@ -126,7 +133,7 @@
                 </li>
                 <li class="socials-item-contact-me">
                   <a
-                    class="socials-link-contact-me social-link-hover"
+                    class="socials-link-contact-me social-link-hover socials-contact-me-last-el"
                     href="tel:+380637780314"
                     >+380637780314</a
                   >

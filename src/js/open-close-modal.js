@@ -59,6 +59,7 @@ function openPopUpContact() {
     backdropModal.classList.add('is-open');
     bodyScroll.classList.add('noscroll');
   }, 300);
+  document.getElementById('contact-me-backdrop').focus();
 
   history.pushState(
     null,
