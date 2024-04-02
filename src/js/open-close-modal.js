@@ -3,6 +3,7 @@ const backdropModal = document.querySelector('.backdrop-modal-contact-me');
 const contactMeCloseBtn = document.querySelector('.close-btn-contact-me');
 const contactMeBtnPrice = document.querySelector('.price-contact-btn');
 const bodyScroll = document.querySelector('body');
+let focusElem;
 
 history.pushState(
   null,
@@ -19,16 +20,19 @@ window.addEventListener('popstate', e => {
   );
 });
 
-contactMeBtnPrice.addEventListener('click', () => {
+contactMeBtnPrice.addEventListener('click', e => {
   openPopUpContact();
+  focusElem = e.target;
 });
 
-contactMeBtn.addEventListener('click', () => {
+contactMeBtn.addEventListener('click', e => {
   openPopUpContact();
+  focusElem = e.target;
 });
 
 contactMeCloseBtn.addEventListener('click', () => {
   closePopUpContact();
+  focusElem.focus();
 });
 
 window.addEventListener('keydown', e => {
@@ -53,12 +57,13 @@ function closePopUpContact() {
   }, 1000);
 }
 
-function openPopUpContact() {
+function openPopUpContact(e) {
   backdropModal.style.display = 'block';
   setTimeout(() => {
     backdropModal.classList.add('is-open');
     bodyScroll.classList.add('noscroll');
   }, 300);
+
   document.getElementById('contact-me-backdrop').focus();
 
   history.pushState(
