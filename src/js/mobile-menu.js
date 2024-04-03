@@ -32,8 +32,6 @@ function mobileMenu() {
       allSite.classList.add('noscroll');
       backdropMenu.classList.add('is-open');
     }, 300);
-    allSite.classList.add('noscroll');
-    backdropMenu.classList.add('is-open');
 
     closeButton.addEventListener('click', closeMenu);
     menuLinks.forEach(menuLink => {
