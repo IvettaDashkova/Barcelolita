@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Badcelolita",
+    "build": "vite build --base=/Badcelolita/",
     "preview": "vite preview"
   },
   "devDependencies": {
