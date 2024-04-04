@@ -6,7 +6,7 @@
 .text-price {
   font-weight: 500;
   font-size: 16px;
-  line-height: 125%;
+  line-height: 1.25;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: rgba(249, 249, 249, 0.5);
@@ -16,7 +16,7 @@
 .prices-text {
   font-weight: 500;
   font-size: 16px;
-  line-height: 125%;
+  line-height: 1.25;
   letter-spacing: -0.03em;
   color: var(--primary-color);
 }
@@ -67,7 +67,7 @@
   left: 16px;
   font-weight: 500;
   font-size: 20px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   color: var(--primary-color);
   z-index: 6;
@@ -79,7 +79,7 @@
   left: 16px;
   font-weight: 500;
   font-size: 120px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   color: #a50807;
   z-index: 1;
@@ -91,7 +91,7 @@
   left: 16px;
   font-weight: 500;
   font-size: 20px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   color: var(--primary-color);
   z-index: 6;
@@ -103,7 +103,7 @@
   left: 16px;
   font-weight: 500;
   font-size: 120px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   color: var(--primary-color);
   z-index: 1;
@@ -115,7 +115,7 @@
   left: 16px;
   font-weight: 500;
   font-size: 20px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   color: var(--primary-color);
   z-index: 6;
@@ -128,7 +128,7 @@
   color: var(--primary-color);
   font-weight: 500;
   font-size: 120px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   z-index: 1;
 }
@@ -154,7 +154,7 @@
   transform: translate(-50%, -50%);
   font-weight: 500;
   font-size: 20px;
-  line-height: 100%;
+  line-height: 1.25;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   width: 255px;
@@ -169,7 +169,7 @@
   left: 109px;
   font-weight: 500;
   font-size: 28px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
@@ -180,7 +180,7 @@
   left: 103px;
   font-weight: 500;
   font-size: 28px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
@@ -191,7 +191,7 @@
   left: 100px;
   font-weight: 500;
   font-size: 28px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
