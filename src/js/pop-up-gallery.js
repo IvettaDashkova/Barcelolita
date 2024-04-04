@@ -165,12 +165,12 @@ function renderPopUpGallery(portfolioItemName) {
   const popUpGalleryTitle = document.querySelector('.pop-up-gallery-title');
   const popUpGalleryText = document.querySelector('.pop-up-gallery-text');
   let languageChange = localStorage.getItem('lang');
-  if (languageChange === 'en') {
-    popUpGalleryTitle.textContent = nameEn;
-    popUpGalleryText.textContent = descriptionEn;
-  } else {
+  if (languageChange === 'uk') {
     popUpGalleryTitle.textContent = nameUa;
     popUpGalleryText.textContent = descriptionUa;
+  } else {
+    popUpGalleryTitle.textContent = nameEn;
+    popUpGalleryText.textContent = descriptionEn;
   }
 
   const markup = img
