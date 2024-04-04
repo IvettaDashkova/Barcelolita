@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "Barcelolita",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/",
+    "build": "vite build --base=/Barcelolita/",
     "preview": "vite preview"
   },
   "devDependencies": {
