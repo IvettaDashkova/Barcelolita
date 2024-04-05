@@ -22,7 +22,6 @@ function fetchPortfolio() {
         },
       }
     ).then(response => {
-      console.log("response", response)
       if (!response.ok) {
            iziToast.error({
              title: 'Oops...',
