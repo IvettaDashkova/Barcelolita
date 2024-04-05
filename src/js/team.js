@@ -1,9 +1,10 @@
 import Swiper from 'swiper';
 import { Keyboard, Navigation } from 'swiper/modules';
 import team from '../constants/team.json';
-import 'swiper/css/navigation';
-import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css';
 import icons from '../img/icons/symbol.svg';
+
 let swiper;
 const swiperParams = {
   modules: [Navigation, Keyboard],

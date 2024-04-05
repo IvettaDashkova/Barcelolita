@@ -6,9 +6,9 @@ import {
   Keyboard,
   Mousewheel,
 } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-coverflow';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/effect-coverflow';
 import '../css/layout/pop-up-gallery.css';
 import '../css/layout/modal.css';
 import portfolio from '../constants/pop-up-gallery.json';

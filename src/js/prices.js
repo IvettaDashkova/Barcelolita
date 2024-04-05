@@ -1,7 +1,7 @@
 
 import Swiper from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const btnPrev = document.querySelector('.icon-arrow-prev');

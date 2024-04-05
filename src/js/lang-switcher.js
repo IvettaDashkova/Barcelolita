@@ -7,7 +7,7 @@ function langSwitcher() {
   }
   const chekerFields = document.querySelectorAll('.svitcher-text');
   let dataLanguage = document.querySelectorAll('[data-en]');
-
+console.log('dataLanguage', dataLanguage);
   chekerFields.forEach(chekerField => {
     chekerField.addEventListener('click', chooseLang);
   });
