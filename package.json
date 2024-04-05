@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@sanity/client": "^6.15.9",
+    "axios": "^1.6.8",
     "dotenv": "^16.4.5",
     "izitoast": "^1.4.0",
     "swiper": "^11.0.7",
