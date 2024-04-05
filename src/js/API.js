@@ -10,7 +10,7 @@ createClient({
 });
 
 function fetchPortfolio() {
-    const portfolio = fetch(
+    fetch(
       `https://${import.meta.env.VITE_ADMIN_PROJECT_ID}.api.sanity.io/${
         import.meta.env.VITE_ADMIN_API_VERSION
       }/data/query/${
@@ -22,6 +22,7 @@ function fetchPortfolio() {
         },
       }
     ).then(response => {
+      console.log("response", response)
       if (!response.ok) {
            iziToast.error({
              title: 'Oops...',
