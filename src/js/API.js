@@ -10,6 +10,7 @@
 // });
 
 function fetchPortfolio() {
+    // console.log(first)
     const qwe = fetch(
       'https://drd3cmm3.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type%3D%3D%22portfolio%22%5D%20%7C%20order(id%20asc)',
       {
