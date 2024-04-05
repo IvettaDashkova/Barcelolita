@@ -15,6 +15,7 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@sanity/client": "^6.15.9",
     "dotenv": "^16.4.5",
     "izitoast": "^1.4.0",
     "swiper": "^11.0.7",

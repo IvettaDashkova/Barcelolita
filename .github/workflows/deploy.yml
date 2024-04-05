@@ -6,6 +6,11 @@ on:
 env:
   VITE_TELEGRAM_TOKEN: ${{secrets.VITE_TELEGRAM_TOKEN}}
   VITE_CHAT_ID: ${{secrets.VITE_CHAT_ID}}
+  SANITY_AUTH_TOKEN: ${{ secrets.VITE_ADMIN_TOKEN}}
+  VITE_ADMIN_PROJECT_ID: ${{secrets.VITE_ADMIN_PROJECT_ID}}
+  VITE_ADMIN_DATASET: ${{secrets.VITE_ADMIN_DATASET}}
+  VITE_ADMIN_API_VERSION: ${{secrets.VITE_ADMIN_API_VERSION}}
+  VITE_ADMIN_TOKEN: ${{secrets.VITE_ADMIN_TOKEN}}
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
