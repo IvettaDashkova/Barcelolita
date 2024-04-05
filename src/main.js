@@ -8,7 +8,7 @@ import sendMessage from './js/send-message';
 import './js/open-close-modal';
 import './js/form-validation';
 import './js/contact-me-tab-control';
-import './API';
+import './js/API';
 
 mobileMenu();
 langSwitcher();
