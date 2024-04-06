@@ -1,13 +1,9 @@
 .hero-section {
-  margin: 0 auto;
   padding-top: 422px;
   padding-bottom: 40px;
   background-image: url('../../img/hero/hero-mobile.jpg');
   background-repeat: no-repeat;
-  background-size: auto 700px;
-  /* background-position-x: 70%; */
   background-position-x: center;
-  /* background-position-y: 20px; */
 }
 
 @supports (background-image: url('../../img/hero/hero-mobile.webp')) {
@@ -68,7 +64,7 @@
   box-shadow: inset -13px -5px 13px 0 rgba(255, 255, 255, 0.05),
     inset 13px 10px 13px 0 rgba(8, 8, 8, 0.05);
   padding: 0;
-  border: 1px solid rgba(249, 249, 249, 0.1);
+  border: 2px solid rgba(249, 249, 249, 0.1);
   background: rgba(1, 1, 1, 0.05);
   outline: none;
   transition: 0.25s ease-in-out;
