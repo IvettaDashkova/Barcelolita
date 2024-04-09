@@ -84,7 +84,7 @@
   .hero-section {
     padding-top: 540px;
     padding-bottom: 196px;
-    margin-bottom: 0px;
+    background-size: auto 980px;
     background-image: url('../../img/hero/hero-tablet.jpg');
   }
 
