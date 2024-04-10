@@ -6,12 +6,11 @@ import {
   Keyboard,
   Mousewheel,
 } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-coverflow';
+import { fetchDataGallery } from './API';
 import '../css/layout/pop-up-gallery.css';
 import '../css/layout/modal.css';
-import portfolio from '../constants/pop-up-gallery.json';
+import { formImgURL } from './helpers';
+// import portfolio from '../constants/pop-up-gallery.json';
 
 const wrapper = document.querySelector('.swiper-wrapper');
 const closeBtn = document.querySelector('.pop-up-gallery-close-btn');
@@ -132,16 +131,15 @@ document.addEventListener('keydown', keydownClose);
 
 closeBtn.addEventListener('click', closePopUpGallery);
 
-portfolioList.addEventListener('click', e => {
+portfolioList.addEventListener('click', async function handleClick(e) {
   if (
     e.target instanceof SVGElement ||
     e.target.nodeName === 'IMG' ||
     e.target.nodeName === 'SPAN' ||
     e.target.nodeName === 'BUTTON'
   ) {
-    let portfolioItemName = e.target.closest('.portfolio-item').dataset.popup;
+    let portfolioItemId = e.target.closest('.portfolio-item').dataset.popup;
     fixFocusPortfolio = e.target.closest('.item-button-portfolio');
-
     galleryBackdrop.style.display = 'block';
     setTimeout(() => {
       galleryBackdrop.classList.add('is-open');
@@ -150,17 +148,13 @@ portfolioList.addEventListener('click', e => {
     document.getElementById('photo-gallery').focus();
     document.addEventListener('keyup', keydownTabModal);
 
-    renderPopUpGallery(portfolioItemName);
+    await renderPopUpGallery(portfolioItemId);
     popUpGallerySlider('photo');
   }
 });
-function renderPopUpGallery(portfolioItemName) {
-  const galleryCurrent = portfolio.find(
-    currentType =>
-      currentType.nameEn.toLowerCase() === portfolioItemName.toLowerCase()
-  );
-
-  const { nameEn, nameUa, descriptionEn, descriptionUa, img } = galleryCurrent;
+async function renderPopUpGallery(portfolioItemId) {
+  const { nameEn, nameUa, descriptionEn, descriptionUa, img } =
+    await fetchDataGallery(portfolioItemId);
 
   const popUpGalleryTitle = document.querySelector('.pop-up-gallery-title');
   const popUpGalleryText = document.querySelector('.pop-up-gallery-text');
@@ -178,7 +172,7 @@ function renderPopUpGallery(portfolioItemName) {
       return `<div class="swiper-slide swiper-slide-layout">
        <img
         class="pop-up-photo"
-        src=${imgItem}
+        src=${formImgURL(imgItem)}
         alt="photo"
         loading="lazy"
        />

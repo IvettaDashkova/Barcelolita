@@ -16,6 +16,10 @@
   fill: var(--primary-color);
   opacity: 50%;
 }
+.item-button-portfolio:hover .arrow-icon{
+   opacity: 100%;
+   transition: opacity 0.5s ease-in-out;
+}
 
 .portfolio-title {
   text-transform: uppercase;
@@ -115,8 +119,6 @@
     width: 28px;
     height: 28px;
   }
-
-  
   .portfolio-list {
     display: grid;
     grid-template-columns: auto auto;

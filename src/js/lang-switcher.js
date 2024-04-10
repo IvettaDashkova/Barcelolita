@@ -1,4 +1,5 @@
 import dict from '../constants/dict.json';
+import { showPortfolio } from './portfolio';
 
 function langSwitcher() {
   let initialValue = 'en';
@@ -7,7 +8,6 @@ function langSwitcher() {
   }
   const chekerFields = document.querySelectorAll('.svitcher-text');
   let dataLanguage = document.querySelectorAll('[data-en]');
-
   chekerFields.forEach(chekerField => {
     chekerField.addEventListener('click', chooseLang);
   });
@@ -60,6 +60,7 @@ function langSwitcher() {
         el.classList.remove('svitcher-highlight');
       });
     }
+      showPortfolio(lang);
   }
 
   let langCheck = localStorage.getItem('lang');
