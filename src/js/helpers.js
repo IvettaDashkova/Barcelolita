@@ -8,6 +8,16 @@ export function formImgURL(img) {
   }`;
 }
 
+export function formVideoURL(video) {
+  const videoData = video.asset._ref.split('-');
+
+  return `https://cdn.sanity.io/files/${
+    import.meta.env.VITE_ADMIN_PROJECT_ID
+  }/${import.meta.env.VITE_ADMIN_DATASET}/${videoData[1]}.${
+    videoData[2]
+  }`;
+}
+
 export function formatDate(isoDate, lng) {
   const months = {
     en: [

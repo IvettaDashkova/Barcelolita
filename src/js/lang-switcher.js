@@ -1,5 +1,6 @@
 import dict from '../constants/dict.json';
 import { showPortfolio } from './portfolio';
+import { initPriceSwiper } from './prices';
 
 function langSwitcher() {
   let initialValue = 'en';
@@ -60,7 +61,8 @@ function langSwitcher() {
         el.classList.remove('svitcher-highlight');
       });
     }
-      showPortfolio(lang);
+    showPortfolio(lang);
+    initPriceSwiper(lang);
   }
 
   let langCheck = localStorage.getItem('lang');

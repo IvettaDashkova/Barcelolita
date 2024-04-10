@@ -47,3 +47,51 @@ export async function fetchDataGallery(portfolioItemId) {
     return;
   }
 }
+export async function fetchPrice() {
+  try {
+    const {
+      data: { result },
+    } = await axios.get(
+      `https://${import.meta.env.VITE_ADMIN_PROJECT_ID}.api.sanity.io/${
+        import.meta.env.VITE_ADMIN_API_VERSION
+      }/data/query/${
+        import.meta.env.VITE_ADMIN_DATASET
+      }?query=*[_type=="price"]{id,titleEn, titleUa, USD,EUR, descriptionEn,descriptionUa}|order(id asc)`
+      );
+  
+    return result;
+  } catch (error) {
+    iziToast.error({
+      title: 'Oops...',
+      message: 'Network response was not ok',
+      backgroundColor: 'var(--accent-color)',
+      titleColor: 'var(--primary-color)',
+      messageColor: 'var(--primary-color)',
+    });
+    return;
+  }
+}
+export async function fetchVideo() {
+  try {
+    const {
+      data: { result },
+    } = await axios.get(
+      `https://${import.meta.env.VITE_ADMIN_PROJECT_ID}.api.sanity.io/${
+        import.meta.env.VITE_ADMIN_API_VERSION
+      }/data/query/${
+        import.meta.env.VITE_ADMIN_DATASET
+      }?query=*[_type=="video"]`
+    );
+    return result[0].url;
+  } catch (error) {
+    iziToast.error({
+      title: 'Oops...',
+      message: 'Network response was not ok',
+      backgroundColor: 'var(--accent-color)',
+      titleColor: 'var(--primary-color)',
+      messageColor: 'var(--primary-color)',
+    });
+    return;
+  }
+}
+

@@ -1,9 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
+import { fetchVideo } from './API';
+import { formVideoURL } from './helpers';
+
+document.addEventListener('DOMContentLoaded', async function () {
   const videoContainer = document.querySelector('.video-container');
   const video = document.getElementById('video');
   const videoThumbnail = document.getElementById('video-thumbnail');
   const playButton = document.getElementById('play-button');
   let isPlaying = false;
+
+  const videoURL = await fetchVideo();
+
+  video.innerHTML = ` <source src=${formVideoURL(videoURL)} type="video/mp4">
+                Your browser does not support the video tag or the file format of this video.`;
 
   playButton.addEventListener('click', function () {
     if (!isPlaying) {
