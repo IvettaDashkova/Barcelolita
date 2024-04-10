@@ -68,6 +68,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
+  text-transform: uppercase;
   letter-spacing: -0.03em;
   color: var(--primary-color);
   z-index: 6;
@@ -95,6 +96,7 @@
   letter-spacing: -0.03em;
   color: var(--primary-color);
   z-index: 6;
+   text-transform: uppercase;
 }
 
 .number-second {
@@ -119,6 +121,7 @@
   letter-spacing: -0.03em;
   color: var(--primary-color);
   z-index: 6;
+   text-transform: uppercase;
 }
 
 .number-third {
@@ -147,7 +150,7 @@
   display: none;
 }
 
-.text {
+.swiper-slide.price .text {
   position: absolute;
   top: 50%;
   left: 50%;
