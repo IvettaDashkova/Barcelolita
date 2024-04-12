@@ -80,7 +80,7 @@ function closePopUpGallery() {
   bodyScroll.classList.remove('noscroll');
   document.removeEventListener('keyup', keydownTabModal);
 
-  fixFocusPortfolio.focus();
+  fixFocusPortfolio && fixFocusPortfolio.focus();
   setTimeout(() => {
     galleryBackdrop.style.display = 'none';
   }, 1000);
