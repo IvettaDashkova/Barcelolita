@@ -1,5 +1,6 @@
 import { formImgURL, formatDate } from './helpers';
 import { fetchPortfolio } from './API';
+import icons from '../img/icons/symbol.svg';
 
 export async function showPortfolio(lang) {
   const portfolio = await fetchPortfolio();
@@ -48,7 +49,7 @@ export function renderPortfolio(portfolio, lang) {
            }
           </span>
           <svg  class="arrow-icon" width="24" height="24">
-            <use href="./img/icons/symbol.svg#icon-arrow-portfolio"></use>
+            <use href="${icons}#icon-arrow-portfolio"></use>
           </svg>
         </span>
       </button>
@@ -83,7 +84,7 @@ ${
            }
           </span>
           <svg  class="arrow-icon" width="24" height="24">
-            <use href="./img/icons/symbol.svg#icon-arrow-portfolio"></use>
+            <use href="${icons}#icon-arrow-portfolio"></use>
           </svg>
         </span>
       </button>
@@ -92,11 +93,11 @@ ${
 }
 ${
   chunk[2]
-        ? `
+    ? `
     <li class="portfolio-item position-top" data-popup="${chunk[2]._id}">
       <button class="item-button-portfolio">
         <span class="portfolio-item-title">${
-             lang === 'en' ? chunk[2].nameEn : chunk[2].nameUa
+          lang === 'en' ? chunk[2].nameEn : chunk[2].nameUa
         }</span>
         <span class="portfolio-item-description portfolio-item-description-large"
         >
@@ -117,7 +118,7 @@ ${
            }
           </span>
           <svg  class="arrow-icon" width="24" height="24">
-            <use href="./img/icons/symbol.svg#icon-arrow-portfolio"></use>
+            <use href="${icons}#icon-arrow-portfolio"></use>
           </svg>
         </span>
       </button>
@@ -126,7 +127,7 @@ ${
 }
    ${
      chunk[3]
-        ? `
+       ? `
     <li class="portfolio-item" data-popup="${chunk[3]._id}">
       <button class="item-button-portfolio position-down-container">
         <span class="portfolio-item-title" >${
@@ -151,7 +152,7 @@ ${
            }
           </span>
           <svg  class="arrow-icon" width="24" height="24">
-            <use href="./img/icons/symbol.svg#icon-arrow-portfolio"></use>
+            <use href="${icons}#icon-arrow-portfolio"></use>
           </svg>
         </span>
       </button>
